@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TACTICAL TERMINAL | SCIACCA</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-symbol.svg">
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <!-- LOADING OVERLAY -->
+  <div id="boot-sequence">
+    <div class="boot-text">INITIALIZING SYSTEM...</div>
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+  </div>
+
+  <div id="background-canvas-container"></div>
+  <div class="scanlines"></div>
+  <div class="noise-overlay"></div>
+  <div class="vignette"></div>
+
+  <header class="main-header">
+    <div class="logo">
+      <span class="highlight">Sciacca</span> Flavio
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active" data-i18n="nav_terminal">ACCUEIL</a></li>
+      <li class="dropdown">
+        <a href="#" data-i18n="nav_profile">À PROPOS</a>
+        <div class="dropdown-content">
+            <a href="apropos.html">À PROPOS DE MOI</a>
+            <a href="entreprise.html">MON ENTREPRISE</a>
+        </div>
+      </li>
+      <li><a href="tcs.html" data-i18n="nav_mission">TCS</a></li>
+      <li><a href="certifications.html" data-i18n="nav_clearance">BTS SIO</a></li>
+      <li class="dropdown">
+        <a href="projets.html" data-i18n="nav_ops">PROJETS</a>
+        <div class="dropdown-content">
+            <a href="procedures.html">MES PROCÉDURES</a>
+        </div>
+      </li>
+      <li><a href="veille.html" data-i18n="nav_intel">VEILLES</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <div class="terminal-window hud-panel">
+      <!-- NEW HERO SECTION STRUCTURE -->
+      <div class="hero-grid">
+        
+        <!-- LEFT COLUMN: TEXT & ACTIONS -->
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span> <span data-i18n="hero_status">ADMINISTRATEUR RÉSEAUX ET SYSTÈME</span>
+          </div>
+          
+          <h1 class="hero-title">Flavio <span class="highlight">SCIACCA</span></h1>
+          <h2 class="hero-subtitle" data-i18n="hero_role">ÉTUDIANT EN BTS SIO SISR</h2>
+          <p class="hero-desc" data-i18n="hero_desc">
+            Spécialiste Systèmes et Réseaux Informatiques.
+            Passionné par l'infrastructure IT et les nouvelles technologies, je développe des compétences en administration système, sécurité réseau et virtualisation.
+          </p>
+
+          <div class="hero-actions">
+            <a href="projets.html" class="btn-tactical btn-primary" data-i18n="btn_projects">EXPLORER MES PROJETS</a>
+            <a href="mailto:FlavioSciacca28@gmail.com" class="btn-tactical btn-outline" data-i18n="btn_contact">ME CONTACTER</a>
+          </div>
+
+          <div class="hero-footer">
+            <div class="contact-item">
+              <a href="https://www.linkedin.com/in/flavio-sciacca-4b234b263/" target="_blank" style="color: inherit; text-decoration: none;">
+                <span>&#128100;</span> LinkedIn
+              </a>
+            </div>
+            <div class="contact-item">
+              <span>&#9993;</span> FlavioSciacca28@gmail.com
+            </div>
+            <div class="contact-item">
+              <span>&#128205;</span> Marseille, France
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: VISUAL -->
+        <div class="hero-visual">
+          <div class="img-container hud-panel" style="position: relative; overflow: hidden;">
+            <!-- NETWORK HERO IMAGE -->
+            <img id="hero-img-static" src="assets/img/ChatGPT Image 11 févr. 2026, 14_57_14.png" alt="Infrastructure Réseau" style="display: block; width: 100%; height: 100%; object-fit: cover; filter: sepia(20%) hue-rotate(180deg) contrast(1.1) brightness(0.8);">
+            
+            <div class="matrix-bg" id="default-matrix" style="display: none;">
+                <div class="server-status-display">
+                    <div class="status-line">SRV-AD-01 [ <span class="text-success">ONLINE</span> ]</div>
+                    <div class="status-line dim">IP: 10.0.0.8</div>
+                    <div class="status-line dim">UPTIME: 99.9%</div>
+                    <br>
+                    <div class="status-line">SRV-WEB-02 [ <span class="text-success">ONLINE</span> ]</div>
+                    <div class="status-line dim">CPU: <span class="load-bar">|||......</span> 32%</div>
+                    <div class="status-line dim">RAM: <span class="load-bar">||||.....</span> 45%</div>
+                    <br>
+                    <div class="status-line">> FIREWALL: <span class="text-alert">ACTIVE</span></div>
+                    <div class="status-line">> VLAN_ID: 10, 20, 50</div>
+                </div>
+            </div> 
+            
+            <div class="info-overlay blur-panel">
+              <div class="overlay-title"><span class="highlight">&#128187;</span> Infrastructure SISR</div>
+              <ul class="stack-list">
+                <li>&#8227; pfSense Firewall</li>
+                <li>&#8227; Switch Cisco Managé</li>
+                <li>&#8227; Serveur AD</li>
+                <li>&#8227; Virtualisation Proxmox</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="status-footer">
+    <div data-i18n="footer_sys">SYSTEM: SECURE</div>
+    <div>LAT: 48.8566 // LON: 2.3522</div>
+    <div>V.2.0.26</div>
+  </footer>
+  <!-- LANG SELECTOR BOTTOM LEFT -->
+  <div class="hud-bottom-left lang-selector">
+    <button class="lang-btn">[ FR ]</button>
+    <div class="lang-dropdown">
+      <div data-lang="fr">FRANÇAIS</div>
+      <div data-lang="en">ENGLISH</div>
+      <div data-lang="pt">PORTUGUÊS</div>
+      <div data-lang="de">DEUTSCH</div>
+      <div data-lang="it">ITALIANO</div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+

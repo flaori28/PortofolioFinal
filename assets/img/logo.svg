@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&amp;display=swap');
+      .bg { fill: #050505; }
+      .text-main {
+        font-family: 'Orbitron', monospace;
+        font-weight: 700;
+        font-size: 32px;
+        fill: #33ff00;
+        text-anchor: middle;
+        letter-spacing: 4px;
+        filter: drop-shadow(0 0 4px rgba(51, 255, 0, 0.6));
+      }
+      .text-sub {
+        font-family: 'Orbitron', monospace;
+        font-weight: 500;
+        font-size: 14px;
+        fill: #00f0ff;
+        text-anchor: middle;
+        letter-spacing: 8px;
+        opacity: 0.8;
+      }
+      .frame {
+        fill: none;
+        stroke: #33ff00;
+        stroke-width: 2;
+        vector-effect: non-scaling-stroke;
+      }
+      .accent {
+        fill: #00f0ff;
+      }
+    </style>
+  </defs>
+
+  <!-- Optional Background for viewing standalone -->
+  <!-- <rect width="100%" height="100%" class="bg" /> -->
+
+  <!-- Tech Frame -->
+  <path class="frame" d="M 20,30 L 20,20 L 50,20" /> <!-- Top Left -->
+  <path class="frame" d="M 380,30 L 380,20 L 350,20" /> <!-- Top Right -->
+  <path class="frame" d="M 20,70 L 20,80 L 50,80" /> <!-- Bottom Left -->
+  <path class="frame" d="M 380,70 L 380,80 L 350,80" /> <!-- Bottom Right -->
+
+  <!-- Accents -->
+  <rect class="accent" x="15" y="35" width="4" height="30" />
+  <rect class="accent" x="381" y="35" width="4" height="30" />
+
+  <!-- Text Content -->
+  <text x="200" y="55" class="text-main">SCIACCA FLAVIO</text>
+  <text x="200" y="78" class="text-sub">SYSTEM ADMIN</text>
+  
+  <!-- Center Line Decoration -->
+  <rect x="180" y="20" width="40" height="2" fill="#33ff00" opacity="0.5" />
+  <rect x="180" y="80" width="40" height="2" fill="#33ff00" opacity="0.5" />
+
+</svg>

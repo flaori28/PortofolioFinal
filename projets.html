@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPERATIONS | PROJETS</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-symbol.svg">
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <div id="background-canvas-container"></div>
+  <div class="scanlines"></div>
+  <div class="noise-overlay"></div>
+  
+  <header class="main-header">
+    <div class="logo">
+      <span class="highlight">Sciacca</span> Flavio
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_terminal">ACCUEIL</a></li>
+      <li class="dropdown">
+        <a href="#" data-i18n="nav_profile">À PROPOS</a>
+        <div class="dropdown-content">
+            <a href="apropos.html">À PROPOS DE MOI</a>
+            <a href="entreprise.html">MON ENTREPRISE</a>
+        </div>
+      </li>
+      <li><a href="tcs.html" data-i18n="nav_mission">TCS</a></li>
+      <li><a href="certifications.html" data-i18n="nav_clearance">BTS SIO</a></li>
+      <li class="dropdown">
+        <a href="projets.html" class="active" data-i18n="nav_ops">PROJETS</a>
+        <div class="dropdown-content">
+            <a href="procedures.html">MES PROCÉDURES</a>
+        </div>
+      </li>
+      <li><a href="veille.html" data-i18n="nav_intel">VEILLES</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">DOSSIERS DE MISSION</h1>
+    
+    <div class="grid-3">
+      
+      <!-- Projet 1 -->
+      <div class="tactical-card">
+        <div class="card-header">
+          <span>OP: OMEGA</span>
+          <span>CLASS: TOP SECRET</span>
+        </div>
+        <h3 class="card-title">GESTION LOGISTIQUE</h3>
+        <p class="text-dim" style="margin-bottom: 20px;">Application web pour l'optimisation des flux de transport.</p>
+        <div style="margin-bottom: 20px;">
+          <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f; margin-right: 5px;">PHP</span>
+          <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f;">SQL</span>
+        </div>
+        <a href="#" class="btn-tactical" style="font-size: 0.8rem; padding: 10px;">DEPLOY MISSION</a>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="tactical-card">
+        <div class="card-header">
+          <span>OP: SENTINEL</span>
+          <span>CLASS: CLASSIFIED</span>
+        </div>
+        <h3 class="card-title">MONITORING RÉSEAU</h3>
+        <p class="text-dim" style="margin-bottom: 20px;">Outil desktop d'analyse de paquets et surveillance.</p>
+        <div style="margin-bottom: 20px;">
+          <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f; margin-right: 5px;">C#</span>
+          <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f;">WPF</span>
+        </div>
+        <a href="#" class="btn-tactical" style="font-size: 0.8rem; padding: 10px;">DEPLOY MISSION</a>
+      </div>
+
+      <!-- Projet 3 -->
+      <div class="tactical-card">
+        <div class="card-header">
+          <span>OP: VANGUARD</span>
+          <span>CLASS: RESTRICTED</span>
+        </div>
+        <h3 class="card-title">RÉSERVATION HÔTEL</h3>
+        <p class="text-dim" style="margin-bottom: 20px;">Système centralisé pour chaîne hôtelière.</p>
+        <div style="margin-bottom: 20px;">
+          <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f; margin-right: 5px;">JAVA</span>
+          <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f;">SPRING</span>
+        </div>
+        <a href="#" class="btn-tactical" style="font-size: 0.8rem; padding: 10px;">DEPLOY MISSION</a>
+      </div>
+
+      <!-- Projet Snake -->
+      <div class="tactical-card">
+        <div class="card-header">
+          <span>OP: SERPENT</span>
+          <span>CLASS: TRAINING</span>
+        </div>
+        <h3 class="card-title">SNAKE GAME</h3>
+        <p class="text-dim" style="margin-bottom: 20px;">Simulation tactique de réflexes en JavaScript.</p>
+        <div style="margin-bottom: 20px;">
+          <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f; margin-right: 5px;">JS</span>
+          <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f;">HTML5</span>
+        </div>
+        <a href="snake.html" class="btn-tactical" style="font-size: 0.8rem; padding: 10px;">INITIATE GAME</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="status-footer">
+    <div>MISSIONS COMPLÉTÉES: 3</div>
+    <div>SUCCÈS OPÉRATIONNEL: 100%</div>
+  </footer>
+  <!-- LANG SELECTOR BOTTOM LEFT -->
+  <div class="hud-bottom-left lang-selector">
+    <button class="lang-btn">[ FR ]</button>
+    <div class="lang-dropdown">
+      <div data-lang="fr">FRANÇAIS</div>
+      <div data-lang="en">ENGLISH</div>
+      <div data-lang="pt">PORTUGUÊS</div>
+      <div data-lang="de">DEUTSCH</div>
+      <div data-lang="it">ITALIANO</div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+

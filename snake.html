@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPERATIONS | SNAKE</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-symbol.svg">
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/snake.js"></script>
+  <style>
+    /* Styling spécifique pour le jeu Snake */
+    #game-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    canvas {
+        background-color: #000;
+        border: 2px solid var(--hud-primary);
+        box-shadow: 0 0 20px rgba(51, 255, 0, 0.2);
+    }
+
+    #score-board {
+        font-family: var(--font-header);
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: var(--hud-secondary);
+        text-shadow: 0 0 10px var(--hud-secondary);
+    }
+    
+    #start-btn {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background: transparent;
+        border: 1px solid var(--hud-primary);
+        color: var(--hud-primary);
+        font-family: var(--font-tech);
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    #start-btn:hover {
+        background: rgba(51, 255, 0, 0.2);
+        box-shadow: 0 0 15px var(--hud-primary);
+    }
+  </style>
+</head>
+<body>
+  <div id="background-canvas-container"></div>
+  <div class="scanlines"></div>
+  <div class="noise-overlay"></div>
+  
+  <header class="main-header">
+    <div class="logo">
+      <span class="highlight">Sciacca</span> Flavio
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_terminal">ACCUEIL</a></li>
+      <li class="dropdown">
+        <a href="#" data-i18n="nav_profile">À PROPOS</a>
+        <div class="dropdown-content">
+            <a href="apropos.html">À PROPOS DE MOI</a>
+            <a href="entreprise.html">MON ENTREPRISE</a>
+        </div>
+      </li>
+      <li><a href="tcs.html" data-i18n="nav_mission">TCS</a></li>
+      <li><a href="certifications.html" data-i18n="nav_clearance">BTS SIO</a></li>
+      <li class="dropdown">
+        <a href="projets.html" data-i18n="nav_ops">PROJETS</a>
+        <div class="dropdown-content">
+            <a href="procedures.html">MES PROCÉDURES</a>
+        </div>
+      </li>
+      <li><a href="veille.html" data-i18n="nav_intel">VEILLES</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">OPERATION: SNAKE</h1>
+    
+    <div id="game-container">
+        <div id="score-board">SCORE: <span id="score">0</span></div>
+        <canvas id="snakeCanvas" width="400" height="400"></canvas>
+        <button id="start-btn">INITIATE SEQUENCE</button>
+    </div>
+  </main>
+
+  <script src="assets/js/snake.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

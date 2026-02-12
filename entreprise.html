@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPERATOR | ENTREPRISE</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-symbol.svg">
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <div id="background-canvas-container"></div>
+  <div class="scanlines"></div>
+  <div class="noise-overlay"></div>
+  
+  <header class="main-header">
+    <div class="logo">
+      <span class="highlight">Sciacca</span> Flavio
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_terminal">ACCUEIL</a></li>
+      <li class="dropdown">
+        <a href="#" class="active" data-i18n="nav_profile">À PROPOS</a>
+        <div class="dropdown-content">
+            <a href="apropos.html">À PROPOS DE MOI</a>
+            <a href="entreprise.html" class="active">MON ENTREPRISE</a>
+        </div>
+      </li>
+      <li><a href="tcs.html" data-i18n="nav_mission">TCS</a></li>
+      <li><a href="certifications.html" data-i18n="nav_clearance">BTS SIO</a></li>
+      <li class="dropdown">
+        <a href="projets.html" data-i18n="nav_ops">PROJETS</a>
+        <div class="dropdown-content">
+            <a href="procedures.html">MES PROCÉDURES</a>
+        </div>
+      </li>
+      <li><a href="veille.html" data-i18n="nav_intel">VEILLES</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">EXPÉRIENCE PROFESSIONNELLE</h1>
+    
+    <div class="hud-panel" style="padding: 30px;">
+        <h2 style="text-align: center; color: var(--hud-primary); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px;">MON ALTERNANCE</h2>
+        <p style="text-align: center; color: #888; margin-bottom: 30px; font-size: 0.9rem;">DÉCOUVREZ MON EXPÉRIENCE PROFESSIONNELLE EN ENTREPRISE</p>
+
+        <div style="display: flex; flex-direction: column; gap: 30px; max-width: 800px; margin: 0 auto;">
+            
+            <!-- CARTE ALTERNANCE (CLICKABLE) -->
+            <a href="sncf.html" class="edu-card" style="background: rgba(0,0,0,0.4); border: 1px solid var(--hud-dim); padding: 25px; display: flex; flex-direction: column; position: relative; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;">
+               <div style="height: 100px; background: linear-gradient(135deg, #ed213a 0%, #93291e 100%); margin: -25px -25px 20px -25px; display: flex; justify-content: center; align-items: center; position: relative;">
+                   <div style="background: white; width: 60px; height: 60px; padding: 10px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center;">
+                        <!-- Logo SNCF -->
+                        <img src="assets/img/ChatGPT Image 11 févr. 2026, 11_41_33.png" alt="SNCF" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                   </div>
+               </div>
+               
+               <h3 style="margin: 0; color: #fff; font-size: 1.3rem; text-align: center;">Alternance chez SNCF</h3>
+               
+               <div style="margin-top: 15px; font-size: 0.9rem; color: #aaa;">
+                   <p style="margin-bottom: 5px;">📅 <span style="color: #fff;">Période:</span> En cours</p>
+                   <p style="margin-bottom: 10px;">📍 <span style="color: #fff;">Lieu:</span> Marseille, France</p>
+               </div>
+               
+               <div style="margin-bottom: 15px;">
+                   <span class="badge" style="background: rgba(237, 33, 58, 0.2); color: #ed213a; border: 1px solid #ed213a; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem;">Alternance</span>
+               </div>
+               
+               <p style="color: #ddd; font-size: 0.95rem; line-height: 1.5;">
+                 Alternance au sein de la SNCF. Mise en pratique des compétences en administration système, gestion des réseaux et support technique sur des environnements professionnels réels.
+               </p>
+            </a>
+
+        </div>
+    </div>
+  </main>
+
+  <footer class="status-footer">
+    <div data-i18n="footer_sys">SYSTEM: SECURE</div>
+    <div>LAT: 48.8566 // LON: 2.3522</div>
+    <div>V.2.0.26</div>
+  </footer>
+  <!-- LANG SELECTOR BOTTOM LEFT -->
+  <div class="hud-bottom-left lang-selector">
+    <button class="lang-btn">[ FR ]</button>
+    <div class="lang-dropdown">
+      <div data-lang="fr">FRANÇAIS</div>
+      <div data-lang="en">ENGLISH</div>
+      <div data-lang="pt">PORTUGUÊS</div>
+      <div data-lang="de">DEUTSCH</div>
+      <div data-lang="it">ITALIANO</div>
+    </div>
+  </div>
+</body>
+</html>
