@@ -184,7 +184,7 @@ a {
   top: 100%;
   left: 0;
   background-color: var(--hud-bg);
-  min-width: 250px; /* Increased from 200px and added whitespace nowrap */
+  min-width: max-content; /* Adapts to largest content */
   white-space: nowrap;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   border: 1px solid var(--hud-primary);
