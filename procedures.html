@@ -33,6 +33,7 @@
         </div>
       </li>
       <li><a href="tcs.html" data-i18n="nav_mission">TCS</a></li>
+      <li><a href="competences.html" data-i18n="nav_arsenal">COMPÉTENCES</a></li>
       <li><a href="certifications.html" data-i18n="nav_clearance">BTS SIO</a></li>
       <li class="dropdown">
         <a href="projets.html" class="active" data-i18n="nav_ops">PROJETS</a>
@@ -51,51 +52,6 @@
     <h2 class="section-title">BIBLIOTHÈQUE DE PROTOCOLES</h2>
     
     <div class="grid-3">
-        <!-- Card 1 -->
-        <div class="tactical-card">
-            <div class="card-header">
-                <span>ID: PROC-AD-01</span>
-                <span>TYPE: NET</span>
-            </div>
-            <h3 class="card-title">CONFIG VM AD1 & AD2</h3>
-            <p class="text-dim" style="margin-bottom: 20px;">Configuration et mise en place des machines virtuelles Active Directory (AD1EX & AD2).</p>
-            <div style="margin-bottom: 20px;">
-                <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f; margin-right: 5px;">AD DS</span>
-                <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f;">WINDOWS SVR</span>
-            </div>
-            <a href="assets/docs/procedure_ad_config.docx" download="procedure_ad_config.docx" class="btn-tactical" style="font-size: 0.8rem; padding: 10px;">TÉLÉCHARGER (DOCX)</a>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="tactical-card">
-            <div class="card-header">
-                <span>ID: PROC-02</span>
-                <span>TYPE: SEC</span>
-            </div>
-            <h3 class="card-title">CONFIG FIREWALL</h3>
-            <p class="text-dim" style="margin-bottom: 20px;">Règles de filtrage et configuration NAT sur pfSense.</p>
-            <div style="margin-bottom: 20px;">
-                <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f; margin-right: 5px;">PFSENSE</span>
-                <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f;">WAN/LAN</span>
-            </div>
-            <a href="#" class="btn-tactical" style="font-size: 0.8rem; padding: 10px;">CONSULTER</a>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="tactical-card">
-            <div class="card-header">
-                <span>ID: PROC-03</span>
-                <span>TYPE: VIRT</span>
-            </div>
-            <h3 class="card-title">SAUVEGARDE VM</h3>
-            <p class="text-dim" style="margin-bottom: 20px;">Mise en place de snapshots et backups automatiques avec Veeam.</p>
-            <div style="margin-bottom: 20px;">
-                <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f; margin-right: 5px;">VEEAM</span>
-                <span style="border:1px solid #336; padding: 2px 5px; font-size: 0.8rem; color: #88f;">ESXI</span>
-            </div>
-            <a href="#" class="btn-tactical" style="font-size: 0.8rem; padding: 10px;">CONSULTER</a>
-        </div>
-        
         <!-- Add Button Card -->
         <div class="tactical-card" style="border: 2px dashed var(--hud-dim); display: flex; align-items: center; justify-content: center; opacity: 0.7; cursor: pointer;">
             <div style="text-align: center;">
@@ -109,8 +65,9 @@
   </main>
 
   <footer class="status-footer">
-    <div>STATUS: EN COURS</div>
-    <div>SUCCÈS OPÉRATIONNEL: N/A</div>
+    <div data-i18n="footer_sys">SYSTEM: SECURE</div>
+    <div>LAT: 48.8566 // LON: 2.3522</div>
+    <div>V.2.0.26</div>
   </footer>
   <!-- LANG SELECTOR BOTTOM LEFT -->
   <div class="hud-bottom-left lang-selector">
