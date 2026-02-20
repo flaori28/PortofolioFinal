@@ -53,52 +53,59 @@
     </ul>
   </header>
 
-  <main class="container" style="padding-top: 20px; padding-bottom: 20px;">
+<main class="container" style="padding-top: 40px; padding-bottom: 40px; display: flex; justify-content: center;">
     
     <!-- MAIN CONTAINER BOX -->
-    <div style="background: rgba(10, 15, 20, 0.6); border: 1px solid var(--hud-dim); border-radius: 15px; padding: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+    <div style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%; max-width: 1200px; color: #333;">
         
-        <h1 class="section-title" style="margin-bottom: 20px; float: left; width: 100%;">VEILLES JURIDIQUES</h1>
-        <p class="text-dim" style="text-align: left; margin-bottom: 60px; clear: both;">Suivi des actualités juridiques et réglementaires.</p>
+        <h1 class="section-title" style="margin-bottom: 20px; text-align: center; width: 100%; color: #6a0dad; text-shadow: none; border-bottom: none; font-size: 3rem;">VEILLES JURIDIQUES</h1>
+        <p class="text-dim" style="text-align: center; margin-bottom: 60px; color: #555; font-size: 1.2rem;">Suivi des actualités juridiques et réglementaires</p>
         
         <div style="display: flex; flex-direction: column; gap: 40px; align-items: center;">
             
             <!-- CARD 1 -->
-            <article class="veille-card" style="width: 100%;">
-            <div class="veille-header">
-                <div class="veille-date">
-                    SEPTEMBRE<br>2025
+            <article class="veille-card" style="width: 100%; background: #ffe6f2; border: 2px solid #ff69b4; border-radius: 15px; box-shadow: none;">
+                <div class="veille-header">
+                    <div class="veille-date" style="color: #ff69b4; border-right: 2px solid #ff69b4;">
+                        SEPTEMBRE<br>2025
+                    </div>
+                    <div>
+                        <h2 class="veille-title" style="color: #ff69b4; text-shadow: none;">La Directive européenne NIS 2 (Network and Information Security) et sa transposition en France.</h2>
+                    </div>
                 </div>
-                <div>
-                    <h2 class="veille-title">La Directive européenne NIS 2 (Network and Information Security) et sa transposition en France.</h2>
+                
+                 <p class="veille-content" style="color: #666;">
+                    La directive NIS 2 (Network and Information Security) est une législation européenne majeure visant à élever le niveau d'« hygiène informatique fondamentale » et à renforcer la résilience des entreprises face aux cybermenaces. Elle marque un véritable changement de paradigme en passant d'initiatives nationales isolées à une réponse coordonnée à l'échelle de l'Union européenne.
+                </p>
+                
+                <a href="https://www.ssi.gouv.fr/" target="_blank" class="veille-link" style="color: #ff69b4; text-shadow: none;">→ Lire l'article complet</a>
+                
+                <div class="veille-tags">
+                    <span class="veille-tag" style="border-color: #00ced1; color: #00ced1; background: rgba(0, 206, 209, 0.1);">Monitoring</span>
+                    <span class="veille-tag" style="border-color: #9370db; color: #9370db; background: rgba(147, 112, 219, 0.1);">Sécurité</span>
                 </div>
-            </div>
-            
-            <a href="https://www.ssi.gouv.fr/" target="_blank" class="veille-link">→ Lire l'article complet</a>
-            
-            <div class="veille-tags">
-                <span class="veille-tag">Monitoring</span>
-                <span class="veille-tag">Sécurité</span>
-                <span class="veille-tag">NIS 2</span>
-            </div>
-        </article>
+            </article>
 
-        <!-- CARD 2 Example -->
-        <article class="veille-card" style="width: 100%;">
-            <div class="veille-header">
-                <div class="veille-date">
-                    JUIN<br>2025
+             <!-- CARD 2 Example -->
+            <article class="veille-card" style="width: 100%; background: #ffe6f2; border: 2px solid #ff69b4; border-radius: 15px; box-shadow: none;">
+                <div class="veille-header">
+                    <div class="veille-date" style="color: #ff69b4; border-right: 2px solid #ff69b4;">
+                        JUIN<br>2025
+                    </div>
+                    <div>
+                        <h2 class="veille-title" style="color: #ff69b4; text-shadow: none;">RGPD : Nouvelles sanctions et impact sur les DPO.</h2>
+                    </div>
                 </div>
-                <div>
-                    <h2 class="veille-title">RGPD : Nouvelles sanctions et impact sur les DPO.</h2>
-                </div>
-            </div>
-            
-            <a href="#" class="veille-link">→ Lire l'article complet</a>
-            
-            <div class="veille-tags">
-                <span class="veille-tag">RGPD</span>
-                <span class="veille-tag">Législation</span>
+                
+                 <p class="veille-content" style="color: #666;">
+                    Analyse des dernières décisions de la CNIL concernant la conformité des données personnelles. Les entreprises doivent désormais justifier d'une cartographie précise des flux de données transfrontaliers sous peine de sanctions lourdes.
+                </p>
+                
+                <a href="#" class="veille-link" style="color: #ff69b4; text-shadow: none;">→ Lire l'article complet</a>
+                
+                <div class="veille-tags">
+                    <span class="veille-tag" style="border-color: #ff69b4; color: #ff69b4; background: rgba(255, 105, 180, 0.1);">RGPD</span>
+                    <span class="veille-tag" style="border-color: #9370db; color: #9370db; background: rgba(147, 112, 219, 0.1);">Législation</span>
             </div>
         </article>
 
