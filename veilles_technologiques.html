@@ -56,60 +56,60 @@
 <main class="container" style="padding-top: 40px; padding-bottom: 40px; display: flex; justify-content: center;">
     
     <!-- MAIN CONTAINER BOX -->
-    <div style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%; max-width: 1200px; color: #333;">
+    <div style="background: rgba(10, 15, 20, 0.85); border: 1px solid var(--hud-dim); border-radius: 20px; padding: 60px; box-shadow: 0 0 30px rgba(0,0,0,0.8); width: 100%; max-width: 1200px; position: relative;">
+        <!-- Decorative corners for cyber feel -->
+        <div style="position: absolute; top: 0; left: 0; width: 20px; height: 20px; border-top: 2px solid var(--hud-primary); border-left: 2px solid var(--hud-primary); border-radius: 10px 0 0 0;"></div>
+        <div style="position: absolute; bottom: 0; right: 0; width: 20px; height: 20px; border-bottom: 2px solid var(--hud-primary); border-right: 2px solid var(--hud-primary); border-radius: 0 0 10px 0;"></div>
 
-        <h1 class="section-title" style="margin-bottom: 20px; text-align: center; width: 100%; color: #6a0dad; text-shadow: none; border-bottom: none; font-size: 3rem;">VEILLES TECHNOLOGIQUES</h1>
-        <p class="text-dim" style="text-align: center; margin-bottom: 60px; color: #555; font-size: 1.2rem;">Suivi des innovations, frameworks et nouvelles technologies.</p>
+        <h1 class="section-title" style="margin-bottom: 20px; text-align: center; width: 100%; text-shadow: 0 0 10px var(--hud-primary); border-bottom: none; font-size: 3rem;">VEILLES TECHNOLOGIQUES</h1>
+        <p class="text-dim" style="text-align: center; margin-bottom: 60px; font-size: 1.2rem;">Suivi des innovations, frameworks et nouvelles technologies.</p>
         
         <div style="display: flex; flex-direction: column; gap: 40px; align-items: center;">
             
             <!-- CARD 1 -->
-            <article class="veille-card" style="width: 100%; background: #ffe6f2; border: 2px solid #ff69b4; border-radius: 15px; box-shadow: none;">
+            <article class="veille-card" style="width: 100%; background: rgba(5, 10, 15, 0.6); border: 1px solid var(--hud-secondary); border-radius: 15px; box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);">
                 <div class="veille-header">
-                    <div class="veille-date" style="color: #ff69b4; border-right: 2px solid #ff69b4;">
+                    <div class="veille-date" style="color: var(--hud-secondary); border-right: 2px solid var(--hud-secondary);">
                         JANVIER<br>2026
                     </div>
                     <div>
-                        <h2 class="veille-title" style="color: #ff69b4; text-shadow: none;">L'essor du Zero Trust dans les architectures Cloud hybride.</h2>
+                        <h2 class="veille-title" style="color: #fff; text-shadow: none;">L'essor du Zero Trust dans les architectures Cloud hybride.</h2>
                     </div>
                 </div>
                 
-                 <p class="veille-content" style="color: #666;">
+                 <p class="veille-content" style="color: #ccc;">
                     Le modèle Zero Trust ("Ne jamais faire confiance, toujours vérifier") devient la norme pour sécuriser les environnements distribués. Avec la montée du télétravail et des services hébergés, les périmètres traditionnels disparaissent au profit d'une sécurité basée sur l'identité et le contexte.
                 </p>
                 
-                <a href="#" class="veille-link" style="color: #ff69b4; text-shadow: none;">→ Lire l'article complet</a>
+                <a href="#" class="veille-link" style="color: var(--hud-secondary); text-shadow: 0 0 5px var(--hud-secondary);">→ Lire l'article complet</a>
                 
                 <div class="veille-tags">
-                    <span class="veille-tag" style="border-color: #00ced1; color: #00ced1; background: rgba(0, 206, 209, 0.1);">Cyber</span>
-                    <span class="veille-tag" style="border-color: #9370db; color: #9370db; background: rgba(147, 112, 219, 0.1);">Cloud</span>
-                    <span class="veille-tag" style="border-color: #ff69b4; color: #ff69b4; background: rgba(255, 105, 180, 0.1);">Infrastructure</span>
+                    <span class="veille-tag" style="border-color: var(--hud-secondary); color: var(--hud-secondary); background: rgba(0, 240, 255, 0.1);">Cyber</span>
+                    <span class="veille-tag" style="border-color: var(--hud-primary); color: var(--hud-primary); background: rgba(51, 255, 0, 0.1);">Cloud</span>
+                    <span class="veille-tag" style="border-color: var(--hud-alert); color: var(--hud-alert); background: rgba(255, 51, 51, 0.1);">Infrastructure</span>
                 </div>
             </article>
 
             <!-- CARD 2 -->
-            <article class="veille-card" style="width: 100%; background: #ffe6f2; border: 2px solid #ff69b4; border-radius: 15px; box-shadow: none;">
+            <article class="veille-card" style="width: 100%; background: rgba(5, 10, 15, 0.6); border: 1px solid var(--hud-secondary); border-radius: 15px; box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);">
                 <div class="veille-header">
-                    <div class="veille-date" style="color: #ff69b4; border-right: 2px solid #ff69b4;">
+                    <div class="veille-date" style="color: var(--hud-secondary); border-right: 2px solid var(--hud-secondary);">
                         DÉCEMBRE<br>2025
                     </div>
                     <div>
-                        <h2 class="veille-title" style="color: #ff69b4; text-shadow: none;">Wi-Fi 7 : Révolutionner la connectivité d'entreprise.</h2>
+                        <h2 class="veille-title" style="color: #fff; text-shadow: none;">Wi-Fi 7 : Révolutionner la connectivité d'entreprise.</h2>
                     </div>
                 </div>
                 
-                 <p class="veille-content" style="color: #666;">
+                 <p class="veille-content" style="color: #ccc;">
                     La norme 802.11be promet des débits jusqu'à 46 Gbps et une latence ultra-faible. Cette technologie va transformer les usages en mobilité et permettre le déploiement massif d'objets connectés industriels (IIoT) sans câblage complexe.
                 </p>
                 
-                <a href="#" class="veille-link" style="color: #ff69b4; text-shadow: none;">→ Lire l'article complet</a>
+                <a href="#" class="veille-link" style="color: var(--hud-secondary); text-shadow: 0 0 5px var(--hud-secondary);">→ Lire l'article complet</a>
                 
                 <div class="veille-tags">
-                    <span class="veille-tag" style="border-color: #00ced1; color: #00ced1; background: rgba(0, 206, 209, 0.1);">Réseau</span>
-                    <span class="veille-tag" style="border-color: #9370db; color: #9370db; background: rgba(147, 112, 219, 0.1);">Hardware</span>
-            </div>
-        </article>
-
+                    <span class="veille-tag" style="border-color: var(--hud-secondary); color: var(--hud-secondary); background: rgba(0, 240, 255, 0.1);">Réseau</span>
+                    <span class="veille-tag" style="border-color: var(--hud-primary); color: var(--hud-primary); background: rgba(51, 255, 0, 0.1);">Hardware</span>
     </div>
     </div>
   </main>
