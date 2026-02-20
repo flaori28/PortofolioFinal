@@ -182,9 +182,11 @@ a {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0; /* Align to the right edge of the parent dropdown */
+  left: auto; /* Reset left alignment */
   background-color: var(--hud-bg);
-  min-width: max-content; /* Adapts to largest content */
+  width: max-content; /* Force width to match content */
+  min-width: 280px; /* Fallback minimum width */
   white-space: nowrap;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   border: 1px solid var(--hud-primary);
