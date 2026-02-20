@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OPERATIONS | MES PROCÉDURES</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/procedures-new.css"> <!-- LOAD NEW CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/img/logo-symbol.svg">
   <script defer src="assets/js/app.js"></script>
@@ -51,7 +52,95 @@
     <!-- PROCEDURE LIBRARY GRID -->
     <h2 class="section-title">BIBLIOTHÈQUE DE PROTOCOLES</h2>
     
-    <div class="grid-3">
+    <div class="procedure-grid">
+        
+        <!-- PROCEDURE 1: ACTIVE DIRECTORY -->
+        <article class="proc-card">
+            <div class="proc-img-container">
+                <!-- Using placeholder image or CSS art for now -->
+                <div class="proc-img-placeholder">
+                  <span class="proc-icon">AD</span>
+                </div>
+            </div>
+            <div class="proc-content">
+                <h3 class="proc-title">Procédure Active Directory</h3>
+                <p class="proc-desc">
+                    Déploiement et configuration initiale d'un contrôleur de domaine sous Windows Server. 
+                    Installation des rôles AD DS, DNS, et structuration de l'annuaire pour centraliser la gestion.
+                </p>
+                <div class="proc-tags">
+                    <span class="proc-tag">DNS</span>
+                    <span class="proc-tag">DHCP</span>
+                    <span class="proc-tag">AD DS</span>
+                    <span class="proc-tag">Windows Server</span>
+                </div>
+                <div class="proc-actions">
+                    <a href="assets/docs/procedure_ad_config.docx" class="btn-proc btn-proc-view" target="_blank">👁️ Voir</a>
+                    <a href="assets/docs/procedure_ad_config.docx" download class="btn-proc btn-proc-download">📥 Télécharger</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROCEDURE 2: PFSENSE -->
+        <article class="proc-card">
+            <div class="proc-img-container">
+                <div class="proc-img-placeholder">
+                  <span class="proc-icon">FW</span>
+                </div>
+            </div>
+            <div class="proc-content">
+                <h3 class="proc-title">Procédure PfSense</h3>
+                <p class="proc-desc">
+                    Mise en place d'un pare-feu PfSense, configuration des interfaces WAN/LAN, 
+                    règles de filtrage NAT et ouverture de ports pour les services web.
+                </p>
+                <div class="proc-tags">
+                    <span class="proc-tag">PfSense</span>
+                    <span class="proc-tag">Firewall</span>
+                    <span class="proc-tag">NAT</span>
+                    <span class="proc-tag">Sécurité</span>
+                </div>
+                <div class="proc-actions">
+                    <a href="assets/docs/procedure_pfsense.pdf" class="btn-proc btn-proc-view" target="_blank">👁️ Voir</a>
+                    <a href="assets/docs/procedure_pfsense.pdf" download class="btn-proc btn-proc-download">📥 Télécharger</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROCEDURE 3: EXCHANGE -->
+        <article class="proc-card">
+            <div class="proc-img-container">
+                <div class="proc-img-placeholder">
+                  <span class="proc-icon">EX</span>
+                </div>
+            </div>
+            <div class="proc-content">
+                <h3 class="proc-title">Procédure Exchange</h3>
+                <p class="proc-desc">
+                    Installation complète d'un serveur de messagerie Microsoft Exchange. 
+                    Configuration des connecteurs SMTP, création de boîtes aux lettres et accès OWA.
+                </p>
+                <div class="proc-tags">
+                    <span class="proc-tag">Exchange</span>
+                    <span class="proc-tag">Mail</span>
+                    <span class="proc-tag">SMTP</span>
+                    <span class="proc-tag">PowerShell</span>
+                </div>
+                <div class="proc-actions">
+                    <a href="assets/docs/procedure_exchange.pdf" class="btn-proc btn-proc-view" target="_blank">👁️ Voir</a>
+                    <a href="assets/docs/procedure_exchange.pdf" download class="btn-proc btn-proc-download">📥 Télécharger</a>
+                </div>
+            </div>
+        </article>
+        
+        <!-- ADD NEW CARD (Action) -->
+        <article class="proc-card" style="opacity:0.7; border-style:dashed; cursor:pointer;" onclick="alert('Fonctionnalité à venir : Ajouter une procédure')">
+            <div class="proc-content" style="justify-content:center; height:100%;">
+                <div style="font-size:4rem; color:#ff3399; margin-bottom:20px;">+</div>
+                <h3 class="proc-title">Nouvelle Procédure</h3>
+            </div>
+        </article>
+
     </div>
 
 
