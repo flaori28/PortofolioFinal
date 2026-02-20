@@ -293,21 +293,22 @@ function initRadar() {
         ctx.lineWidth = 1;
         
         hexes.forEach(h => {
-             // Logic: Random pulses
-             if(!h.active && Math.random() > 0.999 && h.delay <= 0) {
+             // Logic: Random pulses - SLOWED DOWN
+             // Probability reduced from > 0.999 to > 0.9995 for fewer pulses
+             if(!h.active && Math.random() > 0.9995 && h.delay <= 0) {
                  h.active = true;
                  h.life = 1.0;
-                 h.delay = 100; // Cooldown
+                 h.delay = 200; // Cooldown increased from 100
              }
              if(h.delay > 0) h.delay--;
 
-             // Draw Faint Grid
-             drawHex(h.x, h.y, hexRadius, 'rgba(51, 255, 0, 0.02)');
+             // Draw Faint Grid - Opacity reduced for better readability
+             drawHex(h.x, h.y, hexRadius, 'rgba(51, 255, 0, 0.01)');
 
              // Draw Active Pulse
              if(h.active) {
-                 h.life -= 0.01;
-                 const alpha = h.life * 0.3;
+                 h.life -= 0.005; // Fading speed halved (was 0.01)
+                 const alpha = h.life * 0.15; // Max opacity halved (was 0.3)
                  // BO2 Orange Pulse mixed with Cyan
                  const pulseColor = Math.random() > 0.5 ? `rgba(255, 160, 0, ${alpha})` : `rgba(0, 240, 255, ${alpha})`;
                  drawHex(h.x, h.y, hexRadius, pulseColor, true);
