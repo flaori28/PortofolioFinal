@@ -91,39 +91,200 @@
     <!-- PARCOURS DE FORMATION -->
     <h1 class="section-title">PARCOURS DE FORMATION</h1>
     
-    <div class="mission-log">
-      <!-- Entry 1 -->
-      <div class="log-entry hud-panel" style="padding: 20px;">
-        <div class="log-date">> 2023 - AUJOURD'HUI</div>
-        <h3 class="highlight">BTS SIO - OPTION SISR</h3>
-        <p class="text-dim">LIEU: IFC MARSEILLE // ALTERNANCE: SNCF</p>
-        <p style="margin-top: 10px;">
-            Services Informatiques aux Organisations, option Solutions d'Infrastructure, Systèmes et Réseaux.
-            Acquisition de compétences en administration système, gestion de réseau et cybersécurité.
-        </p>
-      </div>
+    <style>
+      /* TIMELINE CONTAINER */
+      .timeline-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin: 60px 0;
+        gap: 40px;
+      }
+      
+      /* CENTRAL LINE */
+      .timeline-line {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(to bottom, transparent, var(--hud-primary), transparent);
+        box-shadow: 0 0 15px var(--hud-primary);
+        z-index: 0;
+      }
 
-       <!-- Entry 2 -->
-       <div class="log-entry hud-panel" style="padding: 20px;">
-        <div class="log-date">> 2021 - 2023</div>
-        <h3 class="highlight">BTS DIÉTÉTIQUE</h3>
-        <p class="text-dim">LIEU: LYCÉE [MARSEILLE]</p>
-        <p style="margin-top: 10px;">
-            Formation scientifique rigoureuse. Développement de méthodes de travail, 
-            d'analyse précise et de gestion de projet.
-        </p>
-      </div>
+      /* ROW */
+      .timeline-row {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
 
-      <!-- Entry 3 -->
-       <div class="log-entry hud-panel" style="padding: 20px;">
-        <div class="log-date">> 2021</div>
-        <h3 class="highlight">BACCALAURÉAT STL</h3>
-        <p class="text-dim">LIEU: LYCÉE [MARSEILLE]</p>
-        <p style="margin-top: 10px;">
-            Sciences et Technologies de Laboratoire. 
-            Développement de l'esprit scientifique et des capacités d'analyse.
-        </p>
-      </div>
+      /* ITEMS */
+      .timeline-card {
+        width: 45%;
+        background: rgba(10, 15, 20, 0.9);
+        border: 1px solid var(--hud-dim);
+        padding: 20px;
+        border-radius: 8px;
+        position: relative;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      }
+      
+      .timeline-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--hud-secondary);
+        box-shadow: 0 5px 25px rgba(0, 240, 255, 0.2);
+      }
+
+      /* CONNECTOR DOT */
+      .timeline-dot {
+        width: 20px;
+        height: 20px;
+        background: #000;
+        border: 4px solid var(--hud-secondary);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--hud-secondary);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+      }
+
+      /* LEFT / RIGHT POSITIONING */
+      .row-left .timeline-card {
+        margin-right: auto;
+        text-align: right;
+        border-right: 3px solid var(--hud-primary);
+      }
+      .row-right .timeline-card {
+        margin-left: auto;
+        text-align: left;
+        border-left: 3px solid var(--hud-primary);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .timeline-line { left: 20px; }
+        .timeline-dot { left: 20px; }
+        .timeline-row { justify-content: flex-start; padding-left: 50px; }
+        .timeline-card { width: 100%; text-align: left; margin: 0 !important; border: 1px solid var(--hud-dim); border-left: 3px solid var(--hud-primary); }
+      }
+
+      /* CARD CONTENT */
+      .t-year {
+        display: inline-block;
+        background: var(--hud-dim);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-family: 'Share Tech Mono', monospace;
+        color: var(--hud-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+      .t-title {
+        font-family: 'Orbitron', sans-serif;
+        color: #fff;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+      }
+      .t-desc {
+        color: #aaa;
+        font-style: italic;
+        margin-bottom: 15px;
+      }
+      .t-list {
+        list-style: none;
+        padding: 0;
+        display: inline-block;
+        text-align: left; /* Always align text left for list readability */
+      }
+      .row-left .t-list {
+         text-align: right; /* Revert for left styling if needed, or keep left for list readability */
+      }
+      /* Force list text align for readability inside styling */
+      .t-list li {
+        margin-bottom: 5px;
+        color: #ddd;
+        font-size: 0.95rem;
+      }
+      .t-list li::before {
+        content: '> ';
+        color: var(--hud-primary);
+      }
+    </style>
+
+    <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <!-- ROW 1 : BAC STL (LEFT) -->
+        <div class="timeline-row row-left">
+            <div class="timeline-card">
+                <span class="t-year">2021</span>
+                <h3 class="t-title">Bac STL</h3>
+                <div class="t-desc">Sciences et Technologies de Laboratoire</div>
+                <ul class="t-list" style="text-align: right;">
+                    <li>Rigueur scientifique</li>
+                    <li>Capacités d'analyse</li>
+                </ul>
+            </div>
+            <div class="timeline-dot"></div>
+            <div style="width: 45%;"></div> <!-- Spacer -->
+        </div>
+
+        <!-- ROW 2 : BTS DIET (RIGHT) -->
+        <div class="timeline-row row-right">
+             <div style="width: 45%;"></div> <!-- Spacer -->
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <span class="t-year">2021 - 2023</span>
+                <h3 class="t-title">BTS Diététique</h3>
+                <div class="t-desc">Lycée [Marseille]</div>
+                <ul class="t-list">
+                    <li>Gestion de plans alimentaires</li>
+                    <li>Relation client & Bio-chimie</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ROW 3 : BTS SIO 1 (LEFT) -->
+        <div class="timeline-row row-left">
+            <div class="timeline-card">
+                <span class="t-year">2023 - 2024</span>
+                <h3 class="t-title">BTS SIO - Année 1</h3>
+                <div class="t-desc">Fondamentaux IT</div>
+                <ul class="t-list" style="text-align: right;">
+                    <li>Bases systèmes & réseaux</li>
+                    <li>Introduction cybersécurité</li>
+                    <li>Virtualisation (VMware)</li>
+                </ul>
+            </div>
+            <div class="timeline-dot"></div>
+            <div style="width: 45%;"></div> <!-- Spacer -->
+        </div>
+
+        <!-- ROW 4 : BTS SIO 2 (RIGHT) -->
+        <div class="timeline-row row-right">
+             <div style="width: 45%;"></div> <!-- Spacer -->
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <span class="t-year">2024 - 2025</span>
+                <h3 class="t-title">BTS SIO - Année 2</h3>
+                <div class="t-desc">Spécialisation SISR</div>
+                <ul class="t-list">
+                    <li>Administration Windows Server</li>
+                    <li>Supervision (Zabbix)</li>
+                    <li>Sécurité avancée (Firewall)</li>
+                    <li>Projets E4 / E5</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
   </main>
