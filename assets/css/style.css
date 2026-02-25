@@ -1074,3 +1074,93 @@ body.loaded {
          }  
  }  
  
+/* --- ICON MODE COMPETENCES --- */
+.competences-grid.icon-mode {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.tech-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.tech-icon-item:hover {
+    transform: translateY(-5px);
+}
+
+.tech-icon-item:hover .icon-box {
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+    border-color: rgba(0, 240, 255, 0.6);
+    background: rgba(20, 25, 35, 1);
+}
+
+.tech-icon-item:hover h3 {
+    color: #33ff00; /* Terminal Green highlight */
+    text-shadow: 0 0 8px rgba(51, 255, 0, 0.5);
+}
+
+.icon-box {
+    width: 90px;
+    height: 90px;
+    background: rgba(10, 15, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.7);
+    border-radius: 18px;
+    pointer-events: none;
+}
+
+.icon-box svg {
+    width: 44px;
+    height: 44px;
+    stroke: #a5b4fc;
+    transition: stroke 0.3s;
+}
+
+.tech-icon-item:hover .icon-box svg {
+    stroke: #00f0ff;
+    filter: drop-shadow(0 0 5px rgba(0, 240, 255, 0.5));
+}
+
+.tech-icon-item h3 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin: 0;
+    font-weight: normal;
+    transition: color 0.3s;
+}
+
+/* Specific Glow Colors based on category classes if needed, 
+   but for now uniform cyber-blue/green is good for the theme. 
+   We can add specific colors if requested. */
+
+.box-network { border-color: rgba(244, 114, 182, 0.2); }
+.box-security { border-color: rgba(192, 132, 252, 0.2); }
+.box-system { border-color: rgba(96, 165, 250, 0.2); }
+.box-virtualisation { border-color: rgba(129, 140, 248, 0.2); }
+.box-os { border-color: rgba(45, 212, 191, 0.2); }
+
+.tech-icon-item:hover .box-network { border-color: #f472b6; box-shadow: 0 0 15px rgba(244, 114, 182, 0.3); }
+.tech-icon-item:hover .box-security { border-color: #c084fc; box-shadow: 0 0 15px rgba(192, 132, 252, 0.3); }
+.tech-icon-item:hover .box-system { border-color: #60a5fa; box-shadow: 0 0 15px rgba(96, 165, 250, 0.3); }
+.tech-icon-item:hover .box-virtualisation { border-color: #818cf8; box-shadow: 0 0 15px rgba(129, 140, 248, 0.3); }
+.tech-icon-item:hover .box-os { border-color: #2dd4bf; box-shadow: 0 0 15px rgba(45, 212, 191, 0.3); }
+
