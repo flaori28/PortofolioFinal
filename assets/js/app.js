@@ -36,7 +36,7 @@ function initMobileMenu() {
 function initProfileSystem() {
     const fileInput = document.getElementById('profile-upload');
     const imgPreview = document.getElementById('profile-img');       // About Page
-    const dashboardImg = document.getElementById('dashboard-img');   // Index Page
+    const dashboardImg = document.getElementById('hero-img-static');   // Index Page
     const defaultMatrix = document.getElementById('default-matrix'); // Index Page
     const uploadBtn = document.getElementById('upload-btn');
 
