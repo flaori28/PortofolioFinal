@@ -1,5 +1,5 @@
 :root {
-  --hud-bg: #f0f0f0;
+  --hud-bg: #ffffff;
   --hud-panel: rgba(10, 15, 20, 0.85);
   --hud-primary: #33ff00; /* Classic Terminal Green */
   --hud-secondary: #00f0ff; /* Tech Blue */
