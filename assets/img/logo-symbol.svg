@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&amp;display=swap');
+      .text {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 700;
+        font-size: 50px;
+        fill: #33ff00;
+        text-anchor: middle;
+        filter: drop-shadow(0 0 5px rgba(51, 255, 0, 0.8));
+      }
+      .frame-outer {
+        fill: none;
+        stroke: #33ff00;
+        stroke-width: 4;
+      }
+      .frame-inner {
+        fill: none;
+        stroke: #00f0ff;
+        stroke-width: 2;
+        opacity: 0.7;
+      }
+    </style>
+  </defs>
+
+  <rect x="5" y="5" width="90" height="90" rx="15" class="frame-outer" />
+  <rect x="15" y="15" width="70" height="70" rx="10" class="frame-inner" />
+  
+  <text x="50" y="68" class="text">SF</text>
+</svg>

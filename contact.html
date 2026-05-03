@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TACTICAL TERMINAL | CONTACT</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-symbol.svg">
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/contact_mailto.js"></script>
+  <style>
+    /* Specific styles for contact form */
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-family: 'Share Tech Mono', monospace;
+      color: var(--primary-color, #0f0);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      background: rgba(0, 20, 0, 0.6);
+      border: 1px solid var(--primary-color, #0f0);
+      color: #fff;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 1rem;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      box-shadow: 0 0 10px var(--primary-color, #0f0);
+      background: rgba(0, 30, 0, 0.8);
+    }
+    
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .submit-btn {
+      background: transparent;
+      border: 1px solid var(--primary-color, #0f0);
+      color: var(--primary-color, #0f0);
+      padding: 10px 30px;
+      font-family: 'Orbitron', sans-serif;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .submit-btn:hover {
+      background: var(--primary-color, #0f0);
+      color: #000;
+      box-shadow: 0 0 20px var(--primary-color, #0f0);
+    }
+    
+    .tcs-header {
+      border-bottom: 1px solid var(--primary-color, #0f0);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+    }
+    
+    .tcs-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      color: #fff;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <!-- LOADING OVERLAY -->
+  <div id="boot-sequence">
+    <div class="boot-text">INITIALIZING COMM LINK...</div>
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+  </div>
+
+  <div id="background-canvas-container"></div>
+  <div class="scanlines"></div>
+  <div class="noise-overlay"></div>
+  <div class="vignette"></div>
+
+  <header class="main-header">
+    <div class="logo">
+      <span class="highlight">Sciacca</span> Flavio
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_terminal">ACCUEIL</a></li>
+      <li class="dropdown">
+        <a href="#" data-i18n="nav_profile">À PROPOS</a>
+        <div class="dropdown-content">
+            <a href="apropos.html">À PROPOS DE MOI</a>
+            <a href="entreprise.html">MON ENTREPRISE</a>
+        </div>
+      </li>
+      <li><a href="tcs.html" data-i18n="nav_mission">TCS</a></li>
+      <li><a href="certifications.html" data-i18n="nav_clearance">BTS SIO</a></li>
+      <li class="dropdown">
+        <a href="projets.html" data-i18n="nav_ops">PROJETS</a>
+        <div class="dropdown-content">
+            <a href="procedures.html">MES PROCÉDURES</a>
+            <a href="e5.html">E5</a>
+            <a href="e6.html">E6</a>
+        </div>
+      </li>
+      <li><a href="veille.html" data-i18n="nav_intel">VEILLES</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <div class="terminal-window hud-panel">
+      <div class="contact-container">
+        <header class="tcs-header">
+          <h1 class="tcs-title">TRANSMISSION DE DONNÉES <span class="highlight">// CONTACT</span></h1>
+          <p>ÉTABLISSEMENT D'UNE LIAISON SÉCURISÉE</p>
+        </header>
+
+        <form action="mailto:FlavioSciacca28@gmail.com">
+          <div class="form-group">
+            <label for="name" class="form-label">IDENTIFIANT [NOM]</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label">CANAL DE RETOUR [EMAIL]</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject" class="form-label">SUJET DE LA MISSION</label>
+            <input type="text" id="subject" name="subject" class="form-control" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="form-label">DONNÉES TRANSMISES [MESSAGE]</label>
+            <textarea id="message" name="message" class="form-control" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn" data-i18n="btn_send">ENVOYER LA TRANSMISSION</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="status-footer">
+    <div data-i18n="footer_sys">SYSTEM: SECURE</div>
+    <div>LAT: 48.8566 // LON: 2.3522</div>
+    <div>V.2.0.26</div>
+  </footer>
+  
+  <div class="hud-bottom-left lang-selector">
+    <button class="lang-btn">[ FR ]</button>
+    <div class="lang-dropdown">
+      <div data-lang="fr">FRANÇAIS</div>
+      <div data-lang="en">ENGLISH</div>
+      <div data-lang="pt">PORTUGUÊS</div>
+      <div data-lang="de">DEUTSCH</div>
+      <div data-lang="it">ITALIANO</div>
+    </div>
+  </div>
+</body>
+</html>

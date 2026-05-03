@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur PNG</title>
+    <style>
+        body { font-family: sans-serif; background: #222; color: #fff; text-align: center; padding: 50px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
+        .card { background: #333; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        h3 { margin-top: 0; color: #33ff00; }
+        canvas { display: block; margin: 0 auto 15px; border: 1px dashed #555; }
+        button {
+            background: #33ff00; color: #000; border: none; padding: 10px 20px; 
+            font-weight: bold; cursor: pointer; border-radius: 5px;
+        }
+        button:hover { background: #2ce600; }
+    </style>
+</head>
+<body>
+    <h1>Convertisseur SVG vers PNG</h1>
+    <p>Cliquez sur les boutons pour télécharger vos logos en format PNG transparent.</p>
+    
+    <div class="container">
+        <!-- Main Logo -->
+        <div class="card">
+            <h3>Logo Principal</h3>
+            <canvas id="canvas-main" width="800" height="200"></canvas>
+            <button onclick="download('canvas-main', 'logo-sciacca.png')">Télécharger PNG</button>
+        </div>
+
+        <!-- Symbol -->
+        <div class="card">
+            <h3>Symbole / Favicon</h3>
+            <canvas id="canvas-symbol" width="512" height="512"></canvas>
+            <button onclick="download('canvas-symbol', 'logo-symbol.png')">Télécharger PNG</button>
+        </div>
+    </div>
+
+    <script>
+        function loadToCanvas(svgPath, canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+            
+            img.onload = function() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            };
+            
+            img.src = svgPath;
+        }
+
+        function download(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+        }
+
+        // Charger les images au démarrage
+        window.onload = function() {
+            loadToCanvas('assets/img/logo.svg', 'canvas-main');
+            loadToCanvas('assets/img/logo-symbol.svg', 'canvas-symbol');
+        };
+    </script>
+</body>
+</html>

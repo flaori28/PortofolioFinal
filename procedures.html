@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPERATIONS | MES PROCÉDURES</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/procedures-new.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-symbol.svg">
+  <style>
+    /* Modal Styles */
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px);
+    }
+    
+    .modal-active {
+        display: flex;
+    }
+
+    .modal-content {
+        background: #0a0a12;
+        border: 2px solid var(--primary-color);
+        width: 80%;
+        max-width: 900px;
+        height: 80vh;
+        box-shadow: 0 0 30px var(--primary-color-dim);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .modal-header {
+        background: rgba(0, 255, 65, 0.1);
+        padding: 15px;
+        border-bottom: 1px solid var(--primary-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal-title {
+        color: var(--primary-color);
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .modal-close {
+        background: none;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        cursor: pointer;
+        padding: 5px 10px;
+        font-family: 'Share Tech Mono', monospace;
+        transition: 0.3s;
+    }
+
+    .modal-close:hover {
+        background: var(--primary-color);
+        color: #000;
+    }
+
+    .modal-body {
+        flex: 1;
+        padding: 20px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .preview-frame {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: #fff; /* White background for documents */
+    }
+
+    .preview-placeholder {
+        color: var(--primary-color);
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="background-canvas-container"></div>
+  <div class="scanlines"></div>
+  <div class="noise-overlay"></div>
+  
+  <header class="main-header">
+    <div class="logo">
+      <span class="highlight">Sciacca</span> Flavio
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_terminal">ACCUEIL</a></li>
+      <li class="dropdown">
+        <a href="#" data-i18n="nav_profile">À PROPOS</a>
+        <div class="dropdown-content">
+            <a href="apropos.html">À PROPOS DE MOI</a>
+            <a href="entreprise.html">MON ENTREPRISE</a>
+        </div>
+      </li>
+      <li><a href="tcs.html" data-i18n="nav_mission">TCS</a></li>
+      <li><a href="certifications.html" data-i18n="nav_clearance">BTS SIO</a></li>
+      <li class="dropdown">
+        <a href="projets.html" class="active" data-i18n="nav_ops">PROJETS</a>
+        <div class="dropdown-content">
+            <a href="procedures.html" class="active">MES PROCÉDURES</a>
+            <a href="e5.html">E5</a>
+            <a href="e6.html">E6</a>
+        </div>
+      </li>
+      <li><a href="veille.html" data-i18n="nav_intel">VEILLES</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">MES PROCÉDURES</h1>
+    
+    <!-- PROCEDURE LIBRARY GRID -->
+    <h2 class="section-title">BIBLIOTHÈQUE DE PROTOCOLES</h2>
+    
+    <div class="grid-3" style="gap: 20px;">
+        
+        <!-- Card 1 (Windows/AD) -->
+        <div class="procedure-card">
+            <div class="procedure-img-header" style="padding: 0;">
+                <div class="procedure-status-badge complete">Terminé</div>
+                <img src="assets/img/ad_cover.png" alt="Active Directory Cover" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+            </div>
+            
+            <div class="procedure-body">
+                <h3 class="procedure-title">Procédure Active Directory</h3>
+                <div class="procedure-meta">
+                    <span style="opacity:0.7; margin-right:5px;">📅</span> 2025
+                </div>
+                
+                <p class="procedure-desc">
+                    Procédure détaillée d'installation et de configuration de l'Active Directory avec gestion des utilisateurs, groupes et GPO (Group Policy Objects).
+                </p>
+                
+                <div class="procedure-tags">
+                   <span class="procedure-tag" style="background: rgba(0,85,170,0.3); color: #88ccff;">Active Directory</span>
+                   <span class="procedure-tag" style="background: rgba(0,85,170,0.3); color: #88ccff;">Windows Server</span>
+                   <span class="procedure-tag" style="background: rgba(0,85,170,0.3); color: #88ccff;">GPO</span>
+                </div>
+                
+                <div class="procedure-footer">
+                    <a href="#" class="btn-proc-view btn-proc" onclick="openPreview('Fiche AD DS', 'DOCX', 'assets/docs/procedure_ad_config.docx'); return false;">👁️ VOIR</a>
+                    <a href="assets/docs/procedure_ad_config.docx" download class="btn-proc-download btn-proc">📥 DL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 (Exchange) -->
+        <div class="procedure-card">
+            <div class="procedure-img-header" style="background: linear-gradient(135deg, #0072c6 0%, #002c4c 100%);">
+                <div class="procedure-status-badge complete">Terminé</div>
+                 <!-- Exchange Placeholder Logo -->
+                <div style="font-size: 2.5rem; color: #fff; text-shadow: 0 0 15px #0072c6;">EXCHANGE</div>
+            </div>
+            
+            <div class="procedure-body">
+                <h3 class="procedure-title">Procédure Exchange Server</h3>
+                <div class="procedure-meta">
+                    <span style="opacity:0.7; margin-right:5px;">📅</span> 2025
+                </div>
+                
+                <p class="procedure-desc">
+                    Installation et configuration d'un serveur de messagerie Microsoft Exchange, gestion des boîtes aux lettres et connecteurs.
+                </p>
+                
+                <div class="procedure-tags">
+                   <span class="procedure-tag" style="background: rgba(0,114,198,0.3); color: #88ccff;">Exchange</span>
+                   <span class="procedure-tag" style="background: rgba(0,114,198,0.3); color: #88ccff;">Mail</span>
+                   <span class="procedure-tag" style="background: rgba(0,114,198,0.3); color: #88ccff;">Microsoft</span>
+                </div>
+                
+                <div class="procedure-footer">
+                    <a href="#" class="btn-proc-view btn-proc" onclick="openPreview('Config Exchange', 'PDF', 'assets/docs/procedure_exchange.pdf'); return false;">👁️ VOIR</a>
+                    <a href="#" class="btn-proc-download btn-proc">📥 DL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 (Veeam) -->
+        <div class="procedure-card">
+            <div class="procedure-img-header" style="background: linear-gradient(135deg, #008844 0%, #002211 100%);">
+                <div class="procedure-status-badge complete">Terminé</div>
+                <div style="font-size: 3rem; color: #55ffaa; text-shadow: 0 0 15px #00ff55;">VEEAM</div>
+            </div>
+            
+            <div class="procedure-body">
+                <h3 class="procedure-title">Procédure Veeam Backup</h3>
+                <div class="procedure-meta">
+                    <span style="opacity:0.7; margin-right:5px;">📅</span> 2025
+                </div>
+                
+                <p class="procedure-desc">
+                    Stratégie de sauvegarde 3-2-1, configuration des jobs de backup et restauration de VM critiques sur ESXi.
+                </p>
+                
+                <div class="procedure-tags">
+                   <span class="procedure-tag" style="background: rgba(0,136,68,0.3); color: #88ffaa;">Veeam</span>
+                   <span class="procedure-tag" style="background: rgba(0,136,68,0.3); color: #88ffaa;">Backup</span>
+                   <span class="procedure-tag" style="background: rgba(0,136,68,0.3); color: #88ffaa;">Virtu</span>
+                </div>
+                
+                <div class="procedure-footer">
+                    <a href="#" class="btn-proc-view btn-proc" onclick="openPreview('Backup Veeam', 'PDF', 'assets/docs/dummy_backup.pdf'); return false;">👁️ VOIR</a>
+                    <a href="#" class="btn-proc-download btn-proc">📥 DL</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+  </main>
+
+  <footer class="status-footer">
+    <div>STATUS: EN COURS</div>
+    <div>SUCCÈS OPÉRATIONNEL: N/A</div>
+  </footer>
+  <!-- LANG SELECTOR BOTTOM LEFT -->
+  <div class="hud-bottom-left lang-selector">
+    <button class="lang-btn">[ FR ]</button>
+    <div class="lang-dropdown">
+      <div data-lang="fr">FRANÇAIS</div>
+      <div data-lang="en">ENGLISH</div>
+      <div data-lang="pt">PORTUGUÊS</div>
+      <div data-lang="de">DEUTSCH</div>
+      <div data-lang="it">ITALIANO</div>
+    </div>
+  </div>
+  <!-- PREVIEW MODAL -->
+  <div id="previewModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="modal-title" id="previewTitle">DOCUMENT VIEW</span>
+            <button class="modal-close" onclick="closePreview()">[X] CLOSE</button>
+        </div>
+        <div class="modal-body" id="previewBody">
+            <!-- Content Injected Here -->
+        </div>
+    </div>
+  </div>
+
+  <script>
+    function openPreview(title, type, contentSrc) {
+        const modal = document.getElementById('previewModal');
+        const previewBody = document.getElementById('previewBody');
+        const previewTitle = document.getElementById('previewTitle');
+        
+        previewTitle.textContent = `// PREVIEW: ${title} [${type}]`;
+        modal.classList.add('modal-active');
+        
+        // Clear previous content
+        previewBody.innerHTML = '';
+        
+        if (contentSrc) {
+            // Check if it's an image or PDF (for now assume image/iframe compatible)
+            const fileExt = contentSrc.split('.').pop().toLowerCase();
+            
+            if (['jpg', 'jpeg', 'png', 'gif', 'svg'].includes(fileExt)) {
+                previewBody.innerHTML = `<img src="${contentSrc}" style="max-width:100%; max-height:100%; object-fit:contain; border:1px solid #333;">`;
+            } else if (fileExt === 'pdf') {
+                previewBody.innerHTML = `<iframe src="${contentSrc}" class="preview-frame"></iframe>`;
+            } else {
+                // Documents like DOCX can't be previewed easily in browser without 3rd party viewer
+                // So we show a placeholder message
+                previewBody.innerHTML = `
+                    <div class="preview-placeholder">
+                        <div style="font-size: 3rem; margin-bottom: 20px;">⚠</div>
+                        <h3>FORMAT NON SUPPORTÉ POUR LA PRÉVISUALISATION (${fileExt.toUpperCase()})</h3>
+                        <p>Veuillez télécharger le fichier pour le consulter.</p>
+                        <a href="${contentSrc}" download class="btn-tactical" style="margin-top:20px; display:inline-block;">TÉLÉCHARGER MAINTENANT</a>
+                    </div>
+                `;
+            }
+        } else {
+            // No source provided (Demo mode)
+            previewBody.innerHTML = `
+                <div class="preview-placeholder">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">NO DATA</div>
+                    <h3>DOCUMENT NOT FOUND</h3>
+                    <p>Ce document est en cours de rédaction ou classifié.</p>
+                </div>
+            `;
+        }
+    }
+
+    function closePreview() {
+        document.getElementById('previewModal').classList.remove('modal-active');
+    }
+    
+    // Close on click outside
+    document.getElementById('previewModal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('previewModal')) {
+            closePreview();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closePreview();
+        }
+    });
+  </script>
+  <script defer src="assets/js/app.js"></script>
+</body>
+</html>

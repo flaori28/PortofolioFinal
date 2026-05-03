@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPERATOR | PROFILE</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-symbol.svg">
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <div id="background-canvas-container"></div>
+  <div class="scanlines"></div>
+  <div class="noise-overlay"></div>
+  
+  <header class="main-header">
+    <div class="logo">
+      <span class="highlight">Sciacca</span> Flavio
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_terminal">ACCUEIL</a></li>
+      <li class="dropdown">
+        <a href="#" class="active" data-i18n="nav_profile">À PROPOS</a>
+        <div class="dropdown-content">
+            <a href="apropos.html" class="active">À PROPOS DE MOI</a>
+            <a href="entreprise.html">MON ENTREPRISE</a>
+        </div>
+      </li>
+      <li><a href="tcs.html" data-i18n="nav_mission">TCS</a></li>
+      <li><a href="certifications.html" data-i18n="nav_clearance">BTS SIO</a></li>
+      <li class="dropdown">
+        <a href="projets.html" data-i18n="nav_ops">PROJETS</a>
+        <div class="dropdown-content">
+            <a href="procedures.html">MES PROCÉDURES</a>
+            <a href="e5.html">E5</a>
+            <a href="e6.html">E6</a>
+        </div>
+      </li>
+      <li><a href="veille.html" data-i18n="nav_intel">VEILLES</a></li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">FICHE AGENT</h1>
+    
+    <div class="grid-2">
+
+      <!-- BIO -->
+      <div class="hud-panel" style="padding: 30px;">
+        <h3 class="highlight">Ma présentation</h3>
+        <p class="type-text" style="color: #fff; margin-top: 20px;">
+          Passionné par l’informatique et les infrastructures systèmes et réseaux, j’ai choisi de m’orienter vers un BTS SIO option SISR après un parcours initial en BAC STL, puis en BTS Diététique, qui m’a permis de développer rigueur et méthode.
+        </p>
+        <p class="type-text" style="color: #fff; margin-top: 15px;">
+          Actuellement en deuxième année à l’IFC Marseille, j’effectue mon alternance à la SNCF, où je mets en pratique mes compétences en administration système, gestion des réseaux et support technique.
+        </p>
+        <p class="type-text" style="color: #fff; margin-top: 15px;">
+          Curieux, analytique et persévérant, j’apprécie particulièrement la résolution de problématiques techniques et l’optimisation des infrastructures IT. Mon objectif est de continuer à évoluer dans le domaine des systèmes et réseaux et de renforcer constamment mes compétences techniques.
+        </p>
+
+      </div>
+    </div>
+    
+    <!-- PARCOURS SCOLAIRE SECTION (moved out of bio panel) -->
+    <div class="hud-panel" style="margin-top: 30px; padding: 30px;">
+          <h2 style="text-align: center; color: var(--hud-primary); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px;">Mon Parcours Scolaire</h2>
+          <p style="text-align: center; color: #888; margin-bottom: 30px; font-size: 0.9rem;">FORMATION ET DIPLÔMES OBTENUS</p>
+          
+          <div class="education-timeline">
+            
+            <!-- CARD 1 -->
+            <div class="edu-card" style="background: rgba(0,0,0,0.4); border: 1px solid var(--hud-dim); padding: 20px; margin-bottom: 20px; display: flex; flex-direction: column; position: relative;">
+               <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+                  <div style="display: flex; align-items: center; gap: 15px;">
+                     <div style="background: #6a00ff; color: white; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 1.5rem;">🎓</div>
+                     <div>
+                        <h3 style="margin: 0; color: #fff; font-size: 1.1rem;">BTS SIO Option SISR</h3>
+                        <p style="margin: 5px 0 0; color: #aaa; font-size: 0.9rem;">IFC Marseille</p>
+                     </div>
+                  </div>
+                  <span class="badge" style="background: #007bff; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">En cours</span>
+               </div>
+               
+               <p style="margin-top: 15px; color: #ccc; font-size: 0.9rem;">
+                 Services Informatiques aux Organisations - Spécialité Solutions d'Infrastructure, Systèmes et Réseaux
+               </p>
+               
+               <div style="margin-top: 15px; display: flex; justify-content: flex-end;">
+                  <span style="background: rgba(255,255,255,0.1); color: #ccc; padding: 5px 10px; border-radius: 4px; font-size: 0.8rem;">📅 De septembre 2024 à juin 2026</span>
+               </div>
+            </div>
+
+             <!-- CARD 2 (Moved BTS DIETETIQUE here) -->
+             <div class="edu-card" style="background: rgba(0,0,0,0.4); border: 1px solid var(--hud-dim); padding: 20px; margin-bottom: 20px; display: flex; flex-direction: column; position: relative;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+                   <div style="display: flex; align-items: center; gap: 15px;">
+                      <div style="background: #6a00ff; color: white; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 1.5rem;">🎓</div>
+                      <div>
+                         <h3 style="margin: 0; color: #fff; font-size: 1.1rem;">BTS DIETETIQUE</h3>
+                         <p style="margin: 5px 0 0; color: #aaa; font-size: 0.9rem;">ADONIS MARSEILLE</p>
+                      </div>
+                   </div>
+                   <span class="badge" style="background: #e67e22; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Réorientation</span>
+                </div>
+                
+                <p style="margin-top: 15px; color: #ccc; font-size: 0.9rem;">
+                  Développement de la rigueur scientifique et du sens de l'organisation.
+                </p>
+                
+                <div style="margin-top: 15px; display: flex; justify-content: flex-end;">
+                   <span style="background: rgba(255,255,255,0.1); color: #ccc; padding: 5px 10px; border-radius: 4px; font-size: 0.8rem;">📅 2021 - 2023</span>
+                </div>
+             </div>
+
+            <!-- CARD 3 (Replaced Licence 1 with BAC STL) -->
+            <div class="edu-card" style="background: rgba(0,0,0,0.4); border: 1px solid var(--hud-dim); padding: 20px; margin-bottom: 20px; display: flex; flex-direction: column; position: relative;">
+               <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+                  <div style="display: flex; align-items: center; gap: 15px;">
+                     <div style="background: #6a00ff; color: white; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 1.5rem;">🎓</div>
+                     <div>
+                        <h3 style="margin: 0; color: #fff; font-size: 1.1rem;">BAC STL</h3>
+                        <p style="margin: 0; color: #fff; font-size: 0.9rem;">Sciences et Technologies de Laboratoire</p>
+                        <p style="margin: 5px 0 0; color: #aaa; font-size: 0.9rem;">Marseille</p>
+                     </div>
+                  </div>
+                  <span class="badge" style="background: #27ae60; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem;">Mention Bien</span>
+               </div>
+               
+               <p style="margin-top: 15px; color: #ccc; font-size: 0.9rem;">
+                 Développement des compétences scientifiques d'investigation et d'analyse.
+               </p>
+               
+               <div style="margin-top: 15px; display: flex; justify-content: flex-end;">
+                  <span style="background: rgba(255,255,255,0.1); color: #ccc; padding: 5px 10px; border-radius: 4px; font-size: 0.8rem;">📅 2021</span>
+               </div>
+            </div>
+
+          </div>
+    </div>
+  </main>
+
+  <footer class="status-footer">
+    <div>AGENT PROFILE: VERIFIED</div>
+    <div>LAST LOGIN: TODAY</div>
+  </footer>
+  <!-- LANG SELECTOR BOTTOM LEFT -->
+  <div class="hud-bottom-left lang-selector">
+    <button class="lang-btn">[ FR ]</button>
+    <div class="lang-dropdown">
+      <div data-lang="fr">FRANÇAIS</div>
+      <div data-lang="en">ENGLISH</div>
+      <div data-lang="pt">PORTUGUÊS</div>
+      <div data-lang="de">DEUTSCH</div>
+      <div data-lang="it">ITALIANO</div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,158 @@
+
+/* === PROCEDURE CARD DESIGN (MODERNISED TACTICAL) === */
+.procedure-card {
+    background-color: rgba(10, 20, 30, 0.95);
+    border: 2px solid var(--hud-dim);
+    border-radius: 8px; /* Slightly rounded unlike pure tactical */
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.procedure-card:hover {
+    box-shadow: 0 0 20px rgba(51, 255, 0, 0.2);
+    border-color: var(--hud-primary);
+}
+
+.procedure-img-header {
+    height: 160px;
+    background: linear-gradient(135deg, #112233 0%, #001122 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--hud-secondary);
+    font-size: 3rem;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+/* Pseudo-tech patterns for the header background */
+.procedure-img-header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px),
+        linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+}
+
+.procedure-status-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--hud-bg);
+    border: 1px solid var(--hud-primary);
+    color: var(--hud-primary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.procedure-status-badge.complete {
+    border-color: #33ff00;
+    color: #33ff00;
+}
+.procedure-status-badge.wip {
+    border-color: #ffaa00;
+    color: #ffaa00;
+}
+
+.procedure-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.procedure-title {
+    font-family: var(--font-header);
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.procedure-meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #8899aa;
+    margin-bottom: 15px;
+}
+
+.procedure-meta i {
+    margin-right: 5px;
+}
+
+.procedure-desc {
+    font-size: 0.9rem;
+    color: #aabbcc;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.procedure-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.procedure-tag {
+    background: rgba(50, 60, 80, 0.4);
+    border: 1px solid rgba(100, 120, 150, 0.3);
+    color: #ccddee;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+}
+
+.procedure-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.btn-proc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-family: var(--font-header);
+    font-size: 0.8rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-proc-view {
+    border: 1px solid #445566;
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+}
+.btn-proc-view:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: #fff;
+}
+
+.btn-proc-download {
+    background: transparent;
+    border: 1px solid var(--hud-primary);
+    color: var(--hud-primary);
+}
+.btn-proc-download:hover {
+    background: var(--hud-primary);
+    color: #000;
+    box-shadow: 0 0 15px var(--hud-primary);
+}
