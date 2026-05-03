@@ -47,142 +47,101 @@
   </header>
 
   <main class="container">
-    <h1 class="section-title">ÉPREUVE E5</h1>
-    <p style="text-align: center; color: var(--hud-secondary); font-size: 0.95rem;">MISE EN SITUATION PROFESSIONNELLE (MSP)</p>
+    <h1 class="section-title">EPREUVE E5</h1>
     
-    <!-- PRÉSENTATION E5 -->
-    <div class="hud-panel" style="margin-bottom: 30px; padding: 30px;">
-      <h2 style="color: var(--hud-primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; font-size: 1.3rem;">
-        📋 Contexte & Objectifs
-      </h2>
-      
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
-        <div style="background: rgba(0, 240, 255, 0.05); border: 1px solid var(--hud-dim); padding: 15px; border-radius: 8px;">
-          <p style="color: var(--hud-secondary); font-weight: bold; margin-bottom: 8px;">🎯 TYPE</p>
-          <p style="color: #fff; font-size: 0.95rem;">Mise en Situation Professionnelle</p>
-          <p style="color: #aaa; font-size: 0.85rem;">Épreuve pratique BTS SIO</p>
-        </div>
+    <div class="hud-panel" style="padding: 30px;">
+        <h2 style="text-align: center; color: var(--hud-primary); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px;">MISE EN SITUATION PROFESSIONNELLE</h2>
+        <p style="text-align: center; color: #888; margin-bottom: 30px; font-size: 0.9rem;">Documentation et projets pour l'épreuve E5</p>
         
-        <div style="background: rgba(0, 240, 255, 0.05); border: 1px solid var(--hud-dim); padding: 15px; border-radius: 8px;">
-          <p style="color: var(--hud-secondary); font-weight: bold; margin-bottom: 8px;">📅 DURÉE</p>
-          <p style="color: #fff; font-size: 0.95rem;">4 heures</p>
-          <p style="color: #aaa; font-size: 0.85rem;">Examen en conditions réelles</p>
-        </div>
-      </div>
+        <!-- SECTION DOCUMENT PDF -->
+        <div style="background: rgba(0,0,0,0.4); border: 1px solid var(--hud-dim); border-radius: 8px; padding: 30px; margin-bottom: 30px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+              <div style="font-size: 3rem;">📄</div>
+              <div>
+                <h3 style="margin: 0; color: #fff; font-size: 1.2rem;">E5 - Mise en Situation Professionnelle</h3>
+                <p style="margin: 5px 0 0; color: #aaa; font-size: 0.9rem;">Document complet du projet E5</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <a href="assets/docs/E5SciaccaFkavioFINAL.PDF.pdf" target="_blank" style="
+                background: var(--hud-primary);
+                color: #000;
+                padding: 10px 20px;
+                border-radius: 4px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 0.9rem;
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: inline-block;
+              " onmouseover="this.style.boxShadow='0 0 15px rgba(0, 240, 255, 0.6)'" onmouseout="this.style.boxShadow='none'">
+                👁️ APERÇU
+              </a>
+              <a href="assets/docs/E5SciaccaFkavioFINAL.PDF.pdf" download style="
+                background: var(--hud-secondary);
+                color: #000;
+                padding: 10px 20px;
+                border-radius: 4px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 0.9rem;
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: inline-block;
+              " onmouseover="this.style.boxShadow='0 0 15px rgba(170, 80, 255, 0.6)'" onmouseout="this.style.boxShadow='none'">
+                ⬇️ TÉLÉCHARGER
+              </a>
+            </div>
+          </div>
 
-      <div style="background: rgba(0, 0, 0, 0.3); border-left: 3px solid var(--hud-primary); padding: 20px; border-radius: 4px;">
-        <p style="color: #ddd; line-height: 1.7; margin: 0;">
-          L'<strong>E5 (MSP)</strong> est l'épreuve pratique majeure du BTS SIO. Elle évalue la capacité à analyser une situation réelle, proposer des solutions et les implémenter en 4 heures.
-          Le candidat doit faire preuve de rigueur, de méthode et d'autonomie face à une problématique d'infrastructure ou de développement.
-        </p>
-      </div>
-    </div>
-
-    <!-- DOCUMENT PDF -->
-    <div class="hud-panel" style="margin-bottom: 30px; padding: 30px;">
-      <h2 style="color: var(--hud-primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-size: 1.3rem;">
-        📄 Rapport E5 - Schéma & Documentation
-      </h2>
-
-      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
-        <!-- VIEWER PDF -->
-        <div style="background: rgba(0,0,0,0.6); border: 2px solid var(--hud-dim); border-radius: 8px; overflow: hidden; min-height: 500px;">
-          <iframe 
-            src="assets/docs/E5SciaccaFkavioFINAL.PDF.pdf" 
-            style="width: 100%; height: 600px; border: none;"
-            title="E5 Rapport PDF">
-          </iframe>
-        </div>
-
-        <!-- INFO & TÉLÉCHARGEMENT -->
-        <div>
-          <div style="background: rgba(0, 240, 255, 0.05); border: 2px solid var(--hud-secondary); padding: 20px; border-radius: 8px; margin-bottom: 15px;">
-            <p style="color: var(--hud-secondary); font-weight: bold; margin-top: 0; margin-bottom: 15px;">📥 TÉLÉCHARGER</p>
-            <a href="assets/docs/E5SciaccaFkavioFINAL.PDF.pdf" download="E5_Sciacca_Flavio.pdf" style="
-              display: inline-block;
-              background: linear-gradient(135deg, var(--hud-primary), var(--hud-secondary));
-              color: white;
-              padding: 12px 20px;
-              border-radius: 6px;
-              text-decoration: none;
-              font-weight: bold;
-              text-transform: uppercase;
-              font-size: 0.9rem;
-              letter-spacing: 1px;
-              transition: all 0.3s ease;
-              box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
-              border: 1px solid var(--hud-primary);
-              cursor: pointer;
-            " onmouseover="this.style.boxShadow='0 0 25px rgba(0, 240, 255, 0.6)'" onmouseout="this.style.boxShadow='0 0 15px rgba(0, 240, 255, 0.3)'">
-              ⬇️ Télécharger PDF
-            </a>
+          <!-- APERÇU PDF INTÉGRÉ -->
+          <div style="
+            background: #000;
+            border: 1px solid var(--hud-dim);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 20px;
+          ">
+            <iframe 
+              src="assets/docs/E5SciaccaFkavioFINAL.PDF.pdf#toolbar=1&navpanes=0&scrollbar=1" 
+              style="
+                width: 100%;
+                height: 600px;
+                border: none;
+              "
+              title="Document E5">
+            </iframe>
           </div>
 
           <!-- INFOS DOCUMENT -->
-          <div style="background: rgba(0,0,0,0.4); border: 1px solid var(--hud-dim); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
-            <p style="color: var(--hud-primary); font-weight: bold; margin-top: 0; margin-bottom: 10px;">📋 FORMAT</p>
-            <p style="color: #999; font-size: 0.9rem; margin: 5px 0;">Fichier PDF</p>
-            <p style="color: #999; font-size: 0.9rem; margin: 5px 0;">⚙️ Schémas techniques inclus</p>
-          </div>
-
-          <!-- CONTENU -->
-          <div style="background: rgba(0,0,0,0.4); border: 1px solid var(--hud-dim); padding: 15px; border-radius: 8px;">
-            <p style="color: var(--hud-primary); font-weight: bold; margin-top: 0; margin-bottom: 10px;">📝 CONTENU</p>
-            <ul style="list-style: none; padding-left: 0; color: #999; font-size: 0.85rem; line-height: 1.8; margin: 0;">
-              <li>✓ Analyse du cahier des charges</li>
-              <li>✓ Schémas d'infrastructure</li>
-              <li>✓ Solutions proposées</li>
-              <li>✓ Implémentation détaillée</li>
-              <li>✓ Tests et validation</li>
-            </ul>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+            <div style="background: rgba(0, 240, 255, 0.05); border: 1px solid var(--hud-dim); padding: 15px; border-radius: 4px;">
+              <p style="color: var(--hud-secondary); font-weight: bold; margin-bottom: 8px;">📋 TYPE</p>
+              <p style="color: #fff; margin: 0;">Mise en Situation Professionnelle</p>
+            </div>
+            <div style="background: rgba(0, 240, 255, 0.05); border: 1px solid var(--hud-dim); padding: 15px; border-radius: 4px;">
+              <p style="color: var(--hud-secondary); font-weight: bold; margin-bottom: 8px;">📌 STATUT</p>
+              <p style="color: #fff; margin: 0;">Projet Réalisé</p>
+            </div>
+            <div style="background: rgba(0, 240, 255, 0.05); border: 1px solid var(--hud-dim); padding: 15px; border-radius: 4px;">
+              <p style="color: var(--hud-secondary); font-weight: bold; margin-bottom: 8px;">🎯 CONTEXTE</p>
+              <p style="color: #fff; margin: 0;">BTS SIO SISR - SNCF</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- COMPÉTENCES DÉMONTRÉES -->
-    <div class="hud-panel" style="padding: 30px;">
-      <h2 style="color: var(--hud-primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-size: 1.3rem;">
-        ⚡ Compétences Démontrées
-      </h2>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-        <div style="background: rgba(0,0,0,0.4); border-left: 3px solid var(--hud-primary); padding: 15px; border-radius: 4px;">
-          <p style="color: var(--hud-primary); font-weight: bold; margin-top: 0; margin-bottom: 10px;">Analyse & Diagnostic</p>
-          <ul style="list-style: none; padding-left: 0; color: #999; font-size: 0.9rem; margin: 0;">
-            <li>✦ Analyse d'un cahier des charges</li>
-            <li>✦ Identification des besoins</li>
-            <li>✦ Propositions de solutions</li>
-          </ul>
+        <!-- DESCRIPTION -->
+        <div style="background: rgba(0, 0, 0, 0.3); border-left: 3px solid var(--hud-primary); padding: 20px; border-radius: 4px;">
+          <h3 style="color: var(--hud-primary); margin-top: 0;">📖 À Propos de l'Épreuve E5</h3>
+          <p style="color: #ccc; line-height: 1.8;">
+            L'épreuve E5 (Mise en Situation Professionnelle) est une épreuve pratique du BTS SIO qui valorise la capacité à gérer 
+            un projet informatique en entreprise. Elle consiste à concevoir, implémenter et documenter une solution IT répondant à 
+            un problématique professionnelle réelle, en utilisant les compétences acquises pendant la formation.
+          </p>
         </div>
-
-        <div style="background: rgba(0,0,0,0.4); border-left: 3px solid var(--hud-secondary); padding: 15px; border-radius: 4px;">
-          <p style="color: var(--hud-secondary); font-weight: bold; margin-top: 0; margin-bottom: 10px;">Implémentation</p>
-          <ul style="list-style: none; padding-left: 0; color: #999; font-size: 0.9rem; margin: 0;">
-            <li>✦ Configuration systèmes/réseaux</li>
-            <li>✦ Respect des normes IT</li>
-            <li>✦ Documentation technique</li>
-          </ul>
-        </div>
-
-        <div style="background: rgba(0,0,0,0.4); border-left: 3px solid var(--hud-primary); padding: 15px; border-radius: 4px;">
-          <p style="color: var(--hud-primary); font-weight: bold; margin-top: 0; margin-bottom: 10px;">Tests & Validation</p>
-          <ul style="list-style: none; padding-left: 0; color: #999; font-size: 0.9rem; margin: 0;">
-            <li>✦ Tests de fonctionnalité</li>
-            <li>✦ Validation des solutions</li>
-            <li>✦ Rapport de test</li>
-          </ul>
-        </div>
-
-        <div style="background: rgba(0,0,0,0.4); border-left: 3px solid var(--hud-secondary); padding: 15px; border-radius: 4px;">
-          <p style="color: var(--hud-secondary); font-weight: bold; margin-top: 0; margin-bottom: 10px;">Professionnalisme</p>
-          <ul style="list-style: none; padding-left: 0; color: #999; font-size: 0.9rem; margin: 0;">
-            <li>✦ Gestion du temps (4h)</li>
-            <li>✦ Autonomie & rigueur</li>
-            <li>✦ Communication technique</li>
-          </ul>
-        </div>
-      </div>
     </div>
   </main>
 
