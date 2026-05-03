@@ -986,8 +986,8 @@ body.loaded {
 
 .competences-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .competence-card {
@@ -995,13 +995,16 @@ body.loaded {
   background: linear-gradient(135deg, rgba(15, 25, 40, 0.7) 0%, rgba(20, 30, 50, 0.5) 100%);
   border: 1px solid rgba(0, 240, 255, 0.2);
   border-radius: 8px;
-  padding: 30px 25px;
+  padding: 20px 15px;
   cursor: crosshair;
   transition: all 0.3s ease;
   overflow: hidden;
-  min-height: 200px;
+  aspect-ratio: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .competence-card::before {
@@ -1038,25 +1041,25 @@ body.loaded {
 }
 
 .card-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 10px;
   opacity: 0.9;
 }
 
 .card-title {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-family: var(--font-header);
   color: #fff;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   font-weight: 600;
   position: relative;
   z-index: 1;
 }
 
 .card-domain {
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   color: var(--hud-secondary);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1065,18 +1068,18 @@ body.loaded {
 }
 
 .card-desc {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   color: #999;
   margin-top: auto;
   position: relative;
   z-index: 1;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 @media (max-width: 1200px) {
   .competences-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 }
 
@@ -1087,8 +1090,8 @@ body.loaded {
   }
 
   .competences-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
   .section-title {
