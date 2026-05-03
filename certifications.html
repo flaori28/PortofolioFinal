@@ -88,38 +88,198 @@
       </div>
     </div>
 
-    <!-- SECTION DEUX SPÉCIALISATIONS -->
+    <!-- SECTION DEUX SPÉCIALISATIONS AVEC ONGLETS -->
     <div class="hud-panel" style="margin-bottom: 30px; padding: 30px;">
       <h2 style="color: var(--hud-primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-size: 1.4rem;">
-        🛣️ Deux Spécialisations Possibles
+        🛣️ Choisir Sa Spécialisation
       </h2>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-        <!-- SISR -->
-        <div style="background: rgba(0,0,0,0.4); border: 2px solid var(--hud-primary); padding: 20px; border-radius: 8px;">
-          <h3 style="color: var(--hud-primary); margin-top: 0; margin-bottom: 12px;">🔧 SISR</h3>
-          <p style="color: var(--hud-secondary); font-weight: bold; margin-bottom: 10px;">Solutions d'Infrastructure, Systèmes et Réseaux</p>
-          <p style="color: #ccc; line-height: 1.7; margin-bottom: 15px;">
-            Installation, maintenance et sécurité des parcs informatiques. Gestion des infrastructures, serveurs et réseaux d'entreprise.
-          </p>
-          <div style="border-top: 1px dashed var(--hud-dim); padding-top: 12px;">
-            <p style="color: #999; font-size: 0.85rem; margin: 0;"><strong>Focus :</strong> Admin Systèmes, Réseaux, Sécurité</p>
-          </div>
-        </div>
+      <!-- ONGLETS -->
+      <div style="display: flex; gap: 10px; margin-bottom: 25px; border-bottom: 2px solid var(--hud-dim); padding-bottom: 0;">
+        <button class="spec-tab-btn active" data-tab="sisr" style="
+          background: none;
+          border: none;
+          color: var(--hud-primary);
+          font-size: 1rem;
+          font-weight: bold;
+          padding: 15px 20px;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          border-bottom: 3px solid transparent;
+          transition: all 0.3s ease;
+          position: relative;
+        ">
+          🔧 SISR
+        </button>
+        <button class="spec-tab-btn" data-tab="slam" style="
+          background: none;
+          border: none;
+          color: var(--hud-secondary);
+          font-size: 1rem;
+          font-weight: bold;
+          padding: 15px 20px;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          border-bottom: 3px solid transparent;
+          transition: all 0.3s ease;
+          position: relative;
+        ">
+          💻 SLAM
+        </button>
+      </div>
 
-        <!-- SLAM -->
-        <div style="background: rgba(0,0,0,0.4); border: 2px solid var(--hud-secondary); padding: 20px; border-radius: 8px;">
-          <h3 style="color: var(--hud-secondary); margin-top: 0; margin-bottom: 12px;">💻 SLAM</h3>
-          <p style="color: var(--hud-primary); font-weight: bold; margin-bottom: 10px;">Solutions Logicielles et Applications Métiers</p>
-          <p style="color: #ccc; line-height: 1.7; margin-bottom: 15px;">
-            Conception, développement et intégration de logiciels et sites web. Création de solutions informatiques sur mesure.
-          </p>
-          <div style="border-top: 1px dashed var(--hud-dim); padding-top: 12px;">
-            <p style="color: #999; font-size: 0.85rem; margin: 0;"><strong>Focus :</strong> Dev, Web, Intégration</p>
+      <!-- CONTENU SISR -->
+      <div id="sisr-content" class="spec-tab-content" style="display: block;">
+        <div style="animation: fadeIn 0.3s ease;">
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 25px;">
+            <!-- DESCRIPTION SISR -->
+            <div style="background: rgba(0,0,0,0.4); border: 2px solid var(--hud-primary); padding: 25px; border-radius: 8px;">
+              <h3 style="color: var(--hud-primary); margin-top: 0; margin-bottom: 15px; font-size: 1.2rem;">
+                Solutions d'Infrastructure, Systèmes et Réseaux
+              </h3>
+              <p style="color: #ccc; line-height: 1.8; margin-bottom: 15px;">
+                Installation, maintenance et sécurité des parcs informatiques. Gestion complète des infrastructures, serveurs et réseaux d'entreprise. Expert capable de déployer, configurer et maintenir les systèmes informatiques.
+              </p>
+              <div style="border-top: 1px dashed var(--hud-dim); padding-top: 15px;">
+                <p style="color: var(--hud-secondary); font-weight: bold; margin-bottom: 10px;">⚡ Points Forts</p>
+                <ul style="list-style: none; padding-left: 0; color: #aaa; font-size: 0.9rem;">
+                  <li style="margin-bottom: 8px;">✦ Admin Systèmes (Windows/Linux)</li>
+                  <li style="margin-bottom: 8px;">✦ Gestion Réseaux & Sécurité</li>
+                  <li style="margin-bottom: 8px;">✦ Virtualisation & Cloud</li>
+                  <li style="margin-bottom: 8px;">✦ Support Infrastructure</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- INFO RAPIDE SISR -->
+            <div style="background: rgba(0, 240, 255, 0.05); border: 1px solid var(--hud-primary); padding: 20px; border-radius: 8px; height: fit-content;">
+              <p style="color: var(--hud-primary); font-weight: bold; margin-top: 0; margin-bottom: 15px;">PROFIL IDÉAL</p>
+              <ul style="list-style: none; padding-left: 0; color: #999; font-size: 0.85rem; line-height: 1.8;">
+                <li>✓ Intérêt pour hardware</li>
+                <li>✓ Sens logique prononcé</li>
+                <li>✓ Rigueur & organisation</li>
+                <li>✓ Dépannage & troubleshooting</li>
+                <li>✓ Sécurité informatique</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- DÉBOUCHÉS SISR -->
+          <div style="background: rgba(0,0,0,0.4); border-left: 3px solid var(--hud-primary); padding: 20px; border-radius: 4px;">
+            <p style="color: var(--hud-primary); font-weight: bold; margin-top: 0; margin-bottom: 12px;">📈 Débouchés Professionnels</p>
+            <p style="color: #ccc; line-height: 1.7; margin: 0;">
+              Admin Systèmes & Réseaux • Technicien Support • Expert Cybersécurité • Ingénieur Infrastructure • Responsable IT • Responsable Sécurité • Consultant IT
+            </p>
           </div>
         </div>
       </div>
+
+      <!-- CONTENU SLAM -->
+      <div id="slam-content" class="spec-tab-content" style="display: none;">
+        <div style="animation: fadeIn 0.3s ease;">
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 25px;">
+            <!-- DESCRIPTION SLAM -->
+            <div style="background: rgba(0,0,0,0.4); border: 2px solid var(--hud-secondary); padding: 25px; border-radius: 8px;">
+              <h3 style="color: var(--hud-secondary); margin-top: 0; margin-bottom: 15px; font-size: 1.2rem;">
+                Solutions Logicielles et Applications Métiers
+              </h3>
+              <p style="color: #ccc; line-height: 1.8; margin-bottom: 15px;">
+                Conception, développement et intégration de logiciels et sites web. Création de solutions informatiques sur mesure pour répondre aux besoins métiers des organisations. Spécialiste capable de développer, tester et déployer des applications.
+              </p>
+              <div style="border-top: 1px dashed var(--hud-dim); padding-top: 15px;">
+                <p style="color: var(--hud-secondary); font-weight: bold; margin-bottom: 10px;">⚡ Points Forts</p>
+                <ul style="list-style: none; padding-left: 0; color: #aaa; font-size: 0.9rem;">
+                  <li style="margin-bottom: 8px;">✦ Développement (Python, Java, C#)</li>
+                  <li style="margin-bottom: 8px;">✦ Web & Frameworks (HTML/CSS/JS)</li>
+                  <li style="margin-bottom: 8px;">✦ Bases de Données (SQL/NoSQL)</li>
+                  <li style="margin-bottom: 8px;">✦ Tests & Intégration</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- INFO RAPIDE SLAM -->
+            <div style="background: rgba(0, 240, 255, 0.05); border: 1px solid var(--hud-secondary); padding: 20px; border-radius: 8px; height: fit-content;">
+              <p style="color: var(--hud-secondary); font-weight: bold; margin-top: 0; margin-bottom: 15px;">PROFIL IDÉAL</p>
+              <ul style="list-style: none; padding-left: 0; color: #999; font-size: 0.85rem; line-height: 1.8;">
+                <li>✓ Intérêt pour programmation</li>
+                <li>✓ Créativité & innovation</li>
+                <li>✓ Pensée algorithmique</li>
+                <li>✓ Autonomie & résolution</li>
+                <li>✓ Userexperience & UI/UX</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- DÉBOUCHÉS SLAM -->
+          <div style="background: rgba(0,0,0,0.4); border-left: 3px solid var(--hud-secondary); padding: 20px; border-radius: 4px;">
+            <p style="color: var(--hud-secondary); font-weight: bold; margin-top: 0; margin-bottom: 12px;">📈 Débouchés Professionnels</p>
+            <p style="color: #ccc; line-height: 1.7; margin: 0;">
+              Développeur Full-Stack • Analyste Programmeur • Webmaster • Intégrateur d'Applications • Lead Developer • Consultant Digital • Architecte Logiciel
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <style>
+      .spec-tab-btn.active {
+        color: var(--hud-primary) !important;
+        border-bottom-color: var(--hud-primary) !important;
+        box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+      }
+
+      .spec-tab-btn:hover {
+        color: var(--hud-secondary) !important;
+        opacity: 0.8;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(5px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .spec-tab-content {
+        animation: fadeIn 0.3s ease;
+      }
+    </style>
+
+    <script>
+      document.querySelectorAll('.spec-tab-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const tab = this.getAttribute('data-tab');
+          
+          // Masquer tout les contenu
+          document.querySelectorAll('.spec-tab-content').forEach(content => {
+            content.style.display = 'none';
+          });
+          
+          // Retirer la classe active de tous les boutons
+          document.querySelectorAll('.spec-tab-btn').forEach(button => {
+            button.classList.remove('active');
+            if(button.getAttribute('data-tab') === 'sisr') {
+              button.style.color = 'var(--hud-primary)';
+            } else {
+              button.style.color = 'var(--hud-secondary)';
+            }
+          });
+          
+          // Afficher le contenu sélectionné
+          document.getElementById(tab + '-content').style.display = 'block';
+          
+          // Ajouter la classe active au bouton cliqué
+          this.classList.add('active');
+        });
+      });
+    </script>
 
     <!-- SECTION MATIÈRES -->
     <div class="hud-panel" style="margin-bottom: 30px; padding: 30px;">
