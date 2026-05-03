@@ -1,6 +1,6 @@
 :root {
-  --hud-bg: #050505;
-  --hud-panel: rgba(10, 15, 20, 0.85);
+  --hud-bg: #0f1620;
+  --hud-panel: rgba(15, 22, 32, 0.95);
   --hud-primary: #33ff00; /* Classic Terminal Green */
   --hud-secondary: #00f0ff; /* Tech Blue */
   --hud-alert: #ff3333;
@@ -8,7 +8,7 @@
   --hud-grid: rgba(51, 255, 0, 0.05);
   --font-tech: 'Share Tech Mono', 'Courier New', monospace;
   --font-header: 'Orbitron', sans-serif;
-  --scanline-color: rgba(0, 0, 0, 0.5);
+  --scanline-color: rgba(0, 0, 0, 0.15);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
@@ -39,8 +39,8 @@ body {
     to bottom,
     rgba(255,255,255,0),
     rgba(255,255,255,0) 50%,
-    rgba(0,0,0,0.2) 50%,
-    rgba(0,0,0,0.2)
+    rgba(0,0,0,0.08) 50%,
+    rgba(0,0,0,0.08)
   );
   background-size: 100% 4px;
   z-index: 1000;
