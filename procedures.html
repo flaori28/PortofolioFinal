@@ -181,7 +181,37 @@
     
     <div class="grid-3" style="gap: 20px;">
         
-        <!-- Card 1 (Windows/AD) -->
+        <!-- Card 1 (SNCF Active Directory) -->
+        <div class="procedure-card">
+            <div class="procedure-img-header" style="background: linear-gradient(135deg, #0d7377 0%, #14919b 100%);">
+                <div class="procedure-status-badge complete">Terminé</div>
+                <div style="font-size: 2.5rem; color: #fff; text-shadow: 0 0 15px #0d7377; font-weight: bold;">AD</div>
+            </div>
+            
+            <div class="procedure-body">
+                <h3 class="procedure-title">Procédure AD SNCF</h3>
+                <div class="procedure-meta">
+                    <span style="opacity:0.7; margin-right:5px;">📅</span> 2025 | SNCF Réseau
+                </div>
+                
+                <p class="procedure-desc">
+                    Installation et configuration complète d'Active Directory : création de VM, installation Windows Server 2025, configuration du contrôleur de domaine, DNS et DHCP.
+                </p>
+                
+                <div class="procedure-tags">
+                   <span class="procedure-tag" style="background: rgba(13,115,119,0.3); color: #88ffaa;">Active Directory</span>
+                   <span class="procedure-tag" style="background: rgba(13,115,119,0.3); color: #88ffaa;">DNS/DHCP</span>
+                   <span class="procedure-tag" style="background: rgba(13,115,119,0.3); color: #88ffaa;">Proxmox</span>
+                </div>
+                
+                <div class="procedure-footer">
+                    <a href="#" class="btn-proc-view btn-proc" onclick="openPreview('Procédure AD SNCF', 'HTML', 'assets/docs/procedure_ad_sncf.html'); return false;">👁️ VOIR</a>
+                    <a href="assets/docs/procedure_ad_sncf.html" download="Procedure_AD_SNCF.html" class="btn-proc-download btn-proc">📥 DL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 (Windows/AD) -->
         <div class="procedure-card">
             <div class="procedure-img-header" style="padding: 0;">
                 <div class="procedure-status-badge complete">Terminé</div>
@@ -325,6 +355,8 @@
                 previewBody.innerHTML = `<img src="${contentSrc}" style="max-width:100%; max-height:100%; object-fit:contain; border:1px solid #333;">`;
             } else if (fileExt === 'pdf') {
                 previewBody.innerHTML = `<iframe src="${contentSrc}" class="preview-frame"></iframe>`;
+            } else if (fileExt === 'html') {
+                previewBody.innerHTML = `<iframe src="${contentSrc}" class="preview-frame" style="background: white;"></iframe>`;
             } else {
                 // Documents like DOCX can't be previewed easily in browser without 3rd party viewer
                 // So we show a placeholder message

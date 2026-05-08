@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procédure AD SNCF - Interne SNCF Réseau</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+      margin: 0;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #0d7377;
+      padding-bottom: 20px;
+    }
+    
+    h1 {
+      color: #0d7377;
+      font-size: 2em;
+      margin: 0;
+    }
+    
+    .subtitle {
+      color: #666;
+      font-size: 0.95em;
+      margin-top: 10px;
+    }
+    
+    h2 {
+      color: #0d7377;
+      font-size: 1.5em;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-left: 4px solid #0d7377;
+      padding-left: 10px;
+    }
+    
+    h3 {
+      color: #14919b;
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+    
+    .table-of-contents {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .table-of-contents h2 {
+      margin-top: 0;
+    }
+    
+    .toc-item {
+      margin: 8px 0;
+      padding-left: 20px;
+    }
+    
+    .toc-item a {
+      color: #0d7377;
+      text-decoration: none;
+    }
+    
+    .toc-item a:hover {
+      text-decoration: underline;
+    }
+    
+    .section {
+      margin-bottom: 40px;
+      page-break-inside: avoid;
+    }
+    
+    .procedure-step {
+      background: #f9f9f9;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 4px solid #0d7377;
+      border-radius: 3px;
+    }
+    
+    .procedure-step strong {
+      color: #0d7377;
+    }
+    
+    ul, ol {
+      margin: 15px 0;
+      padding-left: 30px;
+    }
+    
+    li {
+      margin: 8px 0;
+    }
+    
+    .note {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      padding: 15px;
+      border-radius: 3px;
+      margin: 20px 0;
+    }
+    
+    .note::before {
+      content: "ℹ️ ";
+      font-weight: bold;
+    }
+    
+    .image-placeholder {
+      background: #e9ecef;
+      border: 2px dashed #0d7377;
+      padding: 40px;
+      text-align: center;
+      margin: 20px 0;
+      color: #0d7377;
+      font-size: 0.95em;
+    }
+    
+    .config-box {
+      background: #f0f8ff;
+      border: 1px solid #0d7377;
+      padding: 15px;
+      margin: 15px 0;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+    }
+    
+    footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 2px solid #0d7377;
+      text-align: center;
+      color: #666;
+      font-size: 0.9em;
+    }
+    
+    @media print {
+      body { margin: 0; padding: 0; }
+      header { border-bottom: 1px solid #000; }
+      h2 { page-break-after: avoid; }
+      .procedure-step { break-inside: avoid; }
+      .section { page-break-after: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Interne SNCF Réseau</h1>
+    <p class="subtitle">Procédure de Configuration Active Directory</p>
+  </header>
+
+  <div class="table-of-contents">
+    <h2>Table des matières</h2>
+    <div class="toc-item">1. <a href="#creation">Création VM AD1</a></div>
+    <div class="toc-item">2. <a href="#installation">Installation Windows serveur</a></div>
+    <div class="toc-item">3. <a href="#ad1ex">Procédure AD1EX configuration</a></div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="section" id="creation">
+    <h2>1. Création VM AD1</h2>
+    
+    <p>Cette section détaille la création d'une machine virtuelle AD1 sur Proxmox pour servir de contrôleur de domaine.</p>
+    
+    <div class="procedure-step">
+      <strong>Configuration générale de la VM :</strong>
+      <ul>
+        <li>Node: SRVDEPLOY-S4P2</li>
+        <li>VM ID: 101</li>
+        <li>Name: SRV-AD1EX</li>
+        <li>Add to HA: Non coché</li>
+        <li>Start at boot: Non coché</li>
+      </ul>
+    </div>
+    
+    <div class="image-placeholder">
+      [Image: Création de la machine virtuelle - Onglet General]
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Configuration du système d'exploitation :</strong>
+      <ul>
+        <li>Type: Microsoft Windows</li>
+        <li>Version: 11/02/2/2025</li>
+        <li>Storage: local</li>
+        <li>ISO image: 26108.1742.240966-0</li>
+        <li>Guest OS: Microsoft Windows</li>
+      </ul>
+    </div>
+    
+    <div class="image-placeholder">
+      [Image: Configuration OS - Onglet OS]
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Configuration système avancée :</strong>
+      <ul>
+        <li>Graphic card: Default</li>
+        <li>Machine: q35</li>
+        <li>Firmware: OVMF (UEFI)</li>
+        <li>BIOS: OVMF (UEFI)</li>
+        <li>Add EFI Disk: Coché</li>
+        <li>EFI Storage: local-lvm</li>
+      </ul>
+    </div>
+    
+    <div class="image-placeholder">
+      [Image: Configuration Système - Onglet System]
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Configuration du disque :</strong>
+      <ul>
+        <li>Bus/Device: sata0, SATA</li>
+        <li>Storage: local-lvm</li>
+        <li>Disk size (GB): 120</li>
+        <li>Cache: Default (no cache)</li>
+      </ul>
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Configuration CPU :</strong>
+      <ul>
+        <li>Sockets: 1</li>
+        <li>Cores: 2</li>
+        <li>Total cores: 2</li>
+      </ul>
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Configuration mémoire :</strong>
+      <ul>
+        <li>Memory (MB): 16000</li>
+        <li>Minimum memory (MB): 16000</li>
+      </ul>
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Configuration réseau :</strong>
+      <ul>
+        <li>Bridge: vmbrSI01</li>
+        <li>VLAN Tag: no VLAN</li>
+        <li>Model: Intel E1000</li>
+        <li>MAC address: auto</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section" id="installation">
+    <h2>2. Installation Windows serveur</h2>
+    
+    <p>Sélectionner Windows Server 2025 Standard Evaluation avec l'expérience utilisateur pour faciliter la gestion initiale.</p>
+    
+    <div class="note">
+      <strong>Recommandation :</strong> Choisir Windows Server 2025 Standard Evaluation (experience utilisateur) pour disposer d'une interface graphique lors de la configuration initiale.
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Étapes d'installation :</strong>
+      <ol>
+        <li>Sélectionner l'image d'installation Windows Server 2025</li>
+        <li>Procéder à l'installation standard</li>
+        <li>À l'écran "Sélectionner une image", choisir "Windows Server 2025 Standard Evaluation (expérience utilisateur)"</li>
+        <li>Suivre l'assistant d'installation</li>
+        <li>À l'écran "Paramètres de personnalisation", définir un mot de passe pour l'administrateur</li>
+      </ol>
+    </div>
+    
+    <div class="image-placeholder">
+      [Image: Écran de sélection d'image Windows Server]
+    </div>
+    
+    <div class="image-placeholder">
+      [Image: Écran de progression d'installation]
+    </div>
+    
+    <div class="image-placeholder">
+      [Image: Écran de paramètres de personnalisation]
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section" id="ad1ex">
+    <h2>3. Procédure AD1EX configuration</h2>
+    
+    <h3>3.1 Activation du bureau à distance</h3>
+    
+    <div class="procedure-step">
+      <strong>Étapes :</strong>
+      <ol>
+        <li>Accéder aux Propriétés système</li>
+        <li>Aller dans l'onglet "Utilisation à distance"</li>
+        <li>Activer "Autoriser les connexions à distance à cet ordinateur"</li>
+        <li>Cocher "N'autoriser que les connexions provenant d'ordinateurs exécutant le Bureau à distance avec authentification NLA (recommandé)"</li>
+      </ol>
+    </div>
+    
+    <h3>3.2 Désactivation de la sécurité renforcée d'Internet Explorer</h3>
+    
+    <div class="procedure-step">
+      <strong>Configuration de la sécurité :</strong>
+      <ul>
+        <li>Administrateurs : Désactiver la Configuration de sécurité renforcée</li>
+        <li>Utilisateurs : Désactiver la Configuration de sécurité renforcée</li>
+      </ul>
+    </div>
+    
+    <h3>3.3 Changement du nom de l'ordinateur</h3>
+    
+    <div class="procedure-step">
+      <strong>Configuration du nom d'hôte :</strong>
+      <ol>
+        <li>Accéder aux Propriétés système</li>
+        <li>Cliquer sur "Modifier" dans la section "Nom d'ordinateur"</li>
+        <li>Remplacer le nom par : <strong>SRV-AD1EX</strong></li>
+        <li>Valider et redémarrer la machine</li>
+      </ol>
+    </div>
+    
+    <div class="config-box">
+      Nom d'ordinateur: SRV-AD1EX<br>
+      Groupe de travail: WORKGROUP<br>
+      Description: Serveur de production IS ou "Serveur de gestion"
+    </div>
+    
+    <h3>3.4 Configuration des adresses IP</h3>
+    
+    <div class="procedure-step">
+      <strong>Configuration réseau statique :</strong>
+      <ul>
+        <li>Adresse IP: 192.168.17.1</li>
+        <li>Passerelle par défaut: 192.168.17.254</li>
+        <li>Masque de sous-réseau: 255.255.255.0</li>
+        <li>Serveur DNS préféré: 192.168.17.1 (lui-même une fois AD configuré)</li>
+      </ul>
+    </div>
+    
+    <div class="note">
+      <strong>Vérification :</strong> Utiliser la commande <code>ipconfig</code> pour valider la configuration avant de continuer.
+    </div>
+    
+    <h3>3.5 Désactivation de l'IPv6</h3>
+    
+    <div class="procedure-step">
+      <strong>Étapes :</strong>
+      <ol>
+        <li>Ouvrir Paramètres de la carte Ethernet</li>
+        <li>Accéder aux Propriétés du Protocole Internet version 4 (TCP/IPv4)</li>
+        <li>Décocher la case IPv6</li>
+        <li>Valider les modifications</li>
+      </ol>
+    </div>
+    
+    <h3>3.6 Ajout des rôles et fonctionnalités</h3>
+    
+    <div class="procedure-step">
+      <strong>Rôles à installer :</strong>
+      <ul>
+        <li>✓ Serveur DHCP (Installer)</li>
+        <li>✓ Serveur DNS (Installer)</li>
+        <li>✓ Services de domaine Active Directory (Installer)</li>
+      </ul>
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Procédure d'installation des rôles :</strong>
+      <ol>
+        <li>Ouvrir le Gestionnaire de serveur</li>
+        <li>Cliquer sur "Ajouter des rôles et fonctionnalités"</li>
+        <li>Sélectionner "Installation basée sur un rôle ou une fonctionnalité"</li>
+        <li>Sélectionner le serveur destination (SRV-AD1EX)</li>
+        <li>Sélectionner les rôles listés ci-dessus</li>
+        <li>Ajouter les fonctionnalités requises pour chaque rôle</li>
+        <li>Cliquer sur "Installer"</li>
+      </ol>
+    </div>
+    
+    <div class="image-placeholder">
+      [Image: Sélection des rôles de serveur dans le gestionnaire]
+    </div>
+    
+    <h3>3.7 Promotion en contrôleur de domaine</h3>
+    
+    <div class="procedure-step">
+      <strong>Configuration du domaine :</strong>
+      <ol>
+        <li>Cliquer sur l'alerte de configuration post-déploiement</li>
+        <li>Sélectionner "Promouvoir ce serveur en contrôleur de domaine"</li>
+        <li>Choisir "Ajouter une nouvelle forêt"</li>
+        <li>Entrer le nom de domaine : <strong>carnoux.local</strong></li>
+        <li>Cliquer sur "Suivant"</li>
+      </ol>
+    </div>
+    
+    <div class="config-box">
+      Nom de domaine racine: carnoux.local<br>
+      Niveau fonctionnel de la forêt: Windows Server 2025<br>
+      Niveau fonctionnel du domaine: Windows Server 2025
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Configuration DNS :</strong>
+      <ol>
+        <li>Une alerte s'affichera indiquant que DNS n'existe pas encore (normal)</li>
+        <li>Laisser l'assistant créer automatiquement la zone DNS</li>
+        <li>Cliquer sur "Suivant"</li>
+      </ol>
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Options supplémentaires :</strong>
+      <ul>
+        <li>NetBIOS du domaine: CARNOUX</li>
+        <li>Répertoires de données: Par défaut (C:\Windows\NTDS)</li>
+        <li>Répertoire des journaux: Par défaut (C:\Windows\NTDS)</li>
+        <li>Répertoire SYSVOL: Par défaut (C:\Windows\SYSVOL)</li>
+      </ul>
+    </div>
+    
+    <h3>3.8 Configuration DNS - Zone inversée</h3>
+    
+    <div class="procedure-step">
+      <strong>Créer une nouvelle zone inversée :</strong>
+      <ol>
+        <li>Ouvrir le Gestionnaire DNS (Outils > DNS)</li>
+        <li>Clic droit sur "Zones de recherche inversée"</li>
+        <li>Sélectionner "Nouvelle zone"</li>
+        <li>Choisir "Zone principale"</li>
+        <li>Sélectionner "Zone de recherche inversée IPv4"</li>
+        <li>Entrer l'ID du réseau : <strong>192.168.17</strong> (sans la partie hôte)</li>
+        <li>Activer les mises à jour dynamiques</li>
+        <li>Cliquer sur "Terminer"</li>
+      </ol>
+    </div>
+    
+    <h3>3.9 Configuration DHCP</h3>
+    
+    <div class="procedure-step">
+      <strong>Créer une nouvelle étendue DHCP :</strong>
+      <ol>
+        <li>Ouvrir le Gestionnaire DHCP</li>
+        <li>Clic droit sur IPv4 > "Nouvelle étendue"</li>
+        <li>Donner un nom : <strong>DHCP</strong></li>
+        <li>Description : <strong>srv-dhcp</strong></li>
+      </ol>
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Configuration des adresses IP DHCP :</strong>
+      <ul>
+        <li>Adresse IP de début: 192.168.17.50</li>
+        <li>Adresse IP de fin: 192.168.17.100</li>
+        <li>Masque de sous-réseau: 255.255.255.0</li>
+        <li>Durée du bail: 24 heures (par défaut)</li>
+      </ul>
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Configuration des paramètres DHCP :</strong>
+      <ul>
+        <li>Passerelle par défaut: 192.168.17.254</li>
+        <li>Serveur DNS: 192.168.17.1 (et optionnellement 8.8.8.8)</li>
+        <li>Domaine parent: carnoux.local</li>
+      </ul>
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Activation du serveur DHCP :</strong>
+      <ul>
+        <li>Cocher "Oui, je veux activer cette étendue maintenant"</li>
+        <li>Cliquer sur "Suivant" et "Terminer"</li>
+      </ul>
+    </div>
+    
+    <h3>3.10 Création d'utilisateurs de domaine</h3>
+    
+    <div class="procedure-step">
+      <strong>Ajouter un nouvel utilisateur :</strong>
+      <ol>
+        <li>Ouvrir "Utilisateurs et ordinateurs Active Directory" (Outils > ADUC)</li>
+        <li>Naviguer vers Users</li>
+        <li>Clic droit > "Nouvel objet" > "Utilisateur"</li>
+        <li>Entrer le prénom: <strong>SIO</strong></li>
+        <li>Nom d'ouverture de session: <strong>SIO1@carnoux.local</strong></li>
+        <li>Nom d'ouverture de session (Windows 2000): <strong>CARNOUX\SIO1</strong></li>
+      </ol>
+    </div>
+    
+    <div class="procedure-step">
+      <strong>Configuration du mot de passe :</strong>
+      <ul>
+        <li>Cocher "L'utilisateur ne peut pas changer de mot de passe"</li>
+        <li>Cocher "Le mot de passe n'expire jamais"</li>
+        <li>Définir un mot de passe sécurisé</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>Document: Interne SNCF Réseau - Procédure de Configuration Active Directory</p>
+    <p>Date: 2025 | Version: 1.0</p>
+    <p><em>Ce document peut être imprimé en PDF pour archivage ou partage</em></p>
+  </footer>
+</body>
+</html>
