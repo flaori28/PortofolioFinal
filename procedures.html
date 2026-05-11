@@ -1,0 +1,447 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPERATIONS | MES PROCÃ‰DURES</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
+  <link rel="stylesheet" href="assets/css/procedures-new.css"> <!-- LOAD NEW CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-symbol.svg">
+  <script defer src="assets/js/app.js"></script>
+    <link rel="canonical" href="https://flaori28.github.io/PortofolioFinal/procedures.html"
+</head>
+<body>
+  <div id="background-canvas-container"></div>
+  <div class="scanlines"></div>
+  <div class="noise-overlay"></div>
+  
+  <header class="main-header">
+    <div class="logo">
+      <span class="highlight">Sciacca</span> Flavio
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_terminal">ACCUEIL</a></li>
+      <li class="dropdown">
+        <a href="#" data-i18n="nav_profile">Ã€ PROPOS</a>
+        <div class="dropdown-content">
+            <a href="apropos.html">Ã€ PROPOS DE MOI</a>
+            <a href="entreprise.html">MON ENTREPRISE</a>
+        </div>
+      </li>
+      <li><a href="competences.html" data-i18n="nav_arsenal">COMPÃ‰TENCES</a></li>
+      <li><a href="certifications.html" data-i18n="nav_clearance">BTS SIO</a></li>
+      <li class="dropdown">
+        <a href="projets.html" class="active" data-i18n="nav_ops">PROJETS</a>
+        <div class="dropdown-content">
+            <a href="procedures.html" class="active">MES PROCÃ‰DURES</a>
+            <a href="projets_e5.html">PROJETS E5</a>
+            <a href="projets_e6.html">PROJETS E6</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="veille.html" data-i18n="nav_intel">VEILLES</a>
+        <div class="dropdown-content">
+            <a href="veilles_juridiques.html">VEILLES JURIDIQUES</a>
+            <a href="veilles_technologiques.html">VEILLES TECHNOLOGIQUES</a>
+        </div>
+      </li>
+    </ul>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">MES PROCÃ‰DURES</h1>
+    
+    <!-- ARCHITECTURE RESEAU -->
+    <h2 class="section-title">ARCHITECTURE RÃ‰SEAU</h2>
+
+    <style>
+      .arch-card {
+        background: rgba(10, 20, 30, 0.95);
+        border: 1px solid var(--hud-secondary);
+        border-radius: 4px;
+        padding: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+        margin-bottom: 60px;
+        position: relative;
+        backdrop-filter: blur(5px);
+      }
+      
+      .arch-card::before {
+        content: '';
+        position: absolute;
+        top: -1px; left: -1px; width: 20px; height: 20px;
+        border-top: 2px solid var(--hud-secondary);
+        border-left: 2px solid var(--hud-secondary);
+      }
+      .arch-card::after {
+        content: '';
+        position: absolute;
+        bottom: -1px; right: -1px; width: 20px; height: 20px;
+        border-bottom: 2px solid var(--hud-secondary);
+        border-right: 2px solid var(--hud-secondary);
+      }
+
+      .arch-img-col {
+        flex: 1 1 500px;
+        position: relative;
+        min-height: 300px;
+        border: 1px solid var(--hud-dim);
+        background: #000;
+        overflow: hidden;
+      }
+
+      .arch-img-col img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        opacity: 0.9;
+        transition: opacity 0.3s;
+      }
+      
+      .arch-img-col:hover img {
+        opacity: 1;
+      }
+
+      .arch-badges {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+      }
+
+      .badge-main {
+        background: rgba(0, 240, 255, 0.2);
+        color: var(--hud-secondary);
+        border: 1px solid var(--hud-secondary);
+        padding: 5px 15px;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+      }
+
+      .badge-status {
+        background: rgba(51, 255, 0, 0.2);
+        color: var(--hud-primary);
+        border: 1px solid var(--hud-primary);
+        padding: 5px 15px;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+      }
+
+      .arch-content-col {
+        flex: 1 1 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .arch-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid var(--hud-dim);
+        padding-bottom: 15px;
+      }
+
+      .arch-icon {
+        color: var(--hud-secondary);
+        font-size: 1.5rem;
+      }
+
+      .arch-title {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.8rem;
+        color: #fff;
+        text-shadow: 0 0 10px rgba(255,255,255,0.3);
+      }
+
+      .arch-subtitle {
+        color: var(--hud-secondary);
+        font-family: 'Share Tech Mono', monospace;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        letter-spacing: 2px;
+      }
+
+      .arch-desc {
+        color: #ccc;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        font-family: 'Share Tech Mono', monospace;
+      }
+
+      .arch-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      .tag-item {
+        background: rgba(255,255,255,0.05);
+        color: var(--hud-primary);
+        border: 1px solid var(--hud-dim);
+        padding: 5px 15px;
+        font-size: 0.8rem;
+        font-family: 'Share Tech Mono', monospace;
+      }
+
+      .arch-actions {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .btn-cyber {
+        background: transparent;
+        color: var(--hud-secondary);
+        border: 1px solid var(--hud-secondary);
+        padding: 12px 25px;
+        font-family: 'Orbitron', sans-serif;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+      
+      .btn-cyber:hover {
+        background: rgba(0, 240, 255, 0.1);
+        box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+        transform: translateY(-2px);
+      }
+
+      .btn-cyber-primary {
+        background: rgba(0, 240, 255, 0.1);
+        border: 1px solid var(--hud-secondary);
+        color: #fff;
+      }
+      
+      .btn-cyber-primary:hover {
+        background: var(--hud-secondary);
+        color: #000;
+      }
+
+      .btn-full-width {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin-top: 15px;
+        border-color: var(--hud-dim);
+        color: #888;
+      }
+      .btn-full-width:hover {
+        border-color: #fff;
+        color: #fff;
+        background: rgba(255,255,255,0.05);
+      }
+
+    </style>
+
+    <div class="arch-card">
+        <!-- LEFT: IMAGE -->
+        <div class="arch-img-col">
+            <div class="arch-badges">
+                <div class="badge-main">STATUS: MAIN OPERATION</div>
+                <div class="badge-status">COMPLETE</div>
+            </div>
+            <img src="assets/img/architecture_reseau.png?v=3" alt="Architecture RÃ©seau S3P2">
+        </div>
+
+        <!-- RIGHT: CONTENT -->
+        <div class="arch-content-col">
+            <div class="arch-header">
+                <div class="arch-icon">></div>
+                <h3 class="arch-title">INFRA_RESEAU_S3P2</h3>
+            </div>
+            <div class="arch-subtitle">ARCHITECTURE SECURISEE</div>
+            
+            <p class="arch-desc">
+                [SYSTEM LOG]: DÃ©ploiement d'une infrastructure complÃ¨te.
+                IntÃ©gration Firewall PfSense, Segmentation VLAN, Active Directory et Monitoring.
+                Environnement de test validÃ© et opÃ©rationnel.
+            </p>
+
+            <div class="arch-tags">
+                <span class="tag-item">:: PfSense</span>
+                <span class="tag-item">:: VLANs</span>
+                <span class="tag-item">:: Active Directory</span>
+                <span class="tag-item">:: GLPI</span>
+                <span class="tag-item">:: Zabbix</span>
+                <span class="tag-item">:: Windows Srv</span>
+            </div>
+
+            <div class="arch-actions">
+                <a href="assets/img/architecture_reseau.png?v=3" target="_blank" class="btn-cyber btn-cyber-primary">
+                    [O] VOIR SCHEMA
+                </a>
+                <a href="assets/img/architecture_reseau.png?v=3" download="Architecture_Reseau_S3P2.png" class="btn-cyber">
+                    [ðŸ“¥] TELECHARGER
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROCEDURE LIBRARY GRID -->
+    <h2 class="section-title">BIBLIOTHÃˆQUE DE PROTOCOLES</h2>
+    
+    <div class="procedure-grid">
+        
+        <!-- PROCEDURE 1: PFSENSE -->
+        <article class="proc-card">
+            <div class="proc-img-container">
+                <img src="assets/img/procedures/procedure_img_pfsense.png" alt="ProcÃ©dure PfSense" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="proc-content">
+                <h3 class="proc-title">ProcÃ©dure PfSense</h3>
+                <p class="proc-desc">
+                    Mise en place d'un pare-feu PfSense, configuration des interfaces WAN/LAN, 
+                    rÃ¨gles de filtrage NAT et ouverture de ports pour les services web.
+                </p>
+                <div class="proc-tags">
+                    <span class="proc-tag">PfSense</span>
+                    <span class="proc-tag">Firewall</span>
+                    <span class="proc-tag">NAT</span>
+                    <span class="proc-tag">SÃ©curitÃ©</span>
+                </div>
+                <div class="proc-actions">
+                    <a href="assets/docs/procedure_pfsense_port.pdf" class="btn-proc btn-proc-view" target="_blank">ðŸ‘ï¸ Voir</a>
+                    <a href="assets/docs/procedure_pfsense_port.pdf" download="Procedure_PfSense_Port.pdf" class="btn-proc btn-proc-download">ðŸ“¥ TÃ©lÃ©charger</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROCEDURE 2: ZABBIX -->
+        <article class="proc-card">
+            <div class="proc-img-container">
+                <img src="assets/img/procedures/procedure_img_zabbix.png" alt="ProcÃ©dure Zabbix" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="proc-content">
+                <h3 class="proc-title">ProcÃ©dure Zabbix</h3>
+                <p class="proc-desc">
+                    Installation et configuration d'un serveur de supervision Zabbix. ParamÃ©trage des agents, 
+                    crÃ©ation de tableaux de bord pour le monitoring des ressources (CPU, RAM, Disque).
+                </p>
+                <div class="proc-tags">
+                    <span class="proc-tag">Zabbix</span>
+                    <span class="proc-tag">Supervision</span>
+                    <span class="proc-tag">SNMP</span>
+                    <span class="proc-tag">Linux</span>
+                </div>
+                <div class="proc-actions">
+                    <a href="assets/docs/procedure_zabbix.pdf" class="btn-proc btn-proc-view" target="_blank">ðŸ‘ï¸ Voir</a>
+                    <a href="assets/docs/procedure_zabbix.pdf" download="Procedure_Zabbix.pdf" class="btn-proc btn-proc-download">ðŸ“¥ TÃ©lÃ©charger</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROCEDURE 3: GPO -->
+        <article class="proc-card">
+            <div class="proc-img-container">
+                <img src="assets/img/procedures/procedure_img_gpo.png" alt="ProcÃ©dure GPO" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="proc-content">
+                <h3 class="proc-title">Lecteur PartagÃ©s et GPO</h3>
+                <p class="proc-desc">
+                    Mise en Å“uvre des StratÃ©gies de Groupe (GPO) pour la gestion centralisÃ©e des utilisateurs. 
+                    Exemple : Mappage automatique de lecteurs rÃ©seau et dÃ©ploiement de fond d'Ã©cran.
+                </p>
+                <div class="proc-tags">
+                    <span class="proc-tag">GPO</span>
+                    <span class="proc-tag">Active Directory</span>
+                    <span class="proc-tag">Windows Server</span>
+                    <span class="proc-tag">Policy</span>
+                </div>
+                <div class="proc-actions">
+                    <a href="assets/docs/procedure_gpo_lecteur.pdf" class="btn-proc btn-proc-view" target="_blank">ðŸ‘ï¸ Voir</a>
+                    <a href="assets/docs/procedure_gpo_lecteur.pdf" download="Procedure_GPO_Lecteur.pdf" class="btn-proc btn-proc-download">ðŸ“¥ TÃ©lÃ©charger</a>
+                </div>
+            </div>
+        </article>
+        
+        <!-- PROCEDURE 4: EXCHANGE -->
+        <article class="proc-card">
+            <div class="proc-img-container">
+                <img src="assets/img/procedures/procedure_img_exchange.png" alt="ProcÃ©dure Exchange" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="proc-content">
+                <h3 class="proc-title">ProcÃ©dure Exchange</h3>
+                <p class="proc-desc">
+                    Installation complÃ¨te d'un serveur de messagerie Microsoft Exchange. 
+                    Configuration des connecteurs SMTP, crÃ©ation de boÃ®tes aux lettres et accÃ¨s OWA.
+                </p>
+                <div class="proc-tags">
+                    <span class="proc-tag">Exchange</span>
+                    <span class="proc-tag">Mail</span>
+                    <span class="proc-tag">SMTP</span>
+                    <span class="proc-tag">PowerShell</span>
+                </div>
+                <div class="proc-actions">
+                    <a href="assets/docs/procedure_exchange.pdf" class="btn-proc btn-proc-view" target="_blank">ðŸ‘ï¸ Voir</a>
+                    <a href="assets/docs/procedure_exchange.pdf" download="Procedure_Exchange.pdf" class="btn-proc btn-proc-download">ðŸ“¥ TÃ©lÃ©charger</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROCEDURE 5: CREATION USER -->
+        <article class="proc-card">
+            <div class="proc-img-container">
+                <img src="assets/img/procedures/procedure_creation_user.png" alt="ProcÃ©dure CrÃ©ation User" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="proc-content">
+                <h3 class="proc-title">CrÃ©ation Utilisateur</h3>
+                <p class="proc-desc">
+                    ProcÃ©dure dÃ©taillÃ©e pour la crÃ©ation d'un nouvel utilisateur dans l'Active Directory,
+                    attribution des droits, groupes et configuration du profil.
+                </p>
+                <div class="proc-tags">
+                    <span class="proc-tag">Active Directory</span>
+                    <span class="proc-tag">User</span>
+                    <span class="proc-tag">Administration</span>
+                    <span class="proc-tag">SÃ©curitÃ©</span>
+                </div>
+                <div class="proc-actions">
+                    <a href="assets/docs/procedure_creation_user.pdf" class="btn-proc btn-proc-view" target="_blank">ðŸ‘ï¸ Voir</a>
+                    <a href="assets/docs/procedure_creation_user.pdf" download="Procedure_Creation_User.pdf" class="btn-proc btn-proc-download">ðŸ“¥ TÃ©lÃ©charger</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="proc-card" style="opacity:0.7; border-style:dashed; cursor:pointer;" onclick="alert('FonctionnalitÃ© Ã  venir : Ajouter une procÃ©dure')">
+            <div class="proc-content" style="justify-content:center; height:100%;">
+                <div style="font-size:4rem; color:#ff3399; margin-bottom:20px;">+</div>
+                <h3 class="proc-title">Nouvelle ProcÃ©dure</h3>
+            </div>
+        </article>
+
+    </div>
+
+
+  </main>
+
+  <footer class="status-footer">
+    <div data-i18n="footer_sys">SYSTEM: SECURE</div>
+    <div>LAT: 48.8566 // LON: 2.3522</div>
+    <div>V.2.0.26</div>
+  </footer>
+  <!-- LANG SELECTOR BOTTOM LEFT -->
+
+</body>
+</html>
+

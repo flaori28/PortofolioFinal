@@ -1,0 +1,172 @@
+
+/* --- BLUE/CYAN TECH THEME (Matches --hud-secondary) --- */
+
+.procedure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 30px 10px;
+}
+
+.proc-card {
+  background: rgba(5, 15, 20, 0.9); /* Deep Blue-Black background */
+  border: 1px solid #0088ff; /* Tech Blue border */
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 136, 255, 0.15); /* Blue glow */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.proc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 136, 255, 0.4); /* Stronger Blue glow */
+  border-color: #00bfff; /* Brighter Blue on hover */
+}
+
+/* Image Placeholder */
+.proc-img-container {
+  height: 160px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 136, 255, 0.3);
+  background: #00050a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Scanline effect */
+.proc-img-container::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(0, 136, 255, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+.proc-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #001a33 0%, #000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proc-icon {
+  font-family: var(--font-header, "Orbitron"), sans-serif;
+  font-size: 3rem;
+  color: #00ccff; /* Cyan Icon */
+  text-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
+}
+
+/* Content */
+.proc-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+  flex-grow: 1;
+}
+
+.proc-title {
+  font-family: var(--font-header, "Orbitron"), sans-serif;
+  color: #33ccff; /* Light Blue Title */
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.proc-desc {
+  color: #b3e0ff; /* Light blueish white */
+  font-family: var(--font-tech, "Share Tech Mono"), monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+/* Tags */
+.proc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.proc-tag {
+  background: rgba(0, 136, 255, 0.05);
+  color: #33ccff;
+  border: 1px solid rgba(0, 136, 255, 0.4);
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 0.8rem;
+  font-family: var(--font-tech, "Share Tech Mono"), monospace;
+  transition: all 0.3s ease;
+}
+
+.proc-tag:hover {
+  background: rgba(0, 136, 255, 0.2);
+  box-shadow: 0 0 8px rgba(0, 136, 255, 0.4);
+}
+
+/* Actions */
+.proc-actions {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-proc {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: var(--font-header, "Orbitron"), sans-serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* Blue "Voir" Button */
+.btn-proc-view {
+  color: #00ccff;
+  border: 1px solid #0088ff;
+  background: rgba(0, 136, 255, 0.05);
+}
+
+.btn-proc-view:hover {
+  background: #0088ff; /* Solid Blue on hover */
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 136, 255, 0.5);
+}
+
+/* Green "Télécharger" Button - Inverse of previous scheme */
+.btn-proc-download {
+  color: var(--hud-primary, #33ff00);
+  border: 1px solid var(--hud-primary, #33ff00);
+  background: rgba(51, 255, 0, 0.05);
+}
+
+.btn-proc-download:hover {
+  background: var(--hud-primary, #33ff00);
+  color: #000;
+  box-shadow: 0 0 15px rgba(51, 255, 0, 0.4);
+}
+
