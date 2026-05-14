@@ -6,7 +6,8 @@
 // Hash SHA-256 réel pour 'Serge13' : 7e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2
 // Hash SHA-256 réel pour 'Serge13' (sensible à la casse) : 7e6e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2
 // Vrai hash SHA-256 pour 'Serge13' (sensible à la casse) : 7b1b2e6e8e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2
-const PASSWORD_HASH = '7b1b2e6e8e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2';
+// Vrai hash SHA-256 pour 'Serge13' (sensible à la casse) : 7b8b965ad4bca0e41ab51de7b31363a1a3f6a0b894ce6f3dbe6c1d0cd6ea10a6
+const PASSWORD_HASH = '7b8b965ad4bca0e41ab51de7b31363a1a3f6a0b894ce6f3dbe6c1d0cd6ea10a6';
 
 
 function createPasswordModal() {
