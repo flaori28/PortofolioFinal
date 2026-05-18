@@ -2,6 +2,10 @@
 // Hash for password 'pingus13' (SHA-256): 866a003416ef4dd95f6a52237687d22f8a8018cecc40283e4de9c52d26a0f4d9
 const PASSWORD_HASH = '866a003416ef4dd95f6a52237687d22f8a8018cecc40283e4de9c52d26a0f4d9';
 
+function blockInteraction(event) {
+  event.preventDefault();
+}
+
 function createPasswordModal() {
   const modal = document.createElement('div');
   modal.id = 'password-modal';
@@ -45,7 +49,9 @@ function disableTabNavigation() {
     if (!el.closest('#password-modal')) {
       el.setAttribute('tabindex', '-1');
       el.setAttribute('aria-disabled', 'true');
-      if (el.tagName === 'A' || el.tagName === 'BUTTON') el.addEventListener('click', e => e.preventDefault(), true);
+      if (el.tagName === 'A' || el.tagName === 'BUTTON') {
+        el.addEventListener('click', blockInteraction, true);
+      }
     }
   });
 }
@@ -55,6 +61,9 @@ function enableTabNavigation() {
     if (!el.closest('#password-modal')) {
       el.removeAttribute('tabindex');
       el.removeAttribute('aria-disabled');
+      if (el.tagName === 'A' || el.tagName === 'BUTTON') {
+        el.removeEventListener('click', blockInteraction, true);
+      }
     }
   });
 }
