@@ -43,7 +43,7 @@ body {
   position: relative;
 }
 
-/* Animated grid background */
+/* Static grid background */
 body::before {
   content: '';
   position: fixed;
@@ -57,12 +57,6 @@ body::before {
   background-size: 60px 60px;
   pointer-events: none;
   z-index: 0;
-  animation: grid-movement 20s linear infinite;
-}
-
-@keyframes grid-movement {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(60px); }
 }
 
 body > * {
@@ -108,12 +102,6 @@ body > * {
   content: '▶';
   color: var(--magenta);
   font-size: 1.2rem;
-  animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
 }
 
 .logo span {
@@ -199,13 +187,7 @@ body > * {
   width: 200%;
   height: 200%;
   background: radial-gradient(circle, rgba(255, 0, 255, 0.1) 0%, transparent 70%);
-  animation: rotate-gradient 20s linear infinite;
   z-index: -1;
-}
-
-@keyframes rotate-gradient {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
 
 .hero-text h1 {
@@ -286,12 +268,6 @@ body > * {
   box-shadow: 
     0 0 40px var(--glow-cyan),
     0 0 80px rgba(255, 0, 255, 0.3);
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
 }
 
 .info-section {
@@ -423,16 +399,6 @@ body > * {
 .skill-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  animation: bounce 2s ease-in-out infinite;
-}
-
-.skill-icon:nth-child(2n) {
-  animation-delay: 0.1s;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
 }
 
 .skill-card h3 {
@@ -593,12 +559,6 @@ body > * {
     linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%),
     linear-gradient(-45deg, transparent 30%, rgba(255, 0, 255, 0.1) 50%, transparent 70%);
   pointer-events: none;
-  animation: shimmer 3s infinite;
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
 }
 
 .security-badge {
