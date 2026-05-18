@@ -64,6 +64,14 @@ body > * {
   z-index: 1;
 }
 
+#background-canvas-container,
+.scanlines,
+.noise-overlay,
+.vignette,
+#boot-sequence {
+  display: none !important;
+}
+
 
 /* ============================================
    HEADER & NAVIGATION
