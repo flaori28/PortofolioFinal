@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
 });
 
+const ENABLE_DYNAMIC_BACKGROUND = false;
+
 // MOBILE MENU
 function initMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
@@ -143,17 +145,23 @@ function initBootSequence() {
             setTimeout(() => {
                 bootScreen.style.display = 'none';
                 initTypewriter();
-                initRadar();
+                if (ENABLE_DYNAMIC_BACKGROUND) {
+                    initRadar();
+                }
             }, 500);
         }, 2500);
     } else {
-        initRadar();
+        if (ENABLE_DYNAMIC_BACKGROUND) {
+            initRadar();
+        }
         initTypewriter();
     }
 }
 
 // RADAR / MAP SYSTEM
 function initRadar() {
+    if (!ENABLE_DYNAMIC_BACKGROUND) return;
+
     const container = document.getElementById('background-canvas-container');
     if (!container) return;
 
@@ -299,7 +307,9 @@ function initRadar() {
 
 // Simple fallback if no canvas logic needed immediately
 function initRadarCheck() {
-    if(!document.getElementById('boot-sequence')) initRadar();
+    if (ENABLE_DYNAMIC_BACKGROUND && !document.getElementById('boot-sequence')) {
+        initRadar();
+    }
 }
 
 let typewriterTimeout = null;

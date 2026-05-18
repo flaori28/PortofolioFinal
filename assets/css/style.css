@@ -1327,3 +1327,10 @@ body {
     border-color: var(--sotc-border);
   }
 }
+
+/* Background effects disabled on request */
+.scanlines,
+.noise-overlay,
+.vignette {
+  display: none !important;
+}
