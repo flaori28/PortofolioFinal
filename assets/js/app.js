@@ -7,6 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initRadarCheck();
     initLanguageSystem();
     initMobileMenu();
+
+    // --- PATCH: Force enable E5/E6 links after unlock ---
+    setTimeout(() => {
+        document.querySelectorAll('a[href="e5.html"], a[href="e6.html"]').forEach(link => {
+            link.removeAttribute('tabindex');
+            link.removeAttribute('aria-disabled');
+            link.style.pointerEvents = 'auto';
+            link.style.opacity = '1';
+            link.addEventListener('click', function(e) {
+                // Si le lien est visible, laisse passer le clic
+                if (link.offsetParent !== null) {
+                    return true;
+                }
+            }, true);
+        });
+    }, 500);
 });
 
 // MOBILE MENU
