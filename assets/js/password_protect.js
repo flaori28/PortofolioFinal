@@ -1,6 +1,6 @@
 // Password protection script for static site
-// Hash for password 'pingus13' (SHA-256): d8f0a2c3b5e7f1a4c6d9e2f4a7b9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9f0
-const PASSWORD_HASH = 'd8f0a2c3b5e7f1a4c6d9e2f4a7b9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9f0';
+// Hash for password 'pingus13' (SHA-256): 866a003416ef4dd95f6a52237687d22f8a8018cecc40283e4de9c52d26a0f4d9
+const PASSWORD_HASH = '866a003416ef4dd95f6a52237687d22f8a8018cecc40283e4de9c52d26a0f4d9';
 
 function createPasswordModal() {
   const modal = document.createElement('div');
