@@ -10,7 +10,7 @@ function createPasswordModal() {
   modal.style.left = '0';
   modal.style.width = '100vw';
   modal.style.height = '100vh';
-  modal.style.background = 'linear-gradient(135deg, #0e141a 0%, #1a1a2e 100%)';
+  modal.style.background = 'linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%)';
   modal.style.display = 'flex';
   modal.style.flexDirection = 'column';
   modal.style.justifyContent = 'center';
