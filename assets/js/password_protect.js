@@ -17,16 +17,17 @@ function createPasswordModal() {
   modal.style.alignItems = 'center';
   modal.style.zIndex = '99999';
   modal.innerHTML = `
-    <div style="background:#ffffff;padding:4rem 3.5rem;border:1px solid #e0e0e0;box-shadow:0 8px 32px rgba(0,0,0,0.1);display:flex;flex-direction:column;align-items:center;gap:1.5rem;min-width:360px;max-width:95vw;">
+    <div style="background:#ffffff;padding:4rem 3.5rem;border:2px solid #333;box-shadow:0 8px 32px rgba(0,0,0,0.15);display:flex;flex-direction:column;align-items:center;gap:1.5rem;min-width:360px;max-width:95vw;border-left:4px solid #00d400;position:relative;">
+      <div style="position:absolute;top:-12px;left:20px;background:#fff;padding:0 8px;font-family:Courier New, monospace;font-size:0.8rem;color:#00d400;font-weight:700;letter-spacing:1px;">SECURITY</div>
       <div style="font-size:2.5rem;line-height:1;margin-bottom:0.5rem;">🔒</div>
-      <h2 style="color:#000;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;margin:0 0 0.5rem 0;letter-spacing:0;font-size:2rem;font-weight:700;">ACCÈS PORTFOLIO</h2>
+      <h2 style="color:#000;font-family:Courier New, monospace;margin:0 0 0.5rem 0;letter-spacing:2px;font-size:1.8rem;font-weight:700;"><span style='color:#00d400;'>> </span>ACCÈS PORTFOLIO</h2>
       <div style="color:#333;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;font-size:1.1rem;margin-bottom:0.5rem;font-weight:400;">Sciacca Flavio</div>
-      <div style="color:#666;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;font-size:1rem;text-align:center;margin-bottom:1.5rem;font-weight:300;">Merci d'entrer votre mot de passe pour accéder au portfolio</div>
-      <label for="password-input" style="color:#333;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;font-size:0.95rem;align-self:flex-start;margin-bottom:0.5rem;font-weight:500;">Mot de passe</label>
-      <input id="password-input" type="password" placeholder="Entrez le mot de passe" style="padding:0.9rem 1.2rem;font-size:1rem;border-radius:4px;border:1px solid #e0e0e0;background:#fff;color:#333;width:100%;outline:none;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;transition:border 0.3s;" autofocus />
-      <button id="password-submit" style="margin-top:0.5rem;padding:0.9rem 2rem;background:#000;color:#fff;font-weight:600;border:2px solid #000;border-radius:4px;font-size:1rem;cursor:pointer;transition:all 0.3s;width:100%;text-transform:uppercase;letter-spacing:1px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">Accéder</button>
-      <div id="password-error" style="color:#dc3545;min-height:1.5em;font-size:0.9em;text-align:center;"></div>
-      <div style="margin-top:2rem;font-size:0.85rem;color:#999;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">© 2026 Sciacca Flavio — Portfolio Privé</div>
+      <div style="color:#666;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;font-size:1rem;text-align:center;margin-bottom:1.5rem;font-weight:300;border-top:1px dashed #00d400;border-bottom:1px dashed #00d400;padding:1rem 0;width:100%;">Authentification requise pour accéder au portfolio</div>
+      <label for="password-input" style="color:#333;font-family:Courier New, monospace;font-size:0.9rem;align-self:flex-start;margin-bottom:0.5rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;"><span style='color:#00d400;'>$ </span>Mot de passe</label>
+      <input id="password-input" type="password" placeholder="●●●●●●●●" style="padding:0.9rem 1.2rem;font-size:1rem;border-radius:2px;border:1px solid #00d400;background:#fff;color:#333;width:100%;outline:none;font-family:Courier New, monospace;transition:all 0.3s;font-weight:500;" autofocus />
+      <button id="password-submit" style="margin-top:0.5rem;padding:0.9rem 2rem;background:#000;color:#fff;font-weight:700;border:2px solid #000;border-radius:2px;font-size:1rem;cursor:pointer;transition:all 0.3s;width:100%;text-transform:uppercase;letter-spacing:1px;font-family:Courier New, monospace;font-size:0.9rem;">Unlock</button>
+      <div id="password-error" style="color:#dc3545;min-height:1.5em;font-size:0.9em;text-align:center;font-family:Courier New, monospace;"></div>
+      <div style="margin-top:2rem;font-size:0.8rem;color:#999;font-family:Courier New, monospace;text-align:center;border-top:1px solid #e0e0e0;padding-top:1rem;width:100%;opacity:0.8;">© 2026 Sciacca Flavio — <span style='color:#00d400;'>Portfolio Secured</span></div>
     </div>
   `;
   document.body.appendChild(modal);
