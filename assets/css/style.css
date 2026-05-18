@@ -1,17 +1,26 @@
 :root {
-  --hud-bg: #1a252f;
-  --hud-panel: rgba(26, 37, 47, 0.98);
-  --hud-primary: #33ff00; /* Classic Terminal Green */
-  --hud-secondary: #00f0ff; /* Tech Blue */
-  --hud-alert: #ff3333;
-  --hud-dim: #2a3a2a;
-  --hud-grid: rgba(51, 255, 0, 0.05);
-  --font-tech: 'Share Tech Mono', 'Courier New', monospace;
-  --font-header: 'Orbitron', sans-serif;
-  --scanline-color: rgba(0, 0, 0, 0.05);
+  --hud-bg: #f5ede0;
+  --hud-panel: rgba(250, 244, 236, 0.9);
+  --hud-primary: #c9880a;
+  --hud-secondary: #e0a030;
+  --hud-alert: #b54827;
+  --hud-dim: #c8b89a;
+  --hud-grid: rgba(201, 136, 10, 0.08);
+  --font-tech: 'Lora', 'EB Garamond', serif;
+  --font-header: 'Cinzel', 'Cormorant Garamond', serif;
+  --scanline-color: rgba(200, 184, 154, 0.18);
+  --sotc-sand: #f5ede0;
+  --sotc-ivory: #faf4ec;
+  --sotc-stone: #e8ddd0;
+  --sotc-parchment: #ede0cc;
+  --sotc-text-main: #2e1f0e;
+  --sotc-text-soft: #6b4c2a;
+  --sotc-border: #c8b89a;
+  --sotc-shadow: rgba(125, 85, 30, 0.16);
+  --sotc-glow: rgba(224, 160, 48, 0.36);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@500;600&family=Lora:wght@400;500;600&family=EB+Garamond:wght@400;500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -21,14 +30,15 @@
 }
 
 body {
-  background-color: #050505; /* Fallback */
+  background-color: #f5ede0; /* Fallback */
   background-color: var(--hud-bg);
-  color: var(--hud-primary);
+  color: var(--sotc-text-main);
   font-family: var(--font-tech);
   overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  text-rendering: optimizeLegibility;
 }
 
 /* --- CRT & TEXTURE EFFECTS --- */
@@ -1100,5 +1110,220 @@ body.loaded {
 
   .section-subtitle {
     font-size: 0.95rem;
+  }
+}
+
+/* --- SHADOW OF THE COLOSSUS BRIGHT THEME OVERRIDES --- */
+body,
+.container,
+.status-footer,
+.main-header,
+.terminal-window,
+.hud-panel,
+.tactical-card,
+.competence-card,
+.info-overlay,
+.lang-dropdown,
+.dropdown-content {
+  color: var(--sotc-text-main);
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 50% -120px, rgba(255, 230, 170, 0.45), rgba(255, 230, 170, 0) 60%),
+    radial-gradient(900px 360px at 85% 10%, rgba(255, 214, 135, 0.25), rgba(255, 214, 135, 0) 62%),
+    linear-gradient(180deg, var(--sotc-ivory) 0%, var(--sotc-sand) 55%, var(--sotc-parchment) 100%);
+}
+
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(200, 184, 154, 0.08) 50%,
+    rgba(200, 184, 154, 0.08)
+  );
+  opacity: 0.4;
+}
+
+.noise-overlay {
+  opacity: 0.03;
+}
+
+.vignette {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 58%, rgba(224, 160, 48, 0.09) 100%);
+}
+
+#background-canvas-container {
+  background: radial-gradient(circle at 50% 20%, #fff8ef 0%, #f3e6d6 48%, #ead8c0 100%);
+}
+
+.main-header {
+  border-bottom: 1px solid var(--sotc-border);
+  background: rgba(250, 244, 236, 0.92);
+  box-shadow: 0 8px 26px var(--sotc-shadow);
+  backdrop-filter: blur(6px);
+}
+
+.logo,
+.highlight,
+.section-title,
+.hero-title,
+.card-title {
+  color: var(--sotc-text-main) !important;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.45);
+}
+
+.section-title,
+.hero-title,
+.card-title,
+.btn-tactical,
+.nav-links a {
+  letter-spacing: 0.08em;
+}
+
+.section-title::after {
+  color: var(--sotc-text-soft);
+}
+
+.nav-links a,
+.dropdown-content a,
+.stack-list,
+.hero-subtitle,
+.hero-desc,
+.type-text,
+.skill-label,
+.card-desc,
+.section-subtitle,
+.status-footer,
+.hero-footer,
+.terminal-header,
+.text-dim,
+.dim {
+  color: var(--sotc-text-soft) !important;
+}
+
+.nav-links a.active,
+.nav-links a:hover,
+.dropdown-content a:hover,
+.lang-dropdown div:hover {
+  color: var(--hud-primary) !important;
+  background: rgba(201, 136, 10, 0.1);
+  text-shadow: 0 0 8px var(--sotc-glow);
+}
+
+.dropdown-content,
+.lang-dropdown {
+  background: rgba(250, 244, 236, 0.97);
+  border: 1px solid var(--sotc-border);
+  box-shadow: 0 10px 25px var(--sotc-shadow);
+}
+
+.hud-panel,
+.terminal-window,
+.tactical-card,
+.competence-card,
+.info-overlay,
+.img-container,
+.competences-section {
+  background: linear-gradient(160deg, rgba(250, 244, 236, 0.95) 0%, rgba(237, 224, 204, 0.94) 100%) !important;
+  border: 1px solid var(--sotc-border) !important;
+  box-shadow: 0 12px 30px var(--sotc-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+}
+
+.hud-panel::before,
+.hud-panel::after {
+  border-color: var(--hud-primary);
+}
+
+.card-header,
+.terminal-header,
+.status-footer,
+.mission-log {
+  border-color: var(--sotc-border) !important;
+}
+
+.log-entry::before {
+  background: var(--sotc-ivory);
+  border-color: var(--hud-primary);
+}
+
+.log-date,
+.contact-item span,
+.load-bar,
+.text-success,
+.card-domain,
+.section-title .highlight {
+  color: var(--hud-primary) !important;
+}
+
+.bar-bg {
+  background: rgba(200, 184, 154, 0.4);
+}
+
+.bar-fill {
+  background: linear-gradient(90deg, var(--hud-primary), var(--hud-secondary));
+}
+
+.btn-tactical,
+.btn-outline,
+.btn-primary,
+.lang-btn {
+  background: linear-gradient(160deg, #f5e7d1 0%, #efdfc8 100%) !important;
+  color: var(--sotc-text-main) !important;
+  border: 1px solid #c89d54 !important;
+  box-shadow: 0 6px 16px rgba(180, 125, 38, 0.2);
+  clip-path: none;
+}
+
+.btn-tactical:hover,
+.btn-outline:hover,
+.btn-primary:hover,
+.lang-btn:hover {
+  background: linear-gradient(160deg, #f8ecd7 0%, #f2dfba 100%) !important;
+  box-shadow: 0 0 0 1px rgba(201, 136, 10, 0.3), 0 0 18px var(--sotc-glow);
+  transform: translateY(-1px);
+}
+
+.cursor,
+.status-dot,
+.card-dot {
+  background: var(--hud-primary);
+  box-shadow: 0 0 8px rgba(201, 136, 10, 0.5);
+}
+
+.matrix-bg {
+  background:
+    linear-gradient(rgba(248, 238, 223, 0.88), rgba(241, 228, 207, 0.88)),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(201, 136, 10, 0.08) 2px, rgba(201, 136, 10, 0.08) 3px);
+}
+
+.server-status-display {
+  color: var(--sotc-text-main);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #efe3d2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4ac67 0%, #b47b26 100%);
+  border-radius: 12px;
+  border: 2px solid #efe3d2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #e0b875 0%, #c9880a 100%);
+}
+
+@media (max-width: 768px) {
+  .main-header,
+  .nav-links {
+    background-color: rgba(250, 244, 236, 0.98);
+    border-color: var(--sotc-border);
   }
 }
