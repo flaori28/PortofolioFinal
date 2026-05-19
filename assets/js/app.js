@@ -51,7 +51,7 @@ function initMobileMenu() {
 // LANGUAGE SYSTEM
 const translations = {
     fr: {
-        nav_terminal: "ACCUEIL", nav_mission: "TCS", nav_arsenal: "COMPÉTENCES", nav_ops: "PROJETS", nav_clearance: "BTS SIO", nav_intel: "VEILLES", nav_profile: "À PROPOS",
+        nav_terminal: "MA PRÉSENTATION", nav_mission: "TCS", nav_arsenal: "COMPÉTENCES", nav_ops: "PROJETS", nav_clearance: "BTS SIO", nav_intel: "VEILLES", nav_profile: "À PROPOS",
         term_status: "STATUT: EN LIGNE", term_connect: "> INITIALISATION DU SITE...", term_user: "> UTILISATEUR IDENTIFIE", term_access: "> ACCES AU PORTFOLIO...",
         term_welcome: "Bienvenue sur le portfolio. Je suis un étudiant en Systèmes et Réseaux (SISR). Explorez les différents modules pour analyser mes compétences en infrastructure.",
         btn_access: "ACCEDER AU PORTFOLIO", footer_sys: "SITE: EN LIGNE",
