@@ -1,6 +1,7 @@
 // Password protection script for static site
 // Hash for password 'pingus13' (SHA-256): 866a003416ef4dd95f6a52237687d22f8a8018cecc40283e4de9c52d26a0f4d9
 const PASSWORD_HASH = '866a003416ef4dd95f6a52237687d22f8a8018cecc40283e4de9c52d26a0f4d9';
+const AUTH_FLAG_KEY = 'portfolio_unlocked';
 
 function blockInteraction(event) {
   event.preventDefault();
@@ -79,6 +80,7 @@ async function showPasswordModal() {
     const pwd = input.value;
     hashPassword(pwd).then(hash => {
       if (hash === PASSWORD_HASH) {
+        sessionStorage.setItem(AUTH_FLAG_KEY, '1');
         modal.remove();
         enableTabNavigation();
       } else {
@@ -96,4 +98,26 @@ async function showPasswordModal() {
   setTimeout(() => input.focus(), 100);
 }
 
-window.addEventListener('DOMContentLoaded', showPasswordModal);
+function isUnlocked() {
+  return sessionStorage.getItem(AUTH_FLAG_KEY) === '1';
+}
+
+function isHomePage() {
+  const path = window.location.pathname.toLowerCase();
+  const page = path.split('/').pop();
+  return page === '' || page === 'index.html';
+}
+
+function enforceAccess() {
+  if (isUnlocked()) return;
+
+  if (isHomePage()) {
+    showPasswordModal();
+    return;
+  }
+
+  // Force first unlock on home page, then allow navigating everywhere.
+  window.location.replace('index.html');
+}
+
+window.addEventListener('DOMContentLoaded', enforceAccess);
