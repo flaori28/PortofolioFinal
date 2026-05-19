@@ -1348,3 +1348,52 @@ body {
 .vignette {
   display: none !important;
 }
+
+/* Global typography unification requested */
+:root {
+  --uniform-text-color: #4a321b;
+  --uniform-text-font: 'Lora', 'EB Garamond', serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li,
+label,
+a,
+button,
+input,
+textarea,
+select,
+small,
+strong,
+em,
+.highlight,
+.section-title .highlight,
+.card-domain,
+.text-dim,
+.text-success,
+.hero-subtitle,
+.hero-desc,
+.section-subtitle {
+  font-family: var(--uniform-text-font) !important;
+  color: var(--uniform-text-color) !important;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: var(--uniform-text-color) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(74, 50, 27, 0.65) !important;
+}
