@@ -26,7 +26,24 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: crosshair; /* Default cursor */
+  cursor: default;
+}
+
+a,
+button,
+.btn-tactical,
+.btn-proc,
+.hamburger,
+.lang-btn,
+.lang-dropdown div,
+.dropdown-content a {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  cursor: text;
 }
 
 body {
