@@ -52,11 +52,11 @@ function initMobileMenu() {
 const translations = {
     fr: {
         nav_terminal: "MA PRÉSENTATION", nav_mission: "TCS", nav_arsenal: "COMPÉTENCES", nav_ops: "PROJETS", nav_clearance: "BTS SIO", nav_intel: "VEILLES", nav_profile: "ENTREPRISE",
-        term_status: "STATUT: EN LIGNE", term_connect: "> INITIALISATION DU SITE...", term_user: "> UTILISATEUR IDENTIFIE", term_access: "> ACCES AU PORTFOLIO...",
+        term_status: "STATUT : EN LIGNE", term_connect: "> INITIALISATION DU SITE...", term_user: "> UTILISATEUR IDENTIFIÉ", term_access: "> ACCÈS AU PORTFOLIO...",
         term_welcome: "Bienvenue sur le portfolio. Je suis un étudiant en Systèmes et Réseaux (SISR). Explorez les différents modules pour analyser mes compétences en infrastructure.",
-        btn_access: "ACCEDER AU PORTFOLIO", footer_sys: "SITE: EN LIGNE",
-        hero_status: "ADMINISTRATEUR RESEAUX ET SYSTEME", hero_role: "ÉTUDIANT EN BTS SIO SISR",
-        hero_desc: "Spécialiste Systèmes et Réseaux Informatiques. Passionné par l'infrastructure IT et les nouvelles technologies, je développe des compétences en administration système, sécurité réseau et virtualisation.",
+        btn_access: "ACCÉDER AU PORTFOLIO", footer_sys: "SITE : EN LIGNE",
+        hero_status: "ADMINISTRATEUR RÉSEAUX ET SYSTÈME", hero_role: "ÉTUDIANT EN BTS SIO SISR",
+        hero_desc: "Spécialiste systèmes et réseaux informatiques. Passionné par l'infrastructure IT et les nouvelles technologies, je développe des compétences en administration système, sécurité réseau et virtualisation.",
         btn_projects: "EXPLORER MES PROJETS", btn_contact: "ME CONTACTER"
     },
     en: {
