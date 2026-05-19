@@ -1,7 +1,7 @@
 
 /* === PROCEDURE CARD DESIGN (MODERNISED TACTICAL) === */
 .procedure-card {
-    background: linear-gradient(160deg, rgba(250, 244, 236, 0.95) 0%, rgba(237, 224, 204, 0.92) 100%);
+    background: linear-gradient(160deg, #e6f3fe 0%, #b3e0fa 100%);
     border: 1px solid var(--sotc-border, #c8b89a);
     border-radius: 8px; /* Slightly rounded unlike pure tactical */
     overflow: hidden;
@@ -19,7 +19,7 @@
 
 .procedure-img-header {
     height: 160px;
-    background: linear-gradient(135deg, #f0e4d3 0%, #e3d2b8 100%);
+    background: linear-gradient(135deg, #e6f3fe 0%, #b3e0fa 100%);
     position: relative;
     display: flex;
     align-items: center;
@@ -44,7 +44,7 @@
     position: absolute;
     top: 15px;
     left: 15px;
-    background: var(--sotc-ivory, #faf4ec);
+    background: #e6f3fe;
     border: 1px solid var(--hud-primary);
     color: var(--hud-primary);
     padding: 4px 12px;
@@ -108,7 +108,7 @@
 }
 
 .procedure-tag {
-    background: rgba(232, 221, 208, 0.75);
+    background: rgba(230, 243, 254, 0.75);
     border: 1px solid rgba(200, 184, 154, 0.9);
     color: var(--sotc-text-soft, #6b4c2a);
     padding: 4px 10px;
@@ -140,21 +140,21 @@
 .btn-proc-view {
     border: 1px solid #c8b89a;
     color: var(--sotc-text-main, #2e1f0e);
-    background: rgba(250, 244, 236, 0.85);
+    background: rgba(230, 243, 254, 0.85);
 }
 .btn-proc-view:hover {
-    background: rgba(248, 236, 215, 0.95);
+    background: rgba(230, 243, 254, 0.95);
     border-color: #c9880a;
     box-shadow: 0 0 0 1px rgba(201, 136, 10, 0.2), 0 0 14px rgba(224, 160, 48, 0.22);
 }
 
 .btn-proc-download {
-    background: linear-gradient(160deg, #f5e7d1 0%, #efdfc8 100%);
+    background: linear-gradient(160deg, #e6f3fe 0%, #b3e0fa 100%);
     border: 1px solid #c89d54;
     color: var(--sotc-text-main, #2e1f0e);
 }
 .btn-proc-download:hover {
-    background: linear-gradient(160deg, #f8ecd7 0%, #f2dfba 100%);
+    background: linear-gradient(160deg, #e6f3fe 0%, #b3e0fa 100%);
     color: var(--sotc-text-main, #2e1f0e);
     box-shadow: 0 0 0 1px rgba(201, 136, 10, 0.28), 0 0 16px rgba(224, 160, 48, 0.28);
 }
