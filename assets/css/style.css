@@ -1398,13 +1398,13 @@ textarea::placeholder {
   color: rgba(74, 50, 27, 0.65) !important;
 }
 
-/* Decorative ambient background dressing */
+/* Decorative background with geometric forms and grid */
 #background-canvas-container {
   position: fixed;
   overflow: hidden;
   background:
-    radial-gradient(1200px 560px at 12% 6%, rgba(188, 220, 242, 0.45), rgba(188, 220, 242, 0) 62%),
-    radial-gradient(1050px 500px at 88% 4%, rgba(234, 196, 132, 0.25), rgba(234, 196, 132, 0) 64%),
+    radial-gradient(1200px 620px at 12% 6%, rgba(188, 220, 242, 0.42), rgba(188, 220, 242, 0) 64%),
+    radial-gradient(1050px 520px at 88% 8%, rgba(234, 196, 132, 0.24), rgba(234, 196, 132, 0) 66%),
     linear-gradient(180deg, #fff9f0 0%, #f3e7d8 52%, #ebd8bf 100%);
 }
 
@@ -1412,46 +1412,49 @@ textarea::placeholder {
 #background-canvas-container::after {
   content: "";
   position: absolute;
-  inset: -20%;
+  inset: -18%;
   pointer-events: none;
 }
 
 #background-canvas-container::before {
   background:
-    radial-gradient(circle at 24% 26%, rgba(173, 214, 241, 0.30) 0%, rgba(173, 214, 241, 0) 56%),
-    radial-gradient(circle at 72% 18%, rgba(247, 209, 144, 0.22) 0%, rgba(247, 209, 144, 0) 58%),
-    repeating-linear-gradient(125deg, rgba(112, 84, 48, 0.045) 0 2px, rgba(112, 84, 48, 0) 2px 20px);
-  animation: ambient-drift 22s ease-in-out infinite alternate;
-  opacity: 0.85;
+    linear-gradient(rgba(120, 92, 54, 0.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 92, 54, 0.11) 1px, transparent 1px),
+    linear-gradient(rgba(120, 92, 54, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 92, 54, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  opacity: 0.38;
+  animation: grid-drift 24s linear infinite;
 }
 
 #background-canvas-container::after {
   background:
-    radial-gradient(circle at 15% 80%, rgba(160, 202, 232, 0.18) 0%, rgba(160, 202, 232, 0) 42%),
-    radial-gradient(circle at 84% 68%, rgba(218, 176, 109, 0.15) 0%, rgba(218, 176, 109, 0) 44%),
-    repeating-radial-gradient(circle at 50% 50%, rgba(115, 88, 55, 0.03) 0 2px, rgba(115, 88, 55, 0) 2px 15px);
-  animation: ambient-shift 28s linear infinite;
+    radial-gradient(circle at 20% 22%, rgba(170, 211, 238, 0.30) 0 60px, rgba(170, 211, 238, 0) 160px),
+    radial-gradient(circle at 80% 18%, rgba(247, 209, 144, 0.22) 0 52px, rgba(247, 209, 144, 0) 150px),
+    linear-gradient(135deg, rgba(110, 155, 188, 0.20) 0 38px, rgba(110, 155, 188, 0) 38px),
+    linear-gradient(315deg, rgba(206, 163, 93, 0.16) 0 34px, rgba(206, 163, 93, 0) 34px);
+  background-size: auto, auto, 280px 280px, 320px 320px;
+  background-position: 0 0, 0 0, 10% 65%, 88% 78%;
   mix-blend-mode: soft-light;
-  opacity: 0.72;
+  opacity: 0.75;
+  animation: shapes-float 20s ease-in-out infinite alternate;
 }
 
-@keyframes ambient-drift {
+@keyframes grid-drift {
   0% {
-    transform: translate3d(-1%, 0%, 0) scale(1);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(1.5%, -1%, 0) scale(1.04);
+    transform: translate3d(18px, 10px, 0);
   }
 }
 
-@keyframes ambient-shift {
+@keyframes shapes-float {
   0% {
-    transform: rotate(0deg) translateY(0%);
-  }
-  50% {
-    transform: rotate(0.8deg) translateY(-1.2%);
+    transform: translate3d(-1%, 0, 0) scale(1);
   }
   100% {
-    transform: rotate(0deg) translateY(0%);
+    transform: translate3d(1.2%, -1.2%, 0) scale(1.03);
   }
 }
