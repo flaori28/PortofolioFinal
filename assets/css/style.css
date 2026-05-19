@@ -110,7 +110,7 @@ a {
 
 /* HUD BORDERS */
 .hud-panel {
-  background: var(--hud-panel);
+  background: #f5ede0 !important;
   border: 1px solid var(--hud-dim);
   box-shadow: 0 0 10px rgba(51, 255, 0, 0.1);
   position: relative;
