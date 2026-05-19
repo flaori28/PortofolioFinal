@@ -1279,42 +1279,39 @@ body {
   background: linear-gradient(90deg, var(--hud-primary), var(--hud-secondary));
 }
 
-/* Home transition inspired by screenshot: blue fade + dissolving grid */
+/* Smooth and warm transition between hero block and Competences SISR */
 .terminal-window + .competences-section {
   position: relative;
-  margin-top: -8px;
-  padding-top: 78px;
-  border-top-left-radius: 42px;
-  border-top-right-radius: 42px;
-  overflow: hidden;
-  background: linear-gradient(180deg, #14233f 0%, #0f1b32 48%, #0d172b 100%) !important;
-  border-top: 1px solid rgba(97, 165, 235, 0.28) !important;
-  box-shadow: 0 -10px 28px rgba(8, 24, 50, 0.44), inset 0 1px 0 rgba(118, 176, 236, 0.12) !important;
+  margin-top: 58px;
+  padding-top: 22px;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  overflow: visible;
 }
 
 .terminal-window + .competences-section::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  top: -130px;
-  height: 180px;
+  left: 4%;
+  right: 4%;
+  top: -56px;
+  height: 76px;
   background:
-    repeating-linear-gradient(90deg, rgba(90, 147, 210, 0.11) 0 1px, rgba(90, 147, 210, 0) 1px 26px),
-    repeating-linear-gradient(0deg, rgba(90, 147, 210, 0.09) 0 1px, rgba(90, 147, 210, 0) 1px 26px),
-    linear-gradient(180deg, rgba(20, 37, 67, 0) 0%, rgba(19, 36, 64, 0.72) 62%, rgba(17, 30, 54, 0.98) 100%);
-  opacity: 0.9;
+    radial-gradient(120% 95% at 50% 100%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(180deg, rgba(250, 244, 236, 0) 0%, rgba(246, 236, 222, 0.82) 100%);
+  border-bottom: 1px solid rgba(200, 157, 84, 0.24);
   pointer-events: none;
 }
 
 .terminal-window + .competences-section::after {
   content: "";
   position: absolute;
-  left: 12%;
-  right: 12%;
-  top: 0;
+  left: 16%;
+  right: 16%;
+  top: -10px;
   height: 1px;
-  background: linear-gradient(90deg, rgba(89, 163, 231, 0), rgba(89, 163, 231, 0.55), rgba(89, 163, 231, 0));
+  background: linear-gradient(90deg, rgba(201, 136, 10, 0), rgba(201, 136, 10, 0.40), rgba(201, 136, 10, 0));
+  box-shadow: 0 0 8px rgba(201, 136, 10, 0.16);
   pointer-events: none;
 }
 
