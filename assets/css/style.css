@@ -1292,10 +1292,16 @@ body {
   left: 4%;
   right: 4%;
   top: -62px;
-  height: 92px;
+  height: 98px;
   background:
-    radial-gradient(120% 100% at 50% 100%, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0) 66%),
-    linear-gradient(180deg, rgba(237, 224, 204, 0) 0%, rgba(237, 224, 204, 0.9) 100%);
+    radial-gradient(130% 100% at 50% 100%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 68%),
+    linear-gradient(
+      180deg,
+      rgba(242, 232, 217, 0) 0%,
+      rgba(227, 210, 184, 0.55) 34%,
+      rgba(214, 235, 251, 0.62) 68%,
+      rgba(230, 243, 254, 0.82) 100%
+    );
   border-bottom: 1px solid rgba(200, 157, 84, 0.34);
   pointer-events: none;
 }
