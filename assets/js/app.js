@@ -132,24 +132,14 @@ function setLanguage(lang) {
 }
 
 function initBootSequence() {
-    // Only run if on index page or forces
+    // Skip boot animation and load content immediately.
     const bootScreen = document.getElementById('boot-sequence');
     if (bootScreen) {
-        setTimeout(() => {
-            document.querySelector('.boot-text').innerHTML = "SITE INITIALISE";
-            document.querySelector('.progress-fill').style.background = "#fff";
-        }, 2100);
-
-        setTimeout(() => {
-            bootScreen.style.opacity = '0';
-            setTimeout(() => {
-                bootScreen.style.display = 'none';
-                initTypewriter();
-                if (ENABLE_DYNAMIC_BACKGROUND) {
-                    initRadar();
-                }
-            }, 500);
-        }, 2500);
+        bootScreen.style.display = 'none';
+        initTypewriter();
+        if (ENABLE_DYNAMIC_BACKGROUND) {
+            initRadar();
+        }
     } else {
         if (ENABLE_DYNAMIC_BACKGROUND) {
             initRadar();
