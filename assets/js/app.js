@@ -1,4 +1,4 @@
-// TACTICAL INTERFACE OPERATIONS
+// PORTFOLIO INTERFACE
 document.addEventListener('DOMContentLoaded', () => {
     // Fade in page
     setTimeout(() => document.body.classList.add('loaded'), 100);
@@ -52,48 +52,48 @@ function initMobileMenu() {
 const translations = {
     fr: {
         nav_terminal: "ACCUEIL", nav_mission: "TCS", nav_arsenal: "COMPÉTENCES", nav_ops: "PROJETS", nav_clearance: "BTS SIO", nav_intel: "VEILLES", nav_profile: "À PROPOS",
-        term_status: "STATUS: ONLINE", term_connect: "> ETABLISSEMENT DE LA CONNEXION...", term_user: "> UTILISATEUR IDENTIFIE: RECRUTEUR", term_access: "> ACCES AU DOSSIER...",
-        term_welcome: "Bienvenue sur le terminal tactique. Je suis un étudiant en Systèmes et Réseaux (SISR). Explorez les différents modules pour analyser mes compétences en infrastructure.",
-        btn_access: "ACCÉDER AUX DOSSIERS", footer_sys: "SYSTEME: SECURISE",
-        hero_status: "ADMINISTRATEUR RÉSEAUX ET SYSTÈME", hero_role: "ÉTUDIANT EN BTS SIO SISR",
+        term_status: "STATUT: EN LIGNE", term_connect: "> INITIALISATION DU SITE...", term_user: "> UTILISATEUR IDENTIFIE", term_access: "> ACCES AU PORTFOLIO...",
+        term_welcome: "Bienvenue sur le portfolio. Je suis un étudiant en Systèmes et Réseaux (SISR). Explorez les différents modules pour analyser mes compétences en infrastructure.",
+        btn_access: "ACCEDER AU PORTFOLIO", footer_sys: "SITE: EN LIGNE",
+        hero_status: "ADMINISTRATEUR RESEAUX ET SYSTEME", hero_role: "ÉTUDIANT EN BTS SIO SISR",
         hero_desc: "Spécialiste Systèmes et Réseaux Informatiques. Passionné par l'infrastructure IT et les nouvelles technologies, je développe des compétences en administration système, sécurité réseau et virtualisation.",
         btn_projects: "EXPLORER MES PROJETS", btn_contact: "ME CONTACTER"
     },
     en: {
-        nav_terminal: "TERMINAL", nav_mission: "TCS", nav_arsenal: "SKILLS", nav_ops: "PROJECTS", nav_clearance: "EDUCATION", nav_intel: "TECH WATCH", nav_profile: "ABOUT",
-        term_status: "STATUS: ONLINE", term_connect: "> ESTABLISHING CONNECTION...", term_user: "> USER IDENTIFIED: RECRUITER", term_access: "> ACCESSING DOSSIER...",
-        term_welcome: "Welcome to the tactical terminal. I am a Systems and Networks student (SISR). Explore the different modules to analyze my infrastructure skills.",
-        btn_access: "ACCESS FILES", footer_sys: "SYSTEM: SECURE",
+        nav_terminal: "HOME", nav_mission: "TCS", nav_arsenal: "SKILLS", nav_ops: "PROJECTS", nav_clearance: "EDUCATION", nav_intel: "WATCH", nav_profile: "ABOUT",
+        term_status: "STATUS: ONLINE", term_connect: "> INITIALIZING WEBSITE...", term_user: "> USER IDENTIFIED", term_access: "> ACCESSING PORTFOLIO...",
+        term_welcome: "Welcome to the portfolio. I am a Systems and Networks student (SISR). Explore the different modules to analyze my infrastructure skills.",
+        btn_access: "ACCESS PORTFOLIO", footer_sys: "SITE: ONLINE",
         hero_status: "SYSTEM ADMINISTRATION", hero_role: "BTS SIO SISR STUDENT",
         hero_desc: "Systems and Network Infrastructure Specialist. Passionate about IT infrastructure, system administration and virtualization.",
         btn_projects: "EXPLORE PROJECTS", btn_contact: "CONTACT ME"
     },
     pt: {
-        nav_terminal: "TERMINAL", nav_mission: "TCS", nav_arsenal: "HABILIDADES", nav_ops: "PROJETOS", nav_clearance: "FORMAÇÃO", nav_intel: "VIGILÂNCIA", nav_profile: "SOBRE",
-        term_status: "STATUS: ONLINE", term_connect: "> ESTABELECENDO CONEXAO...", term_user: "> USUARIO IDENTIFICADO: RECRUTADOR", term_access: "> ACESSANDO DOSSIE...",
-        term_welcome: "Bem-vindo ao terminal tático. Eu sou um desenvolvedor Fullstack especializado em soluções de software. Explore os diferentes módulos para analisar minhas habilidades e operações passadas.",
-        btn_access: "ACESSAR ARQUIVOS", footer_sys: "SISTEMA: SEGURO"
+        nav_terminal: "HOME", nav_mission: "TCS", nav_arsenal: "HABILIDADES", nav_ops: "PROJETOS", nav_clearance: "FORMAÇÃO", nav_intel: "VEILLE", nav_profile: "SOBRE",
+        term_status: "STATUS: ONLINE", term_connect: "> INICIANDO SITE...", term_user: "> USUARIO IDENTIFICADO", term_access: "> ACESSANDO PORTFOLIO...",
+        term_welcome: "Bem-vindo ao portfolio. Eu sou um desenvolvedor Fullstack especializado em soluções de software. Explore os diferentes módulos para analisar minhas habilidades e projetos.",
+        btn_access: "ACESSAR PORTFOLIO", footer_sys: "SITE: ONLINE"
     },
     de: {
-        nav_terminal: "TERMINAL", nav_mission: "TCS", nav_arsenal: "KOMPETENZEN", nav_ops: "PROJEKTE", nav_clearance: "AUSBILDUNG", nav_intel: "TECH-WATCH", nav_profile: "ÜBER",
-        term_status: "STATUS: ONLINE", term_connect: "> VERBINDUNG HERSTELLEN...", term_user: "> BENUTZER IDENTIFIZIERT: REKRUTIER", term_access: "> ZUGRIFF AUF DATEI...",
-        term_welcome: "Willkommen am taktischen Terminal. Ich bin ein Fullstack-Entwickler, spezialisiert auf Softwarelösungen. Erkunden Sie die verschiedenen Module, um meine Fähigkeiten und vergangenen Operationen zu analysieren.",
-        btn_access: "DATEIEN AUFRUFEN", footer_sys: "SYSTEM: SICHER"
+        nav_terminal: "HOME", nav_mission: "TCS", nav_arsenal: "KOMPETENZEN", nav_ops: "PROJEKTE", nav_clearance: "AUSBILDUNG", nav_intel: "TECH-WATCH", nav_profile: "ÜBER",
+        term_status: "STATUS: ONLINE", term_connect: "> WEBSITE WIRD GELADEN...", term_user: "> BENUTZER IDENTIFIZIERT", term_access: "> PORTFOLIO WIRD GEOEFFNET...",
+        term_welcome: "Willkommen im Portfolio. Ich bin ein Fullstack-Entwickler, spezialisiert auf Softwarelösungen. Erkunden Sie die verschiedenen Module, um meine Fähigkeiten und Projekte zu analysieren.",
+        btn_access: "PORTFOLIO OFFNEN", footer_sys: "SEITE: ONLINE"
     },
     it: {
-        nav_terminal: "TERMINALE", nav_mission: "TCS", nav_arsenal: "COMPETENZE", nav_ops: "PROGETTI", nav_clearance: "FORMAZIONE", nav_intel: "TECH-WATCH", nav_profile: "A PROPOSITO",
-        term_status: "STATO: ONLINE", term_connect: "> CONNESSIONE IN CORSO...", term_user: "> UTENTE IDENTIFICATO: RECLUTATORE", term_access: "> ACCESSO AL DOSSIER...",
-        term_welcome: "Benvenuto nel terminale tattico. Sono uno sviluppatore Fullstack specializzato in soluzioni software. Esplora i diversi moduli per analizzare le mie competenze e operazioni passate.",
-        btn_access: "ACCEDI AI FILE", footer_sys: "SISTEMA: SICURO"
+        nav_terminal: "HOME", nav_mission: "TCS", nav_arsenal: "COMPETENZE", nav_ops: "PROGETTI", nav_clearance: "FORMAZIONE", nav_intel: "TECH-WATCH", nav_profile: "A PROPOSITO",
+        term_status: "STATO: ONLINE", term_connect: "> AVVIO DEL SITO...", term_user: "> UTENTE IDENTIFICATO", term_access: "> ACCESSO AL PORTFOLIO...",
+        term_welcome: "Benvenuto nel portfolio. Sono uno sviluppatore Fullstack specializzato in soluzioni software. Esplora i diversi moduli per analizzare le mie competenze e i miei progetti.",
+        btn_access: "APRI PORTFOLIO", footer_sys: "SITO: ONLINE"
     }
 };
 
 function initLanguageSystem() {
     // Default to French if no language is saved
-    let currentLang = localStorage.getItem('tactical_lang');
+    let currentLang = localStorage.getItem('site_lang');
     if (!currentLang) {
         currentLang = 'fr';
-        localStorage.setItem('tactical_lang', 'fr');
+        localStorage.setItem('site_lang', 'fr');
     }
     setLanguage(currentLang);
     
@@ -107,7 +107,7 @@ function initLanguageSystem() {
 }
 
 function setLanguage(lang) {
-    localStorage.setItem('tactical_lang', lang);
+    localStorage.setItem('site_lang', lang);
     const data = translations[lang];
     if(!data) return;
 
@@ -136,7 +136,7 @@ function initBootSequence() {
     const bootScreen = document.getElementById('boot-sequence');
     if (bootScreen) {
         setTimeout(() => {
-            document.querySelector('.boot-text').innerHTML = "SYSTEM INITIALIZED";
+            document.querySelector('.boot-text').innerHTML = "SITE INITIALISE";
             document.querySelector('.progress-fill').style.background = "#fff";
         }, 2100);
 
