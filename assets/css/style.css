@@ -1009,7 +1009,7 @@ body.loaded {
 .competences-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
 
 .competence-card {
@@ -1017,11 +1017,14 @@ body.loaded {
   background: linear-gradient(135deg, rgba(15, 25, 40, 0.7) 0%, rgba(20, 30, 50, 0.5) 100%);
   border: 1px solid rgba(0, 240, 255, 0.2);
   border-radius: 8px;
-  padding: 20px 15px;
+  padding: 16px 12px;
   cursor: crosshair;
   transition: all 0.3s ease;
   overflow: hidden;
-  aspect-ratio: 1;
+  aspect-ratio: 0.9;
+  width: 90%;
+  max-width: 230px;
+  justify-self: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1116,6 +1119,12 @@ body.loaded {
   .competences-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+  }
+
+  .competence-card {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1;
   }
 
   .section-title {
