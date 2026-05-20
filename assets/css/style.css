@@ -186,6 +186,14 @@ a {
   position: relative;
 }
 
+.nav-links a[href="index.html#bienvenue"] {
+  display: inline-block;
+  background: rgba(224, 160, 48, 0.14);
+  border: 1px solid var(--hud-primary);
+  border-radius: 6px;
+  padding: 8px 14px;
+}
+
 .nav-links a.active, .nav-links a:hover {
   color: var(--hud-primary);
   text-shadow: 0 0 8px var(--hud-primary);
@@ -645,6 +653,12 @@ a {
     display: block;
     width: 100%;
     padding: 10px 0;
+  }
+
+  .nav-links a[href="index.html#bienvenue"] {
+    display: inline-block;
+    width: auto;
+    padding: 8px 14px;
   }
 
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
