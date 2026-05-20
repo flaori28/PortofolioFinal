@@ -238,9 +238,9 @@ a {
 
 
 .welcome-box {
-  max-width: 700px;
-  margin: 24px auto 30px;
-  padding: 22px 26px;
+  max-width: none;
+  margin: 24px 0 30px;
+  padding: 30px;
 }
 
 .welcome-box-title {
@@ -253,10 +253,10 @@ a {
 }
 
 .welcome-box-placeholder {
-  min-height: 140px;
-  border: 1px dashed rgba(200, 184, 154, 0.9);
+  min-height: 380px;
+  border: 1px dashed rgba(200, 184, 154, 0.95);
   border-radius: 6px;
-  background: rgba(250, 244, 236, 0.55);
+  background: rgba(250, 244, 236, 0.75);
 }
 
 /* Fix for mobile */
