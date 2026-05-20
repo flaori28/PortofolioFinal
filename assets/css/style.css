@@ -186,14 +186,6 @@ a {
   position: relative;
 }
 
-.nav-links a[href="index.html#bienvenue"] {
-  display: inline-block;
-  background: rgba(224, 160, 48, 0.14);
-  border: 1px solid var(--hud-primary);
-  border-radius: 6px;
-  padding: 8px 14px;
-}
-
 .nav-links a.active, .nav-links a:hover {
   color: var(--hud-primary);
   text-shadow: 0 0 8px var(--hud-primary);
@@ -246,8 +238,8 @@ a {
 
 
 .welcome-box {
-  max-width: none;
-  margin: 24px 0 30px;
+  max-width: 780px;
+  margin: 24px auto 30px;
   padding: 30px;
 }
 
@@ -261,10 +253,20 @@ a {
 }
 
 .welcome-box-placeholder {
-  min-height: 380px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   border: 1px dashed rgba(200, 184, 154, 0.95);
   border-radius: 6px;
   background: rgba(250, 244, 236, 0.75);
+  overflow: auto;
+}
+
+.welcome-box-text {
+  color: #2e1f0e;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  padding: 22px;
+  margin: 0;
 }
 
 /* Fix for mobile */
@@ -653,12 +655,6 @@ a {
     display: block;
     width: 100%;
     padding: 10px 0;
-  }
-
-  .nav-links a[href="index.html#bienvenue"] {
-    display: inline-block;
-    width: auto;
-    padding: 8px 14px;
   }
 
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
