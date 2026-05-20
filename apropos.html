@@ -81,6 +81,166 @@
         </div>
       </div>
     </div>
+
+    <div class="hud-panel" style="margin-bottom: 30px; padding: 30px;">
+      <h2 style="color: var(--hud-primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-size: 1.4rem;">
+        Choisir sa specialisation
+      </h2>
+
+      <div style="display: flex; gap: 10px; margin-bottom: 25px; border-bottom: 2px solid var(--hud-dim); padding-bottom: 0;">
+        <button class="spec-tab-btn active" data-tab="sisr" style="
+          background: none;
+          border: none;
+          color: var(--hud-primary);
+          font-size: 1rem;
+          font-weight: bold;
+          padding: 15px 20px;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          border-bottom: 3px solid transparent;
+          transition: all 0.3s ease;
+          position: relative;
+        ">
+          SISR
+        </button>
+        <button class="spec-tab-btn" data-tab="slam" style="
+          background: none;
+          border: none;
+          color: var(--hud-secondary);
+          font-size: 1rem;
+          font-weight: bold;
+          padding: 15px 20px;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          border-bottom: 3px solid transparent;
+          transition: all 0.3s ease;
+          position: relative;
+        ">
+          SLAM
+        </button>
+      </div>
+
+      <div id="sisr-content" class="spec-tab-content" style="display: block;">
+        <div style="animation: fadeIn 0.3s ease;">
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 25px;">
+            <div style="background: rgba(230, 243, 254, 0.82); border: 2px solid var(--hud-primary); padding: 25px; border-radius: 8px;">
+              <h3 style="color: var(--hud-primary); margin-top: 0; margin-bottom: 15px; font-size: 1.2rem;">
+                Solutions d'Infrastructure, Systemes et Reseaux
+              </h3>
+              <p style="color: #ccc; line-height: 1.8; margin-bottom: 15px;">
+                Installation, maintenance et securite des parcs informatiques. Gestion des infrastructures, serveurs et reseaux d'entreprise.
+              </p>
+              <div style="border-top: 1px dashed var(--hud-dim); padding-top: 15px;">
+                <p style="color: var(--hud-secondary); font-weight: bold; margin-bottom: 10px;">Points forts</p>
+                <ul style="list-style: none; padding-left: 0; color: #aaa; font-size: 0.9rem;">
+                  <li style="margin-bottom: 8px;">Admin systemes (Windows/Linux)</li>
+                  <li style="margin-bottom: 8px;">Gestion reseaux et securite</li>
+                  <li style="margin-bottom: 8px;">Virtualisation et cloud</li>
+                  <li style="margin-bottom: 8px;">Support infrastructure</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="background: rgba(0, 240, 255, 0.05); border: 1px solid var(--hud-primary); padding: 20px; border-radius: 8px; height: fit-content;">
+              <p style="color: var(--hud-primary); font-weight: bold; margin-top: 0; margin-bottom: 15px;">PROFIL IDEAL</p>
+              <ul style="list-style: none; padding-left: 0; color: #999; font-size: 0.85rem; line-height: 1.8;">
+                <li>Interet pour hardware</li>
+                <li>Sens logique prononce</li>
+                <li>Rigueur et organisation</li>
+                <li>Depannage et troubleshooting</li>
+                <li>Securite informatique</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="slam-content" class="spec-tab-content" style="display: none;">
+        <div style="animation: fadeIn 0.3s ease;">
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 25px;">
+            <div style="background: rgba(230, 243, 254, 0.82); border: 2px solid var(--hud-secondary); padding: 25px; border-radius: 8px;">
+              <h3 style="color: var(--hud-secondary); margin-top: 0; margin-bottom: 15px; font-size: 1.2rem;">
+                Solutions Logicielles et Applications Metiers
+              </h3>
+              <p style="color: #ccc; line-height: 1.8; margin-bottom: 15px;">
+                Conception, developpement et integration de logiciels et sites web. Creation de solutions informatiques adaptees aux besoins metiers.
+              </p>
+              <div style="border-top: 1px dashed var(--hud-dim); padding-top: 15px;">
+                <p style="color: var(--hud-secondary); font-weight: bold; margin-bottom: 10px;">Points forts</p>
+                <ul style="list-style: none; padding-left: 0; color: #aaa; font-size: 0.9rem;">
+                  <li style="margin-bottom: 8px;">Developpement (Python, Java, C#)</li>
+                  <li style="margin-bottom: 8px;">Web et frameworks (HTML/CSS/JS)</li>
+                  <li style="margin-bottom: 8px;">Bases de donnees (SQL/NoSQL)</li>
+                  <li style="margin-bottom: 8px;">Tests et integration</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="background: rgba(0, 240, 255, 0.05); border: 1px solid var(--hud-secondary); padding: 20px; border-radius: 8px; height: fit-content;">
+              <p style="color: var(--hud-secondary); font-weight: bold; margin-top: 0; margin-bottom: 15px;">PROFIL IDEAL</p>
+              <ul style="list-style: none; padding-left: 0; color: #999; font-size: 0.85rem; line-height: 1.8;">
+                <li>Interet pour programmation</li>
+                <li>Creativite et innovation</li>
+                <li>Pensee algorithmique</li>
+                <li>Autonomie et resolution</li>
+                <li>UX/UI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .spec-tab-btn.active {
+        color: var(--hud-primary) !important;
+        border-bottom-color: var(--hud-primary) !important;
+        box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+      }
+
+      .spec-tab-btn:hover {
+        color: var(--hud-secondary) !important;
+        opacity: 0.8;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(5px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .spec-tab-content {
+        animation: fadeIn 0.3s ease;
+      }
+    </style>
+
+    <script>
+      document.querySelectorAll('.spec-tab-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const tab = this.getAttribute('data-tab');
+          document.querySelectorAll('.spec-tab-content').forEach(content => {
+            content.style.display = 'none';
+          });
+          document.querySelectorAll('.spec-tab-btn').forEach(button => {
+            button.classList.remove('active');
+            if (button.getAttribute('data-tab') === 'sisr') {
+              button.style.color = 'var(--hud-primary)';
+            } else {
+              button.style.color = 'var(--hud-secondary)';
+            }
+          });
+          document.getElementById(tab + '-content').style.display = 'block';
+          this.classList.add('active');
+        });
+      });
+    </script>
     
   </main>
 
