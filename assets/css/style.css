@@ -236,6 +236,29 @@ a {
   color: var(--hud-primary);
 }
 
+
+.welcome-box {
+  max-width: 700px;
+  margin: 24px auto 30px;
+  padding: 22px 26px;
+}
+
+.welcome-box-title {
+  font-family: var(--font-header);
+  color: var(--hud-primary);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.welcome-box-placeholder {
+  min-height: 140px;
+  border: 1px dashed rgba(200, 184, 154, 0.9);
+  border-radius: 6px;
+  background: rgba(250, 244, 236, 0.55);
+}
+
 /* Fix for mobile */
 @media (max-width: 768px) {
   .dropdown {
