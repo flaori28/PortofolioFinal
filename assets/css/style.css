@@ -238,8 +238,8 @@ a {
 
 
 .welcome-box {
-  max-width: 780px;
-  margin: 24px auto 30px;
+  max-width: 620px;
+  margin: 24px 0 30px auto;
   padding: 30px;
 }
 
@@ -254,7 +254,7 @@ a {
 
 .welcome-box-placeholder {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 0.95 / 1;
   border: 1px dashed rgba(200, 184, 154, 0.95);
   border-radius: 6px;
   background: rgba(250, 244, 236, 0.75);
@@ -271,6 +271,12 @@ a {
 
 /* Fix for mobile */
 @media (max-width: 768px) {
+  .welcome-box {
+    max-width: 100%;
+    margin: 18px 0 24px;
+    padding: 20px;
+  }
+
   .dropdown {
     width: 100%;
     text-align: center;
