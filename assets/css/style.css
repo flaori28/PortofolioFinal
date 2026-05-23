@@ -911,7 +911,7 @@ body.loaded {
 }
 
 .hero-subtitle {
-  font-family: 'Share Tech Mono', monospace; /* Fallback/Variable */
+  font-family: var(--font-tech);
   font-size: 1.5rem;
   color: #ccc;
   margin-bottom: 20px;
@@ -1028,7 +1028,7 @@ body.loaded {
 /* SERVER STATUS VISUAL */
 .server-status-display {
   padding: 20px;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: var(--font-tech);
   font-size: 0.85rem;
   color: #fff;
   opacity: 0.8;
