@@ -229,6 +229,12 @@ a {
   padding: 10px 0;
 }
 
+.dropdown-content.dropdown-align-right {
+  left: auto;
+  right: 0;
+  min-width: 230px;
+}
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -239,6 +245,7 @@ a {
   text-decoration: none;
   display: block;
   font-size: 0.8rem;
+  white-space: nowrap;
   transition: all 0.3s ease;
 }
 
