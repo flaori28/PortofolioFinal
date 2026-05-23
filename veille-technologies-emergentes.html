@@ -49,24 +49,106 @@
 
   <main class="container">
     <div class="hud-panel" style="padding: 26px;">
-      <h1 class="section-title" style="font-family: var(--font-header);">VEILLE TECHNOLOGIES ÉMERGENTES</h1>
-      <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); line-height: 1.8; margin-top: 10px;">
-        Cette veille observe les innovations presentees par SNCF autour de la mobilite intelligente, de la performance industrielle et des usages numeriques. Elle permet d'identifier les tendances qui peuvent impacter les futurs projets informatiques.
+      <h1 class="section-title" style="font-family: var(--font-header);">LES TECHNOLOGIES ÉMERGENTES AU SERVICE DU FERROVIAIRE</h1>
+      <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); line-height: 1.8; margin-top: 6px; margin-bottom: 16px;">Publié le 19/02/2024 — Mis à jour le 20/03/2025 — Source : Groupe SNCF</p>
+
+      <img src="https://www.groupe-sncf.com/medias-publics/styles/crop_12_5/public/2024-02/technicentre-hellemmes-nicolasmayeux.jpg.webp" alt="Technicentre d'Hellemmes SNCF" style="width: 100%; height: 220px; object-fit: cover; border: 1px solid var(--hud-dim); border-radius: 4px; margin-bottom: 20px;">
+
+      <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); line-height: 1.8; margin-bottom: 22px;">
+        De l'intelligence artificielle à la cybersécurité, en passant par la robotique ou les nouveaux matériaux, la SNCF mise sur les technologies émergentes pour transformer le ferroviaire. Le programme <strong>Research4Future</strong> porte cette ambition, soutenu par plus de 500 experts du réseau interne Synapses.
       </p>
-      <h2 style="font-family: var(--font-header); color: var(--hud-primary); margin-top: 18px; margin-bottom: 8px; font-size: 1.05rem;">Contexte de la veille</h2>
-      <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); line-height: 1.8;">
-        Les technologies emergentes sont souvent decrites de facon tres large. Cette veille permet de filtrer les informations utiles pour des cas concrets: optimisation d'exploitation, collecte de donnees, supervision et services aux usagers.
-      </p>
-      <ul style="margin-top: 14px; padding-left: 18px; color: var(--sotc-text-main); font-family: var(--font-tech); line-height: 1.8;">
-        <li>Nouveaux usages numeriques dans le transport</li>
-        <li>Outils et plateformes emergentes</li>
-        <li>Impacts sur les competences et l'organisation IT</li>
-      </ul>
-      <h2 style="font-family: var(--font-header); color: var(--hud-primary); margin-top: 18px; margin-bottom: 8px; font-size: 1.05rem;">Analyse et interet</h2>
-      <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); line-height: 1.8;">
-        Cette veille m'aide a identifier les competences a renforcer: architecture data, securite des systemes connectes, automatisation et supervision. Elle apporte une vision strategique utile pour prioriser les apprentissages et mieux orienter les projets.
-      </p>
-      <div style="margin-top: 22px;">
+
+      <!-- IA : sujet prioritaire mis en avant -->
+      <div style="border: 2px solid var(--hud-primary); border-radius: 6px; background: rgba(201, 136, 10, 0.08); padding: 22px; margin-bottom: 28px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
+          <span style="background: var(--hud-primary); color: #fff; font-family: var(--font-header); font-size: 0.75rem; padding: 4px 12px; border-radius: 999px; letter-spacing: 1px;">★ SUJET PRIORITAIRE</span>
+          <span style="font-family: var(--font-tech); color: var(--sotc-text-soft); font-size: 0.82rem;">Intelligence Artificielle</span>
+        </div>
+        <h2 style="font-family: var(--font-header); color: var(--hud-primary); font-size: 1.2rem; margin-bottom: 10px;">L'Intelligence Artificielle</h2>
+        <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); line-height: 1.8;">
+          Les algorithmes d'IA de la SNCF facilitent les métiers des collaborateurs, la maintenance des matériels roulants et les voyages des clients. La SNCF déploie des outils « maison » d'<strong>IA générative</strong> de manière éthique, en veillant à la souveraineté des données et en limitant les émissions de CO₂. La recherche en cybersécurité et en sciences de la décision s'appuie également sur les avancées de l'IA.
+        </p>
+      </div>
+
+      <!-- Grille des sujets -->
+      <h2 style="font-family: var(--font-header); color: var(--hud-primary); font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px;">Tous les sujets de recherche</h2>
+      <div class="grid-2" style="gap: 20px;">
+
+        <!-- Robotique -->
+        <div class="tactical-card" style="padding: 0; overflow: hidden; border: 1px solid var(--hud-dim);">
+          <img src="https://www.groupe-sncf.com/medias-publics/styles/crop_1_1/public/2024-02/motricetgvm-ericpothier-26052026-square.jpg.webp" alt="TGV M en technicentre" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 16px;">
+            <h3 style="font-family: var(--font-header); color: var(--sotc-text-main); font-size: 0.95rem; margin-bottom: 8px;">La Robotique</h3>
+            <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); font-size: 0.88rem; line-height: 1.7;">Des robots pour l'inspection des tunnels, le désherbage des voies et le déneigement des quais. L'objectif : permettre aux agents de travailler plus efficacement en toute sécurité.</p>
+          </div>
+        </div>
+
+        <!-- Matériaux composites -->
+        <div class="tactical-card" style="padding: 0; overflow: hidden; border: 1px solid var(--hud-dim);">
+          <img src="https://www.groupe-sncf.com/medias-publics/styles/crop_1_1/public/2024-02/systcomplexes-christopherecoura-illim-square.jpg.webp" alt="TGV INOUI et OUIGO en gare" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 16px;">
+            <h3 style="font-family: var(--font-header); color: var(--sotc-text-main); font-size: 0.95rem; margin-bottom: 8px;">Les Matériaux Composites</h3>
+            <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); font-size: 0.88rem; line-height: 1.7;">Plus légers et moins énergivores que les matériaux classiques, ces composites permettent de concevoir des pièces complexes de grande dimension pour les trains du futur.</p>
+          </div>
+        </div>
+
+        <!-- Ingénierie des systèmes complexes -->
+        <div class="tactical-card" style="padding: 0; overflow: hidden; border: 1px solid var(--hud-dim);">
+          <img src="https://www.groupe-sncf.com/medias-publics/styles/crop_1_1/public/2024-02/tgvvoieantenne-sncf-illim-square.jpg.webp" alt="Antennes le long d'une voie TGV" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 16px;">
+            <h3 style="font-family: var(--font-header); color: var(--sotc-text-main); font-size: 0.95rem; margin-bottom: 8px;">L'Ingénierie des Systèmes Complexes</h3>
+            <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); font-size: 0.88rem; line-height: 1.7;">Nouvelles méthodes d'ingénierie pour décrire et maîtriser les interfaces entre sous-systèmes : train autonome, train léger, matériel roulant, réseau et exploitation.</p>
+          </div>
+        </div>
+
+        <!-- Télécoms -->
+        <div class="tactical-card" style="padding: 0; overflow: hidden; border: 1px solid var(--hud-dim);">
+          <img src="https://www.groupe-sncf.com/medias-publics/styles/crop_1_1/public/2024-06/ter-paysage-alexprofit-31082024-banner-2.jpg.webp" alt="TER dans le sud-est de la France" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 16px;">
+            <h3 style="font-family: var(--font-header); color: var(--sotc-text-main); font-size: 0.95rem; margin-bottom: 8px;">Les Télécoms & 5G</h3>
+            <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); font-size: 0.88rem; line-height: 1.7;">La 5G améliore la performance ferroviaire : maintenance connectée, aides à la conduite, digitalisation de la signalisation des petites lignes.</p>
+          </div>
+        </div>
+
+        <!-- Physique du système ferroviaire -->
+        <div class="tactical-card" style="padding: 0; overflow: hidden; border: 1px solid var(--hud-dim);">
+          <img src="https://www.groupe-sncf.com/medias-publics/styles/crop_1_1/public/2024-02/faisceau-triage-jjdangelo-rff-illim-square.jpg.webp" alt="Faisceau de triage SNCF" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 16px;">
+            <h3 style="font-family: var(--font-header); color: var(--sotc-text-main); font-size: 0.95rem; margin-bottom: 8px;">La Physique du Système Ferroviaire</h3>
+            <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); font-size: 0.88rem; line-height: 1.7;">Modèles et simulations numériques pour surveiller la géométrie de la voie, prédire les fissures du rail et mieux organiser les opérations de maintenance.</p>
+          </div>
+        </div>
+
+        <!-- Sciences de la décision -->
+        <div class="tactical-card" style="padding: 0; overflow: hidden; border: 1px solid var(--hud-dim);">
+          <img src="https://www.groupe-sncf.com/medias-publics/styles/crop_1_1/public/2024-04/sciences-cognitives.jpg.webp" alt="Recherche en sciences cognitives SNCF" style="width: 100%; height: 160px; object-fit: cover; display: block;">
+          <div style="padding: 16px;">
+            <h3 style="font-family: var(--font-header); color: var(--sotc-text-main); font-size: 0.95rem; margin-bottom: 8px;">Les Sciences de la Décision</h3>
+            <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); font-size: 0.88rem; line-height: 1.7;">Des algorithmes pour optimiser la taille des flottes, les flux de marchandises et la régulation des trains en cas de perturbation.</p>
+          </div>
+        </div>
+
+        <!-- Sciences cognitives -->
+        <div class="tactical-card" style="padding: 16px; border: 1px solid var(--hud-dim);">
+          <h3 style="font-family: var(--font-header); color: var(--sotc-text-main); font-size: 0.95rem; margin-bottom: 8px;">Les Sciences Cognitives</h3>
+          <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); font-size: 0.88rem; line-height: 1.7;">Psychologie cognitive, sociologie et anthropologie pour analyser la perception des clients et adapter l'offre : information voyageur, gestion des flux, confort à bord.</p>
+        </div>
+
+        <!-- Cybersécurité -->
+        <div class="tactical-card" style="padding: 16px; border: 1px solid var(--hud-dim);">
+          <h3 style="font-family: var(--font-header); color: var(--sotc-text-main); font-size: 0.95rem; margin-bottom: 8px;">La Cybersécurité</h3>
+          <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); font-size: 0.88rem; line-height: 1.7;">L'IA est utilisée pour détecter les attaques informatiques. L'objectif : créer un système résilient capable de détecter et neutraliser automatiquement les menaces sur le train connecté du futur.</p>
+        </div>
+
+        <!-- Fabrication additive -->
+        <div class="tactical-card" style="padding: 16px; border: 1px solid var(--hud-dim);">
+          <h3 style="font-family: var(--font-header); color: var(--sotc-text-main); font-size: 0.95rem; margin-bottom: 8px;">La Fabrication Additive (Impression 3D)</h3>
+          <p style="font-family: var(--font-tech); color: var(--sotc-text-soft); font-size: 0.88rem; line-height: 1.7;">L'impression 3D industrielle réduit les délais de livraison des pièces de rechange, lutte contre l'obsolescence et permet de réparer rapidement des composants mécaniques.</p>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 28px;">
         <a href="https://www.groupe-sncf.com/fr/innovation/technologies-emergentes" target="_blank" rel="noopener noreferrer" class="btn-tactical">Aller sur le site de la veille</a>
       </div>
     </div>
