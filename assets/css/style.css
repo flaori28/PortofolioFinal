@@ -6,8 +6,8 @@
   --hud-alert: #b54827;
   --hud-dim: #c8b89a;
   --hud-grid: rgba(201, 136, 10, 0.08);
-  --font-tech: 'Lora', 'EB Garamond', serif;
-  --font-header: 'Cinzel', 'Cormorant Garamond', serif;
+  --font-tech: 'Manrope', 'Lora', 'EB Garamond', sans-serif;
+  --font-header: 'Sora', 'Cinzel', 'Cormorant Garamond', sans-serif;
   --scanline-color: rgba(200, 184, 154, 0.18);
   --sotc-sand: #f5ede0;
   --sotc-ivory: #faf4ec;
@@ -20,7 +20,7 @@
   --sotc-glow: rgba(224, 160, 48, 0.36);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@500;600&family=Lora:wght@400;500;600&family=EB+Garamond:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700;800&family=Lora:wght@400;500;600&family=EB+Garamond:wght@400;500&family=Sora:wght@400;500;600;700;800&display=swap');
 
 * {
   box-sizing: border-box;
